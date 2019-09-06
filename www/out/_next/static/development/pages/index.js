@@ -22035,26 +22035,11 @@ var Page = function Page() {
       lineNumber: 87
     },
     __self: this
-  }, "DB Object interface - Massive"))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Flex"], {
-    mt: 4,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
-    flexGrow: 0,
-    flexBasis: 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(react_archer__WEBPACK_IMPORTED_MODULE_4__["ArcherContainer"], {
+  }, "DB Object interface - Massive"))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(react_archer__WEBPACK_IMPORTED_MODULE_4__["ArcherContainer"], {
     strokeColor: "red",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 91
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(react_archer__WEBPACK_IMPORTED_MODULE_4__["ArcherElement"], {
@@ -22074,21 +22059,22 @@ var Page = function Page() {
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 92
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Flex"], {
+    mt: 4,
     pb: 1,
     flexDirection: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 112
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(ProjectTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 113
     },
     __self: this
   }, "System to to manage internet connected fire hydrants"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
@@ -22104,30 +22090,30 @@ var Page = function Page() {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 116
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Span"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 125
     },
     __self: this
   }, "Show Events"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Span"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 126
     },
     __self: this
   }, "Manage hydrants"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Span"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 127
     },
     __self: this
   }, "Manage users")))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
     textAlign: "center",
-    mt: 7,
+    mt: 10,
     gridAutoColumns: "1fx",
     gridAutoFlow: "column",
     css: _styles_ss_utils__WEBPACK_IMPORTED_MODULE_7__["boxCss"].css({
@@ -22139,115 +22125,114 @@ var Page = function Page() {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 132
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(react_archer__WEBPACK_IMPORTED_MODULE_4__["ArcherElement"], {
     id: "B",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 141
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["H4"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 142
     },
     __self: this
   }, "Server"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 143
     },
     __self: this
   }, "Built with Meteor"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 144
     },
     __self: this
   }, "MongoDB")), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(react_archer__WEBPACK_IMPORTED_MODULE_4__["ArcherElement"], {
     id: "C",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 146
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["H4"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 147
     },
     __self: this
   }, "Client"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 148
     },
     __self: this
   }, "Built with React + React-router"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 149
     },
     __self: this
   }, "Notifications with Web-Workers"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 150
     },
     __self: this
   }, "Show hydrants on a map")), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(react_archer__WEBPACK_IMPORTED_MODULE_4__["ArcherElement"], {
     id: "D",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 152
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["H4"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 153
     },
     __self: this
   }, "Mobile"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 154
     },
     __self: this
   }, "Built with React-Native and MobX"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 155
     },
     __self: this
   }, "Converted to Typescript"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 156
     },
     __self: this
   }, "Notifications"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 157
     },
     __self: this
   }, "Geolocation"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 158
     },
     __self: this
-  }, "Barcode Scanning")))))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Flex"], {
+  }, "Barcode Scanning")))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Flex"], {
     mt: 4,
     flexDirection: ['column', 'row'],
-    maxWidth: "800px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 163
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
@@ -22255,7 +22240,7 @@ var Page = function Page() {
     width: [null, '60%'],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 164
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(Gallery, {
@@ -22264,7 +22249,7 @@ var Page = function Page() {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 165
     },
     __self: this
   })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
@@ -22272,7 +22257,7 @@ var Page = function Page() {
     width: [null, '40%'],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 167
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(Gallery, {
@@ -22281,64 +22266,64 @@ var Page = function Page() {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 168
     },
     __self: this
   }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
     mt: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 172
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(ProjectTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 173
     },
     __self: this
   }, "My first React project"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["P"], {
     mt: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 174
     },
     __self: this
   }, "While I was working as an Electronics Engineer, I was assigned to develop a Laboratory experiments management software."), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["UL"], {
     mt: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 178
     },
     __self: this
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["LI"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 179
     },
     __self: this
   }, "Instead of building the usual desktop solution using Delphi/Vb/C#, I turned to develop distributed system which will be available through a client anywhere"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["LI"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 184
     },
     __self: this
   }, "Meteor enabled me to get started easily and build Full-Stack solution"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["LI"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 187
     },
     __self: this
   }, "React made me excited to write a client structured with components"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["LI"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 190
     },
     __self: this
   }, "React is the main reason I started web-coding."), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])(_styles_ss_components__WEBPACK_IMPORTED_MODULE_3__["LI"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 191
     },
     __self: this
   }, "I was able to take advantage of community built components, this opportunity was the main reason to ditch the desktop way of development"))));
