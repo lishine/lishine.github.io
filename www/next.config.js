@@ -6,17 +6,18 @@ const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
 const nextConfig = {
     experimental: { publicDirectory: true },
     // target: 'serverless',
-    // webpack: (config, { dev }) => {
-    // 	// Perform customizations to config
-    // 	config.module.rules = config.module.rules.map(rule => {
-    // 		if (rule.loader === 'babel-loader') {
-    // 			rule.options.cacheDirectory = false
-    // 		}
-    // 		return rule
-    // 	})
-    // 	// Important: return the modified config
-    // 	return config
-    // },
+    webpack: (config, { dev }) => {
+        config.optimization.minimizer[0].options.terserOptions.compress.inline = false
+        // 	// Perform customizations to config
+        // 	config.module.rules = config.module.rules.map(rule => {
+        // 		if (rule.loader === 'babel-loader') {
+        // 			rule.options.cacheDirectory = false
+        // 		}
+        // 		return rule
+        // 	})
+        // 	// Important: return the modified config
+        return config
+    },
 }
 
 // const _withBundleAnalyzer = withBundleAnalyzer({

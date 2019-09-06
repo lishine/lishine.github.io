@@ -88,83 +88,79 @@ const Page = () => (
             </UL>
         </Box>
 
-        <Flex mt={4}>
-            <Box flexGrow={0} flexBasis={0}>
-                <ArcherContainer strokeColor="red">
-                    <ArcherElement
-                        id="A"
-                        relations={[
-                            {
-                                targetId: 'B',
-                                sourceAnchor: 'bottom',
-                                targetAnchor: 'top',
-                            },
-                            {
-                                targetId: 'C',
-                                sourceAnchor: 'bottom',
-                                targetAnchor: 'top',
-                            },
-                            {
-                                targetId: 'D',
-                                sourceAnchor: 'bottom',
-                                targetAnchor: 'top',
-                            },
-                        ]}
-                    >
-                        <Flex pb={1} flexDirection="column">
-                            <ProjectTitle>
-                                System to to manage internet connected fire hydrants
-                            </ProjectTitle>
-                            <Grid
-                                mt={1}
-                                justifyContent="space-around"
-                                gridAutoColumns="1fx"
-                                gridAutoFlow="column"
-                                css={boxCss.css({
-                                    Span: { mx: 1, lineHeight: '19px' },
-                                })}
-                            >
-                                <Span>Show Events</Span>
-                                <Span>Manage hydrants</Span>
-                                <Span>Manage users</Span>
-                            </Grid>
-                        </Flex>
-                    </ArcherElement>
-
+        <ArcherContainer strokeColor="red">
+            <ArcherElement
+                id="A"
+                relations={[
+                    {
+                        targetId: 'B',
+                        sourceAnchor: 'bottom',
+                        targetAnchor: 'top',
+                    },
+                    {
+                        targetId: 'C',
+                        sourceAnchor: 'bottom',
+                        targetAnchor: 'top',
+                    },
+                    {
+                        targetId: 'D',
+                        sourceAnchor: 'bottom',
+                        targetAnchor: 'top',
+                    },
+                ]}
+            >
+                <Flex mt={4} pb={1} flexDirection="column">
+                    <ProjectTitle>
+                        System to to manage internet connected fire hydrants
+                    </ProjectTitle>
                     <Grid
-                        textAlign="center"
-                        mt={7}
+                        mt={1}
+                        justifyContent="space-around"
                         gridAutoColumns="1fx"
                         gridAutoFlow="column"
                         css={boxCss.css({
-                            P: { mx: 1, mb: 1, lineHeight: '19px' },
+                            Span: { mx: 1, lineHeight: '19px' },
                         })}
                     >
-                        <ArcherElement id="B">
-                            <H4>Server</H4>
-                            <P>Built with Meteor</P>
-                            <P>MongoDB</P>
-                        </ArcherElement>
-                        <ArcherElement id="C">
-                            <H4>Client</H4>
-                            <P>Built with React + React-router</P>
-                            <P>Notifications with Web-Workers</P>
-                            <P>Show hydrants on a map</P>
-                        </ArcherElement>
-                        <ArcherElement id="D">
-                            <H4>Mobile</H4>
-                            <P>Built with React-Native and MobX</P>
-                            <P>Converted to Typescript</P>
-                            <P>Notifications</P>
-                            <P>Geolocation</P>
-                            <P>Barcode Scanning</P>
-                        </ArcherElement>
+                        <Span>Show Events</Span>
+                        <Span>Manage hydrants</Span>
+                        <Span>Manage users</Span>
                     </Grid>
-                </ArcherContainer>
-            </Box>
-        </Flex>
+                </Flex>
+            </ArcherElement>
 
-        <Flex mt={4} flexDirection={['column', 'row']} maxWidth="800px">
+            <Grid
+                textAlign="center"
+                mt={10}
+                gridAutoColumns="1fx"
+                gridAutoFlow="column"
+                css={boxCss.css({
+                    P: { mx: 1, mb: 1, lineHeight: '19px' },
+                })}
+            >
+                <ArcherElement id="B">
+                    <H4>Server</H4>
+                    <P>Built with Meteor</P>
+                    <P>MongoDB</P>
+                </ArcherElement>
+                <ArcherElement id="C">
+                    <H4>Client</H4>
+                    <P>Built with React + React-router</P>
+                    <P>Notifications with Web-Workers</P>
+                    <P>Show hydrants on a map</P>
+                </ArcherElement>
+                <ArcherElement id="D">
+                    <H4>Mobile</H4>
+                    <P>Built with React-Native and MobX</P>
+                    <P>Converted to Typescript</P>
+                    <P>Notifications</P>
+                    <P>Geolocation</P>
+                    <P>Barcode Scanning</P>
+                </ArcherElement>
+            </Grid>
+        </ArcherContainer>
+
+        <Flex mt={4} flexDirection={['column', 'row']}>
             <Box mie={[null, 2]} width={[null, '60%']}>
                 <Gallery images={[1, 2, 3, 4, 5].map(index => `/img/hd/${index}.png`)} />
             </Box>
