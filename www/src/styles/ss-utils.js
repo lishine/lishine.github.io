@@ -21,8 +21,8 @@ import { system, get as styledSystemGet } from '@styled-system/core'
 import { map, omitProps, pick, omit } from 'utils/utils'
 
 // Local
-import { mediaDown, mediaUp } from 'styles/utils'
-import { theme } from 'styles/theme'
+import { mediaDown, mediaUp } from './utils'
+import { theme } from './theme'
 
 // const themed = key => props => props.theme[key]
 

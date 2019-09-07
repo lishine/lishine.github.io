@@ -1,4 +1,3 @@
-// import initSubscriber from 'redux-subscriber'
 import React from 'react'
 import Head from 'next/head'
 import { default as nextRouter } from 'next/router'

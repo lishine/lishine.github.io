@@ -1,7 +1,0 @@
-https://domain
-https://domain/about
-https://domain/blog-feed
-https://domain/blog-post
-https://domain/course
-https://domain/about
-https://domain/contact-us

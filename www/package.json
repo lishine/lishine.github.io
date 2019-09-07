@@ -3,10 +3,10 @@
     "author": "Pavel Ravits",
     "license": "ISC",
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "export": "next export",
-        "start": "next build && next start"
+        "dev": "cd src && next dev",
+        "build": "cd src && next build",
+        "export": "cd src && next export --outdir ../out",
+        "start": "cd src && next start"
     },
     "dependencies": {
         "@emotion/core": "^10.0.10",

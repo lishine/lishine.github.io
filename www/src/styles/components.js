@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Box } from 'styles/ss-components'
+import { Box } from './ss-components'
 import { css } from '@emotion/core'
 
 export const Container = ({ children, ...props }) => (

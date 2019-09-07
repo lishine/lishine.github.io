@@ -47,9 +47,7 @@ export const mediaDown = to => (props = {}) => {
 
 export const mediaBetween = (from, to) => (props = {}) => {
     const _theme = props.theme || theme
-    return `@media screen and (min-width: ${
-        _theme.breakpointsObject[from]
-    }) and (max-width: ${theme.breakpointsObject[to]})`
+    return `@media screen and (min-width: ${_theme.breakpointsObject[from]}) and (max-width: ${theme.breakpointsObject[to]})`
 }
 
 // export const space = props => SS.space({ ...props, pt: [0, 2, 4], pl: 4 })

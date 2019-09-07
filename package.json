@@ -3,16 +3,7 @@
     "author": "Pavel Ravits",
     "license": "ISC",
     "scripts": {
-        "deploy": "cd www && yarn build && yarn export && touch out/.nojekyll && git add out && git commit -m \"Deploy to gh-pages\" && cd .. && git subtree push --prefix www/out origin master",
-        "now-logs": "now logs -f do-salsa.tk",
-        "now-deploy": "cd api && yarn build && cd .. && now --target production && yarn now-logs",
-        "docker-clean": "docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi --force $(docker images -q) && docker volume rm $(docker volume ls -q)",
-        "adm": "node scripts/apply-deploy-migrations.js",
-        "emails-gen": "cd emails-generator && yarn gen",
-        "now-update": "yarn global add now@canary",
-        "db-console": "set -o allexport; source ./.env; set +o allexport && cd db && hasura console --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET",
-        "db-up": "set -o allexport; source ./.env; set +o allexport && cd db && echo $HASURA_GRAPHQL_ADMIN_SECRET && docker-compose up -d --remove-orphans",
-        "db-down": "cd db && docker-compose down"
+        "deploy": "cd www && yarn build && yarn export && touch out/.nojekyll && git add out && git commit -m \"Deploy to gh-pages\" && cd .. && git subtree push --prefix www/out origin master"
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",

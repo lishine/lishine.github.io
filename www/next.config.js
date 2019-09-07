@@ -4,6 +4,7 @@ const withCSS = require('@zeit/next-css')
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
 
 const nextConfig = {
+    distDir: '../.next',
     experimental: { publicDirectory: true },
     // target: 'serverless',
     webpack: (config, { dev }) => {
