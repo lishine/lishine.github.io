@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import {
     Box,
     Flex,
@@ -24,23 +24,39 @@ import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/scss/image-gallery.scss'
 import { boxCss } from 'styles/ss-utils'
 
-const imageFrameStyles = boxCss.css({ bg: 'lightgrey', p: 1 })
-
-const _Gallery = ({ images, className }) => (
-    <ImageGallery
-        additionalClass={className}
-        // showFullscreenButton={false}
-        showPlayButton={false}
-        showBullets={false}
-        showNav={false}
-        // showThumbnails={false}
-        items={images.map(url => ({
-            original: url,
-            thumbnail: url,
-        }))}
-    />
+const _Gallery = ({ images, className, ...props }) => {
+    const ref = useRef(null)
+    const [isFullScreen, setFullScreen] = useState(false)
+    return (
+        <ImageGallery
+            ref={ref}
+            additionalClass={className}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            showBullets={false}
+            showNav={false}
+            useBrowserFullscreen={false}
+            onClick={() => {
+                if (isFullScreen) {
+                    ref.current.exitFullScreen()
+                    setFullScreen(false)
+                } else {
+                    ref.current.fullScreen()
+                    setFullScreen(true)
+                }
+            }}
+            showThumbnails={false}
+            items={images.map(url => ({
+                original: url,
+                thumbnail: url,
+            }))}
+            {...props}
+        />
+    )
+}
+const Gallery = props => (
+    <_Gallery {...props} css={boxCss.css({ bg: 'lightgrey', p: 1, cursor: 'pointer' })} />
 )
-const Gallery = props => <_Gallery {...props} css={imageFrameStyles} />
 
 // const LineTo = dynamic(() => import('react-lineto').then(r => r), { ssr: false })
 
@@ -215,13 +231,16 @@ const Page = () => (
                     </Box>
                 </Flex>
 
-                <Image
+                <Box mt={4} width="100%" maxWidth="600px">
+                    <Gallery images={['/img/salsa/1.png']} />
+                </Box>
+                {/* <Image
                     css={imageFrameStyles}
                     mt={4}
                     width="100%"
                     maxWidth="600px"
                     src="/img/salsa/1.png"
-                />
+                /> */}
             </Box>
 
             {/** ***************************************************************/}
@@ -258,14 +277,17 @@ const Page = () => (
                             <LI>Git, Jira, Slack</LI>
                         </UL>
                     </Box>
-                    <Image
+                    <Box mt={3} width="100%" height="100%" maxWidth="600px">
+                        <Gallery images={['/img/overtok/1.png']} />
+                    </Box>
+                    {/* <Image
                         css={imageFrameStyles}
                         mt={3}
                         width="100%"
                         height="100%"
                         maxWidth="600px"
                         src="/img/overtok/1.png"
-                    />
+                    /> */}
                 </Flex>
             </Box>
 
@@ -382,11 +404,13 @@ const Page = () => (
             <Flex mt={4} flexDirection={['column', 'row']}>
                 <Box mie={[null, 2]} width={[null, '60%']}>
                     <Gallery
+                        showThumbnails
                         images={[1, 2, 3, 4, 5].map(index => `/img/hd/${index}.png`)}
                     />
                 </Box>
                 <Box mt={[2, null]} width={[null, '40%']}>
                     <Gallery
+                        showThumbnails
                         images={[1, 2, 3, 4].map(index => `/img/hdm/${index}.jpg`)}
                     />
                 </Box>
