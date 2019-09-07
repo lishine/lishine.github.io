@@ -2,7 +2,7 @@ STATUS="$(git status)"
 
 echo $STATUS
 
-if [[ $STATUS == *"nothing to commit"* ]]
+if [[ $STATUS == *"nothing to commit, working"* ]]
 then
 echo FFFFFFFF
 exit
