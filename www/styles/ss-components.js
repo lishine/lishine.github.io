@@ -127,10 +127,10 @@ export const UL = styled(Box)`
     list-style: none;
     position: relative;
     padding: 0;
-    margin-left: 12px;
 `
 UL.defaultProps = {
     as: 'ul',
+    mis: '12px',
 }
 
 const liPadding = '1em'
