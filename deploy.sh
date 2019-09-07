@@ -2,8 +2,10 @@ STATUS="$(git status)"
 
 echo $STATUS
 
-if [[ $STATUS == *"nothing to commit, working directory clean"* ]]
+if [[ $STATUS == *"nothing to commit"* ]]
 then
+echo FFFFFFFF
+exit
     cd www
     yarn build
     yarn export
