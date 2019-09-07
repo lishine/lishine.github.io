@@ -1,5 +1,7 @@
 STATUS="$(git status)"
 
+echo $STATUS
+
 if [[ $STATUS == *"nothing to commit, working directory clean"* ]]
 then
     cd www
