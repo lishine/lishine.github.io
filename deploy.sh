@@ -1,11 +1,7 @@
 STATUS="$(git status)"
 
-echo $STATUS
-
 if [[ $STATUS == *"nothing to commit, working tree clean"* ]]
 then
-echo FFFFFFFF
-exit
     cd www
     yarn build
     yarn export
