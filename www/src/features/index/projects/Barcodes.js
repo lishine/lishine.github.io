@@ -2,8 +2,8 @@ import React, { useRef, useState } from 'react'
 import { Box, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
 import { ProjectTitle } from './common'
 
-export const Barcodes = () => (
-    <Box mt={4}>
+export const Barcodes = props => (
+    <Box {...props}>
         <ProjectTitle>Manage barcodes for users</ProjectTitle>
         <H4 mt="5px">Built from the ground up</H4>
         <NavLink mt={1} href="https://github.com/lishine/login-full-stack">

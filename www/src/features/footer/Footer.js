@@ -9,12 +9,12 @@ import { boxCss } from 'styles/ss-utils'
 export const Footer = () => {
     return (
         <Box
+            bg="secondary"
             height="218px"
             position="absolute"
             bottom={0}
             className="grid-container padding-container"
-        >
-            Footer
-        </Box>
+            maxWidth={[null, null, '100%']}
+        />
     )
 }

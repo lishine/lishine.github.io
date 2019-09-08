@@ -48,7 +48,9 @@ export const ProjectTitle = props => (
     <H3 borderBottom="1px solid currentColor" {...props} />
 )
 
-export const SubRemark = props => <H4 color="var(--onwhite-menu)" {...props} />
+export const SubRemark = props => (
+    <H4 fontSize="20px" color="var(--onwhite-menu)" {...props} />
+)
 
 // const Feature = styled(Box)(
 //     boxCss.css({ border: '1px solid var(--onwhite-border)', p: 1 })

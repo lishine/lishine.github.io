@@ -160,7 +160,7 @@ LI.defaultProps = {
 
 export const Card = styled(Box)()
 
-export const NavLink = ({ onClick, loading, children, ...props }) => {
+export const NavLink = ({ onClick, loading, href, children, ...props }) => {
     const _onClick = e => {
         console.log('onClick', onClick)
         if (onClick) {
@@ -170,9 +170,9 @@ export const NavLink = ({ onClick, loading, children, ...props }) => {
         }
     }
     return (
-        <Box onClick={_onClick} {...props}>
+        <Box onClick={_onClick} href={href} {...props}>
             {loading && <Loading />}
-            {!loading && children}
+            {(!loading && children) || href}
         </Box>
     )
 }

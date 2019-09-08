@@ -6,8 +6,8 @@ import { ArcherContainer, ArcherElement } from 'react-archer'
 import { boxCss } from 'styles/ss-utils'
 import { ProjectTitle, Gallery } from './common'
 
-export const Hydrantech = () => (
-    <Box>
+export const Hydrantech = props => (
+    <Box {...props}>
         <ArcherContainer strokeColor="red">
             <ArcherElement
                 id="A"

@@ -2,23 +2,23 @@ import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
 import { ProjectTitle, Gallery } from './common'
 
-export const Overtok = () => (
-    <Box mt={4}>
+export const Overtok = props => (
+    <Box {...props}>
         <ProjectTitle>Overtok - users engagement and convertion</ProjectTitle>
         <NavLink mt={1} href="https://overtok.com">
             https://overtok.com
         </NavLink>
-        <Flex mt={4} flexDirection={['column', null, 'row']}>
+        <Flex mt={1} flexDirection={['column', null, 'row']}>
             <Box mie={4}>
-                <H4 mt={1}>Working in a team</H4>
-                <UL mt={1}>
+                <H4>Working in a team</H4>
+                <UL>
                     <LI>Javascript web client, which is embedded into client website</LI>
                     <LI>Clojurescript web admin panel (see picture)</LI>
                     <LI>Mobile client built with Clojuresript and React-Native</LI>
                     <LI>Serverless backend</LI>
                 </UL>
-                <H4 mt={1}>Technologies being used</H4>
-                <UL mt={1}>
+                <H4 mt={2}>Technologies being used</H4>
+                <UL>
                     <LI>Javascript</LI>
                     <LI>React</LI>
                     <LI>React-Native</LI>

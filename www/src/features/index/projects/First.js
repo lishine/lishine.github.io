@@ -2,8 +2,8 @@ import React, { useRef, useState } from 'react'
 import { Box, LI, UL, H3, Grid, P, Span, NavLink } from 'styles/ss-components'
 import { ProjectTitle } from './common'
 
-export const First = () => (
-    <Box mt={4}>
+export const First = props => (
+    <Box {...props}>
         <ProjectTitle>My first React project</ProjectTitle>
         <P mt={1}>
             While I was working as an Electronics Engineer, I was assigned to develop a
