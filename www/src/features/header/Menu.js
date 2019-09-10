@@ -19,7 +19,7 @@ export const Menu = props => {
                 CONTACT
             </RouteLink>
             <RouteLink menu href="/">
-                HOME
+                PORTFOLIO
             </RouteLink>
         </Flex>
     )

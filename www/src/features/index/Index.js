@@ -22,7 +22,6 @@ export const Index = () => (
                 development career
             </H4>
             <UL>
-                <LI>In a chronological order, from most recent to the first one</LI>
                 <LI>
                     Most of the recent and the best writen code is in private repositories
                     that will be demonstrated upon request

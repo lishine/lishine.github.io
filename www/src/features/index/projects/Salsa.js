@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, Grid, Span, NavLink } from 'styles/ss-components'
 import { ProjectTitle, SubRemark, Gallery } from './common'
 import { boxCss } from 'styles/ss-utils'
+import { mediaUp } from 'styles/utils'
 
 export const Salsa = props => (
     <Box {...props}>
@@ -21,9 +22,7 @@ export const Salsa = props => (
                 mie={5}
                 mt={[3, null, '12px']}
                 justifyContent="space-between"
-                // gridAutoColumns="1fx"
                 gridTemplateColumns="repeat(auto-fill, minmax(150px, 1fr))"
-                // gridAutoFlow="column"
                 gridGap={2}
                 css={boxCss.css({
                     [Span]: {
@@ -58,19 +57,33 @@ export const Salsa = props => (
             textAlign="center"
             flexDirection="column"
             flexWrap="wrap"
-            maxHeight={['1000px', '330px', '330px', '300px']}
-            // gridAutoColumns="1fx"
-            // gridAutoFlow="column"
-            // gridColumnGap={4}
-            // gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
             css={boxCss.css({
                 [H4]: { textAlign: 'start' },
-                [UL]: { mis: ['1em', '-1em', '-1em', '-1em'] },
                 [LI]: { textAlign: 'start', mb: 1 },
+
                 [Box]: {
-                    maxWidth: ['250px', '200px', '200px', '200px'],
                     mt: 2,
-                    mr: 4,
+                    mie: 4,
+                },
+                [UL]: { mis: '1em' },
+                [mediaUp('md')()]: {
+                    maxHeight: '830px',
+                    [Box]: {
+                        maxWidth: '45%',
+                    },
+                },
+                [mediaUp('lg')()]: {
+                    maxHeight: '530px',
+                    [Box]: {
+                        maxWidth: '33%',
+                    },
+                    [UL]: { mis: '-1em' },
+                },
+                [mediaUp('xl')()]: {
+                    maxHeight: '330px',
+                    [Box]: {
+                        maxWidth: '25%',
+                    },
                 },
             })}
         >
