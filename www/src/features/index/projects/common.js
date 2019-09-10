@@ -19,7 +19,7 @@ const _Gallery = ({ images, className, ...props }) => {
             showPlayButton={false}
             showBullets={false}
             showNav={false}
-            useBrowserFullscreen={false}
+            useBrowserFullscreen
             onClick={() => {
                 if (isFullScreen) {
                     ref.current.exitFullScreen()
