@@ -69,6 +69,10 @@ class MyApp extends App {
                         href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:300,400,500|Permanent+Marker"
                         rel="stylesheet"
                     />
+                    <link
+                        href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500&display=swap"
+                        rel="stylesheet"
+                    />
                     {/* <link rel="icon" type="image/x-icon" href={favicon.url} /> */}
                 </Head>
 

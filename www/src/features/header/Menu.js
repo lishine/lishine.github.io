@@ -21,6 +21,9 @@ export const Menu = props => {
             <RouteLink menu href="/">
                 PORTFOLIO
             </RouteLink>
+            <RouteLink menu href="/resume">
+                RESUME
+            </RouteLink>
         </Flex>
     )
 }

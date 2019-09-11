@@ -133,30 +133,36 @@ UL.defaultProps = {
     mis: '12px',
 }
 
-const liPadding = '1em'
-export const LI = styled(Box)`
-    padding-left: ${liPadding};
-    text-indent: ${props => (props.textIndent ? 0 : `-${liPadding}`)};
+// export const LI = styled(Box)`
+//     &:before {
+//         position: absolute;
+//         content: ${props => props.content};
+//         color: black;
+//         left: 0;
+//     }
+// `
+// LI.defaultProps = {
+//     as: 'li',
+//     textIndent: true,
+//     pis: '1em',
+//     content: '•',
+// }
 
-    &:before {
-        position: absolute;
-        content: '•';
-        color: black;
-        left: 0;
-    }
-`
+export const LI = styled(({ dot, ...props }) => (
+    <Box {...props}>
+        <Span position="absolute" left={0}>
+            {dot}
+        </Span>
+        {props.children}
+    </Box>
+))()
+
 LI.defaultProps = {
     as: 'li',
-    textIndent: true,
+    textIndent: '1em',
+    pis: '1em',
+    dot: '•',
 }
-
-// export const LI = ({ dotColor, ...props }) => (
-//     <li css={{ color: dotColor }}>
-//         <Span color="initial" {...props} />
-//     </li>
-// )
-
-// const cards = variant({ key: 'cards' })
 
 export const Card = styled(Box)()
 
