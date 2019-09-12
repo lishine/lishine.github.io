@@ -2,8 +2,8 @@ STATUS="$(git status)"
 
 if [[ $STATUS == *"nothing to commit, working tree clean"* ]]
 then
-    rm -rf out
     cd www
+    rm -rf out
     yarn build
     yarn export
     touch out/.nojekyll
