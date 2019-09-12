@@ -2,6 +2,7 @@ STATUS="$(git status)"
 
 if [[ $STATUS == *"nothing to commit, working tree clean"* ]]
 then
+    rm -rf out
     cd www
     yarn build
     yarn export
