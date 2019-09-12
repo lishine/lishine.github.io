@@ -70,7 +70,7 @@ class MyApp extends App {
                         rel="stylesheet"
                     />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500&display=swap"
+                        href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500, 600, 700&display=swap"
                         rel="stylesheet"
                     />
                     {/* <link rel="icon" type="image/x-icon" href={favicon.url} /> */}
@@ -80,7 +80,7 @@ class MyApp extends App {
                     <GlobalCss />
                     <Flex flexDirection="column" className="page-container">
                         <Header />
-                        <Flex flexDirection="column" pb="218px" flex={1}>
+                        <Flex flexDirection="column" pb="216px" flex={1}>
                             <Component />
                             <Footer />
                         </Flex>

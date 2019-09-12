@@ -10,7 +10,7 @@ export const Footer = () => {
     return (
         <Box
             bg="secondary"
-            height="218px"
+            height="216px"
             position="absolute"
             bottom={0}
             className="grid-container padding-container"

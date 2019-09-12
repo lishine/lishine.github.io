@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import styled from '@emotion/styled'
 
 // Common
 import { boxCss } from 'styles/ss-utils'
@@ -10,18 +11,21 @@ const getMenuStyle = active => {
     const activeMenu = {
         textDecoration: 'none',
         borderBottom: '2px solid currentColor',
-        color: 'primary',
+        color: 'secondary',
     }
     const menu = {
         text: 'menu',
         p: 1,
-        color: 'light-normal',
+        color: 'black',
         borderBottom: '2px solid transparent',
         cursor: 'pointer',
         textAlign: 'center',
         width: 'min-content',
         wordSpacing: '100px',
         pb: '4px',
+        '& :hover': {
+            color: 'red',
+        },
         [mediaDown('md')()]: {
             pl: '3px',
             pr: '3px',
@@ -40,14 +44,12 @@ const getMenuStyle = active => {
 
 export const RouteLink = ({ children, className, menu, ...props }) => {
     const router = useRouter()
-
     const active = router.pathname === props.href
-
-    const css = menu ? getMenuStyle(active) : {}
+    const styles = boxCss.css(menu ? getMenuStyle(active) : {})
 
     return (
-        <Link {...props} shallow>
-            <a className={className} css={boxCss.css(css)}>
+        <Link passHref {...props} shallow>
+            <a className={className || ''} css={styles}>
                 {children}
             </a>
         </Link>

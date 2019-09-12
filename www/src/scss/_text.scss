@@ -49,18 +49,21 @@
 // }
 
 
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, dl, ul, ol {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	@include f(16px, 24px, 6px);
-	font-weight: 400;
+    font-weight: 400;
+    > strong {
+        font-weight: 600;
+    }
 }
 
 ol, ul, dl {
     padding-inline-start: 0px;
 }
 
-dd, dt, ol, ul, dl {
+dd, dt, li {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -78,7 +81,7 @@ dd, dt, ol, ul, dl {
 
 h1 {
 	@include oswald;
-	@include f(32px, 40px, 6px);
+	@include f(32px, 40px, 7px);
 	letter-spacing: 0.08em;
 }
 
@@ -103,8 +106,12 @@ h3 {
 
 .h4, h4 {
 	@include oswald;
-	@include f(20px, 24px, 4px);
-	letter-spacing: 0.08em;
+	@include f(20px, 24px, 5px);
+    letter-spacing: 0.08em;
+    &.sectionHeader {
+        @include f(24px, 32px, 7px);
+        font-weight: 500;
+    }
 }
 
 

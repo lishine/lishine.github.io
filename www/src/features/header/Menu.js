@@ -10,6 +10,7 @@ import { RouteLink } from 'common/RouteLink'
 export const Menu = props => {
     return (
         <Flex
+            as="dl"
             display={['flex', 'grid']}
             className=" padding-container"
             css={boxCss.css(styles)}

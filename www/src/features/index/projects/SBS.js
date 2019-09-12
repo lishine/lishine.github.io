@@ -62,27 +62,27 @@ export const SBS = props => (
                 [H4]: { textAlign: 'start' },
                 [LI]: { textAlign: 'start', mb: 1 },
 
-                [Box]: {
+                div: {
                     mt: 2,
                     mie: 4,
                 },
                 [UL]: { mis: '1em' },
                 [mediaUp('md')()]: {
                     maxHeight: '830px',
-                    [Box]: {
+                    div: {
                         maxWidth: '50%',
                     },
                 },
                 [mediaUp('lg')()]: {
                     maxHeight: '530px',
-                    [Box]: {
+                    div: {
                         maxWidth: '33%',
                     },
                     [UL]: { mis: '-1em' },
                 },
                 [mediaUp('xl')()]: {
                     maxHeight: '330px',
-                    [Box]: {
+                    div: {
                         maxWidth: '25%',
                     },
                 },

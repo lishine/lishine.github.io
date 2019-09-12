@@ -70,7 +70,7 @@ export const Hydrantech = props => (
                 <ArcherElement id="C">
                     <H4>Client</H4>
                     <P>Built with React + React-router</P>
-                    <P>Notifications with Web-Workers</P>
+                    <P>Notifications with Service-Workers</P>
                     <P>Show hydrants on a map</P>
                 </ArcherElement>
                 <ArcherElement id="D">
