@@ -35,7 +35,6 @@ const Page = () => (
                 fontFamily: 'Crimson Pro, serif',
                 fontSize: '40px',
                 transform: 'translateY(7px)',
-                fontWeight: 600,
                 letterSpacing: '0.03em',
             },
             h4: {
@@ -60,16 +59,19 @@ const Page = () => (
             '.sectionHeader': {
                 mb: 1,
             },
-            '--link': '#496DAA',
+            '--link': '#6387C5',
         })}
     >
-        <H1 mb={1}>Pavel Ravits</H1>
+        <H1 mb={1}>
+            <strong>Pavel Ravits</strong>
+        </H1>
         <H4 mt="-5px">
             <light>React developer</light>
         </H4>
 
-        <H1 mt={6} mb={7} color="#496DAA">
-            ...looking forward to collaborate with a team of great developers
+        <H1 mt={6} mb={7} color="link">
+            ...seeking <strong>collaboration</strong> with <strong>passionate</strong>{' '}
+            developers
         </H1>
         <Grid
             flex={1}
@@ -144,7 +146,9 @@ const Page = () => (
                 <Grid as="dl" gridAutoFlow="row" gridTemplateColumns="150px 1fr">
                     <DT>1996 - 2003</DT>
                     <DD>
-                        B.A.Sc. Electronics Computing and Communication Engineering
+                        <strong>
+                            BA.Sc. Electronics Computing and Communication Engineering
+                        </strong>
                         <br />
                         <Span color="mute-onwhite">
                             Technion - Israel institute of technology
@@ -171,7 +175,7 @@ const Page = () => (
                 <UL>
                     <LI>Front End UI</LI>
                     <LI>Distributed Software</LI>
-                    <LI>Dev-Ops</LI>
+                    <LI>Cloud</LI>
                 </UL>
                 <H4 className="sectionHeader">Hobbies</H4>
                 <UL>

@@ -11,7 +11,7 @@ const getMenuStyle = active => {
     const activeMenu = {
         textDecoration: 'none',
         borderBottom: '2px solid currentColor',
-        color: 'secondary',
+        color: '#496DAA',
     }
     const menu = {
         text: 'menu',
@@ -23,9 +23,7 @@ const getMenuStyle = active => {
         width: 'min-content',
         wordSpacing: '100px',
         pb: '4px',
-        '& :hover': {
-            color: 'red',
-        },
+        ':hover': activeMenu,
         [mediaDown('md')()]: {
             pl: '3px',
             pr: '3px',
@@ -36,8 +34,7 @@ const getMenuStyle = active => {
     }
 
     if (active) {
-        Object.assign(menu, activeMenu)
-        menu[':hover'] = activeMenu
+        Object.assign(menu, activeMenu, { ':hover': activeMenu })
     }
     return menu
 }

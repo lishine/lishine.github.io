@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, Grid, Span, NavLink } from 'styles/ss-components'
-import { ProjectTitle, SubRemark, Gallery } from './common'
+import { ProjectTitle, SubRemark, Gallery, DoesTitle, DoesItem } from './common'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 import styled from '@emotion/styled'
@@ -19,7 +19,7 @@ export const Salsa = props => {
                 <Box mie={5}>
                     <SubRemark>Built from the ground up</SubRemark>
                     <Flex as="p" alignItems="center">
-                        <Span mie="1em">Have a look please:</Span>
+                        <Span mie="0.5em">Take a look:</Span>
                         <NavLink href="https://do-salsa.tk" />
                     </Flex>
                 </Box>
@@ -66,9 +66,6 @@ export const Salsa = props => {
                 flexDirection="column"
                 flexWrap="wrap"
                 css={boxCss.css({
-                    [H4]: { textAlign: 'start' },
-                    [LI]: { textAlign: 'start', mb: 1 },
-
                     [DoesWrapper]: {
                         mt: 2,
                         mie: 4,
@@ -96,72 +93,82 @@ export const Salsa = props => {
                 })}
             >
                 <DoesWrapper>
-                    <H4>API</H4>
+                    <DoesTitle>API</DoesTitle>
                     <DoesList>
-                        <LI>
+                        <DoesItem>
                             Serverless services, deployed to Zeit Now v2 on top of AWS
                             lambda
-                        </LI>
-                        <LI>JWT in cookie authentication</LI>
-                        <LI>Email service with MailGun API, MJML templates</LI>
+                        </DoesItem>
+                        <DoesItem>JWT in cookie authentication</DoesItem>
+                        <DoesItem>
+                            Email service with MailGun API, MJML templates
+                        </DoesItem>
                     </DoesList>
                 </DoesWrapper>
 
                 <DoesWrapper>
-                    <H4>Emails generator</H4>
+                    <DoesTitle>Emails generator</DoesTitle>
                     <DoesList>
-                        <LI>React rendering</LI>
-                        <LI>MJML markup</LI>
-                        <LI>DOT templates</LI>
+                        <DoesItem>React rendering</DoesItem>
+                        <DoesItem>MJML markup</DoesItem>
+                        <DoesItem>DOT templates</DoesItem>
                     </DoesList>
                 </DoesWrapper>
 
                 <DoesWrapper>
-                    <H4>Content managment</H4>
+                    <DoesTitle>Content managment</DoesTitle>
                     <DoesList>
-                        <LI>DATO Headless CMS</LI>
-                        <LI>
+                        <DoesItem>DATO Headless CMS</DoesItem>
+                        <DoesItem>
                             <NavLink href="https://www.datocms.com" display="inline" />
-                        </LI>
-                        <LI>GraphQL API</LI>
+                        </DoesItem>
+                        <DoesItem>GraphQL API</DoesItem>
                     </DoesList>
                 </DoesWrapper>
 
                 <DoesWrapper>
-                    <H4>DB</H4>
+                    <DoesTitle>DB</DoesTitle>
                     <DoesList>
-                        <LI>Hasura GraphQL engine</LI>
-                        <LI>Docker on Heroku</LI>
-                        <LI>Migrations</LI>
-                        <LI>Permissions</LI>
-                        <LI>Postgress</LI>
+                        <DoesItem>Hasura GraphQL engine</DoesItem>
+                        <DoesItem>Docker on Heroku</DoesItem>
+                        <DoesItem>Migrations</DoesItem>
+                        <DoesItem>Permissions</DoesItem>
+                        <DoesItem>Postgress</DoesItem>
                     </DoesList>
                 </DoesWrapper>
 
                 <DoesWrapper>
-                    <H4>Client</H4>
+                    <DoesTitle>Client</DoesTitle>
                     <DoesList>
-                        <LI>Next.js SSR dynamic deploy</LI>
-                        <LI>SEO optimized</LI>
-                        <LI>SCSS, imported Bootstrap, Emotion, Styled-System </LI>
-                        <LI>React state management: Easy-Peasy (Redux + React-hooks)</LI>
-                        <LI>PayPal API</LI>
-                        <LI>
+                        <DoesItem>Next.js SSR dynamic deploy</DoesItem>
+                        <DoesItem>SEO optimized</DoesItem>
+                        <DoesItem>
+                            SCSS, imported Bootstrap, Emotion, Styled-System{' '}
+                        </DoesItem>
+                        <DoesItem>
+                            React state management: Easy-Peasy (Redux + React-hooks)
+                        </DoesItem>
+                        <DoesItem>PayPal API</DoesItem>
+                        <DoesItem>
                             Design implemented according to design requirements given in
                             Invision
-                        </LI>
-                        <LI>Responsive & adaptive design to 4 types of devices</LI>
-                        <LI>
+                        </DoesItem>
+                        <DoesItem>
+                            Responsive & adaptive design to 4 types of devices
+                        </DoesItem>
+                        <DoesItem>
                             Latest CSS qualities: Flex, Grid, CSS custom and logical
                             properties
-                        </LI>
+                        </DoesItem>
                     </DoesList>
                 </DoesWrapper>
             </Flex>
 
-            <Box mt={4} width="100%" maxWidth="600px">
-                <Gallery images={['/img/salsa/1.png']} />
-            </Box>
+            <Flex justifyContent="center">
+                <Box mt={5} width="100%" maxWidth="600px">
+                    <Gallery images={['/img/salsa/1.png']} />
+                </Box>
+            </Flex>
         </Box>
     )
 }

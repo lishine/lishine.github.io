@@ -13,6 +13,18 @@ body {
 	-webkit-font-smoothing: antialiased;	
 }
 
+a {
+    // color: $link-color;
+    text-decoration: $link-decoration;
+  
+    &:hover {
+    //   color: $link-hover-color;
+    //   text-decoration: $link-hover-decoration;
+        text-decoration-thickness: .125em;
+        text-underline-offset: 1.5px;
+    }
+  }
+  
 .w100 { width: 100%; }
 .mw100 { min-width: 100%; }
 .wauto { width: auto; }

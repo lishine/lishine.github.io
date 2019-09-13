@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { H1, H4, H3 } from 'styles/ss-components'
+import { H1, H4, H3, LI } from 'styles/ss-components'
 // import dynamic from 'next/dynamic'
 import { ArcherContainer, ArcherElement } from 'react-archer'
 // import LineTo from 'react-lineto'
@@ -45,12 +45,17 @@ export const Gallery = props => (
 // const LineTo = dynamic(() => import('react-lineto').then(r => r), { ssr: false })
 
 export const ProjectTitle = props => (
-    <H3 borderBottom="1px solid currentColor" {...props} />
+    <H3 fontWeight="400" borderBottom="1px solid currentColor" {...props} />
 )
 
 export const SubRemark = props => (
-    <H4 fontSize="20px" color="var(--onwhite-menu)" {...props} />
+    <H4 fontStyle="italic" fontSize="18px" color="var(--onwhite-menu)" {...props} />
 )
+
+export const DoesTitle = props => (
+    <H4 textAlign="start" mt={1} mb={1} fontWeight="400" {...props} />
+)
+export const DoesItem = props => <LI textAlign="start" mb="4px" {...props} />
 
 // const Feature = styled(Box)(
 //     boxCss.css({ border: '1px solid var(--onwhite-border)', p: 1 })

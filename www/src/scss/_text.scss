@@ -83,6 +83,9 @@ h1 {
 	@include oswald;
 	@include f(32px, 40px, 7px);
 	letter-spacing: 0.08em;
+    > strong {
+        font-weight: 600;
+      }
 }
 
 h2 {

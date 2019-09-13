@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
-import { Box, Flex, H4, LI, UL, Grid, Span, NavLink, P } from 'styles/ss-components'
-import { ProjectTitle, SubRemark, Gallery } from './common'
+import { Box, Flex, LI, UL, Grid, H4, Span, NavLink, P } from 'styles/ss-components'
+import { ProjectTitle, DoesTitle, SubRemark, Gallery, DoesItem } from './common'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 import styled from '@emotion/styled'
@@ -66,9 +66,6 @@ export const SBS = props => (
             flexDirection="column"
             flexWrap="wrap"
             css={boxCss.css({
-                [H4]: { textAlign: 'start' },
-                [LI]: { textAlign: 'start', mb: 1 },
-
                 [DoesWrapper]: {
                     mt: 2,
                     mie: 4,
@@ -96,57 +93,63 @@ export const SBS = props => (
             })}
         >
             <DoesWrapper>
-                <H4>API</H4>
+                <DoesTitle>API</DoesTitle>
                 <DoesList>
-                    <LI>Built as a services - serverless ready</LI>
-                    <LI>SMS with Nexmo API</LI>
-                    <LI>Auth with httpOnly cookie in JWT and SMS</LI>
-                    <LI>Websockets server</LI>
-                    <LI>Websockets test client in Codesandbox</LI>
-                    <LI>Device Auth with Private/Public keys with libsodium</LI>
+                    <DoesItem>Built as a services - serverless ready</DoesItem>
+                    <DoesItem>SMS with Nexmo API</DoesItem>
+                    <DoesItem>Auth with httpOnly cookie in JWT and SMS</DoesItem>
+                    <DoesItem>Websockets server</DoesItem>
+                    <DoesItem>Websockets test client in Codesandbox</DoesItem>
+                    <DoesItem>
+                        Device Auth with Private/Public keys with libsodium
+                    </DoesItem>
                 </DoesList>
             </DoesWrapper>
 
             <DoesWrapper>
-                <H4>Deploy</H4>
+                <DoesTitle>Deploy</DoesTitle>
                 <DoesList>
-                    <LI>Digital ocean</LI>
-                    <LI>Everything in docker containers</LI>
-                    <LI>Traefik reverse proxy + Letsencrypt</LI>
-                    <LI>Single command deploy to staging/production</LI>
-                    <LI>Single command Hasura console through ssh</LI>
-                    <LI>Single command DB fill through ssh</LI>
-                    <LI>Single command logs through ssh</LI>
+                    <DoesItem>Digital ocean</DoesItem>
+                    <DoesItem>Everything in docker containers</DoesItem>
+                    <DoesItem>Traefik reverse proxy + Letsencrypt</DoesItem>
+                    <DoesItem>Single command deploy to staging/production</DoesItem>
+                    <DoesItem>Single command Hasura console through ssh</DoesItem>
+                    <DoesItem>Single command DB fill through ssh</DoesItem>
+                    <DoesItem>Single command logs through ssh</DoesItem>
                 </DoesList>
             </DoesWrapper>
 
             <DoesWrapper>
-                <H4>DB</H4>
+                <DoesTitle>DB</DoesTitle>
                 <DoesList>
-                    <LI>Hasura GraphQL engine</LI>
-                    <LI>Migrations</LI>
-                    <LI>Permissions</LI>
-                    <LI>Postgress</LI>
+                    <DoesItem>Hasura GraphQL engine</DoesItem>
+                    <DoesItem>Migrations</DoesItem>
+                    <DoesItem>Permissions</DoesItem>
+                    <DoesItem>Postgress</DoesItem>
                 </DoesList>
             </DoesWrapper>
 
             <DoesWrapper>
-                <H4>Client</H4>
+                <DoesTitle>Client</DoesTitle>
                 <DoesList>
-                    <LI>Next.js SSR dynamic deploy</LI>
-                    <LI>SCSS, imported Bootstrap, Emotion, Styled-System</LI>
-                    <LI>React state management: Easy-Peasy (Redux + React-hooks)</LI>
-                    <LI>Design - currently, by self consideration</LI>
-                    <LI>
+                    <DoesItem>Next.js SSR dynamic deploy</DoesItem>
+                    <DoesItem>SCSS, imported Bootstrap, Emotion, Styled-System</DoesItem>
+                    <DoesItem>
+                        React state management: Easy-Peasy (Redux + React-hooks)
+                    </DoesItem>
+                    <DoesItem>Design - currently, by self consideration</DoesItem>
+                    <DoesItem>
                         Latest CSS qualities: Flex, Grid, CSS custom and logical
                         properties
-                    </LI>
+                    </DoesItem>
                 </DoesList>
             </DoesWrapper>
         </Flex>
 
-        <Box mt={4} width="100%" maxWidth="600px">
-            <Gallery images={['/img/salsa/1.png']} />
-        </Box>
+        <Flex justifyContent="center">
+            <Box mt={5} width="100%" maxWidth="600px">
+                <Gallery images={['/img/salsa/1.png']} />
+            </Box>
+        </Flex>
     </Box>
 )
