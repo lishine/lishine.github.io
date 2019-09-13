@@ -33,7 +33,7 @@ const _Gallery = ({ images, className, ...props }) => {
             if (thumbClicked.current) {
                 thumbClicked.current = false
             }
-        }, 150)
+        }, 250)
     }
 
     useEffect(() => {
@@ -65,8 +65,8 @@ const _Gallery = ({ images, className, ...props }) => {
                         thumbClicked.current = true
                     }
                     //  else {
-                    e.stopPropagation()
-                    e.preventDefault()
+                    // e.stopPropagation()
+                    // e.preventDefault()
                     // }
                 }}
                 onClick={e => {
