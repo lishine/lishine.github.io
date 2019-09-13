@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { H1, H4, H3, LI } from 'styles/ss-components'
+import React, { useRef, useState, useEffect } from 'react'
+import { H1, H4, H3, LI, Box, Flex } from 'styles/ss-components'
 // import dynamic from 'next/dynamic'
 import { ArcherContainer, ArcherElement } from 'react-archer'
 // import LineTo from 'react-lineto'
@@ -9,33 +9,88 @@ import 'react-image-gallery/styles/scss/image-gallery.scss'
 import { boxCss } from 'styles/ss-utils'
 
 const _Gallery = ({ images, className, ...props }) => {
+    const ref1 = useRef(null)
     const ref = useRef(null)
+    const thumbClicked = useRef(false)
+
     const [isFullScreen, setFullScreen] = useState(false)
-    return (
-        <ImageGallery
-            ref={ref}
-            additionalClass={className}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            showBullets={false}
-            showNav={false}
-            useBrowserFullscreen={false}
-            onClick={() => {
-                if (isFullScreen) {
+
+    const handleCloseEvent = e => {
+        setTimeout(() => {
+            console.log('event')
+            if (isFullScreen) {
+                console.log('1')
+                console.log('thumbClicked.current', thumbClicked.current)
+                console.log('2')
+                // console.log('handling event', e)
+                // if (ref1 && ref1.current && isFullScreen && !ref1.current.contains(e.target)) {
+                if (!thumbClicked.current) {
+                    console.log('3')
                     ref.current.exitFullScreen()
                     setFullScreen(false)
-                } else {
-                    ref.current.fullScreen()
-                    setFullScreen(true)
                 }
-            }}
-            showThumbnails={false}
-            items={images.map(url => ({
-                original: url,
-                thumbnail: url,
-            }))}
-            {...props}
-        />
+            }
+            if (thumbClicked.current) {
+                thumbClicked.current = false
+            }
+        }, 150)
+    }
+
+    useEffect(() => {
+        if (isFullScreen) {
+            document.addEventListener('mousedown', handleCloseEvent)
+            document.addEventListener('touchstart', handleCloseEvent)
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleCloseEvent)
+            document.removeEventListener('touchstart', handleCloseEvent)
+        }
+    }, [isFullScreen])
+
+    return (
+        <Flex ref={ref1}>
+            <ImageGallery
+                ref={ref}
+                additionalClass={className}
+                showFullscreenButton={false}
+                showPlayButton={false}
+                showBullets={false}
+                showNav={false}
+                useBrowserFullscreen={false}
+                onThumbnailClick={e => {
+                    console.log('Thumbnail click')
+                    if (isFullScreen) {
+                        console.log('4')
+                        thumbClicked.current = true
+                    }
+                    //  else {
+                    e.stopPropagation()
+                    e.preventDefault()
+                    // }
+                }}
+                onClick={e => {
+                    console.log('gallery click')
+                    if (!isFullScreen) {
+                        // ref.current.exitFullScreen()
+                        // setFullScreen(false)
+                        // } else {
+                        ref.current.fullScreen()
+                        setFullScreen(true)
+                    }
+                    //  else {
+                    // e.stopPropagation()
+                    // e.preventDefault()
+                    // }
+                }}
+                showThumbnails={false}
+                items={images.map(url => ({
+                    original: url,
+                    thumbnail: url,
+                }))}
+                {...props}
+            />
+        </Flex>
     )
 }
 export const Gallery = props => (
