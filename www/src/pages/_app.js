@@ -73,6 +73,7 @@ class MyApp extends App {
                         href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500, 600, 700&display=swap"
                         rel="stylesheet"
                     />
+                    <script src="/gif-player.es6.js" defer async />
                     {/* <link rel="icon" type="image/x-icon" href={favicon.url} /> */}
                 </Head>
 

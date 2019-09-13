@@ -12,7 +12,7 @@ const PageTitle = props => <H1 borderBottom="1px solid currentColor" {...props} 
 
 export const Index = () => (
     <Box mb={8} className="grid-container padding-container">
-        <H4 my={2}>🚧 IN CONSTRUCTION 👷</H4>
+        <H4 my={2}>🚧 UNDER CONSTRUCTION 👷</H4>
         <Box mb={3}>
             <PageTitle mb={1}>
                 <strong>Portfolio</strong>

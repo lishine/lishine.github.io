@@ -72,13 +72,13 @@ export const SBS = props => (
                 },
                 [DoesList]: { mis: '1em' },
                 [mediaUp('md')()]: {
-                    maxHeight: '830px',
+                    maxHeight: '630px',
                     [DoesWrapper]: {
                         maxWidth: '50%',
                     },
                 },
                 [mediaUp('lg')()]: {
-                    maxHeight: '530px',
+                    maxHeight: '480px',
                     [DoesWrapper]: {
                         maxWidth: '33%',
                     },
@@ -148,7 +148,10 @@ export const SBS = props => (
 
         <Flex justifyContent="center">
             <Box mt={5} width="100%" maxWidth="600px">
-                <Gallery images={['/img/salsa/1.png']} />
+                <Gallery
+                    showThumbnails
+                    images={[1, 2, 3, 4].map(index => `/img/sbs/${index}.png`)}
+                />
             </Box>
         </Flex>
     </Box>

@@ -72,7 +72,7 @@ export const Salsa = props => {
                     },
                     [DoesList]: { mis: '1em' },
                     [mediaUp('md')()]: {
-                        maxHeight: '830px',
+                        maxHeight: '630px',
                         [DoesWrapper]: {
                             maxWidth: '45%',
                         },
@@ -166,7 +166,12 @@ export const Salsa = props => {
 
             <Flex justifyContent="center">
                 <Box mt={5} width="100%" maxWidth="600px">
-                    <Gallery images={['/img/salsa/1.png']} />
+                    <Gallery
+                        showThumbnails
+                        images={[1, 2, 3, 4, 5, 6].map(
+                            index => `/img/salsa/${index}.png`
+                        )}
+                    />
                 </Box>
             </Flex>
         </Box>
