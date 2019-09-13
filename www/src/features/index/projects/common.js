@@ -60,11 +60,11 @@ const _Gallery = ({ images, className, ...props }) => {
             <ImageGallery
                 ref={ref}
                 additionalClass={className}
-                showFullscreenButton={isMobile}
+                showFullscreenButton={false}
                 showPlayButton={false}
                 showBullets={false}
                 showNav={false}
-                useBrowserFullscreen={false}
+                useBrowserFullscreen={isMobile}
                 onThumbnailClick={e => {
                     if (isMobile) {
                         return
