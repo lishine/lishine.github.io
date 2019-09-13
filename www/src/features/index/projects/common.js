@@ -3,9 +3,10 @@ import { H1, H4, H3, LI, Box, Flex } from 'styles/ss-components'
 // import dynamic from 'next/dynamic'
 import { ArcherContainer, ArcherElement } from 'react-archer'
 // import LineTo from 'react-lineto'
-
+import { isMobile } from 'react-device-detect'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/scss/image-gallery.scss'
+
 import { boxCss } from 'styles/ss-utils'
 
 const _Gallery = ({ images, className, ...props }) => {
@@ -17,6 +18,9 @@ const _Gallery = ({ images, className, ...props }) => {
 
     const handleCloseEvent = e => {
         setTimeout(() => {
+            if (isMobile) {
+                return
+            }
             console.log('event')
             if (isFullScreen) {
                 console.log('1')
@@ -33,10 +37,13 @@ const _Gallery = ({ images, className, ...props }) => {
             if (thumbClicked.current) {
                 thumbClicked.current = false
             }
-        }, 250)
+        }, 150)
     }
 
     useEffect(() => {
+        if (isMobile) {
+            return
+        }
         if (isFullScreen) {
             document.addEventListener('mousedown', handleCloseEvent)
             document.addEventListener('touchstart', handleCloseEvent)
@@ -53,12 +60,15 @@ const _Gallery = ({ images, className, ...props }) => {
             <ImageGallery
                 ref={ref}
                 additionalClass={className}
-                showFullscreenButton={false}
+                showFullscreenButton={isMobile}
                 showPlayButton={false}
                 showBullets={false}
                 showNav={false}
                 useBrowserFullscreen={false}
                 onThumbnailClick={e => {
+                    if (isMobile) {
+                        return
+                    }
                     console.log('Thumbnail click')
                     if (isFullScreen) {
                         console.log('4')
