@@ -39,17 +39,26 @@ const _Gallery = ({ images, className, ...props }) => {
             }
         }, 150)
     }
+    const handleEsc = e => {
+        if (e.keyCode === 27) {
+            if (isFullScreen) {
+                setFullScreen(false)
+            }
+        }
+    }
 
     useEffect(() => {
         if (isMobile) {
             return
         }
         if (isFullScreen) {
+            document.addEventListener('keydown', handleEsc)
             document.addEventListener('mousedown', handleCloseEvent)
             document.addEventListener('touchstart', handleCloseEvent)
         }
 
         return () => {
+            document.removeEventListener('keydown', handleEsc)
             document.removeEventListener('mousedown', handleCloseEvent)
             document.removeEventListener('touchstart', handleCloseEvent)
         }
