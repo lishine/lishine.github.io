@@ -28,15 +28,16 @@ export const Salsa = props => {
                     maxWidth={['600px']}
                     flex={1}
                     mie={5}
-                    mt={[3, null, '12px']}
+                    mt={[3, null, 2]}
                     justifyContent="space-between"
                     gridTemplateColumns="repeat(auto-fill, minmax(150px, 1fr))"
-                    gridGap={2}
+                    gridColumnGap={2}
+                    gridRowGap={3}
                     css={boxCss.css({
                         [FeatureSpan]: {
                             textAlign: 'center',
                             border: '1px solid var(--onwhite-border)',
-                            p: '5px',
+                            p: '8px',
                         },
                         [FeatureWrapper]: {
                             textAlign: 'center',
@@ -61,118 +62,124 @@ export const Salsa = props => {
                 </Grid>
             </Flex>
 
-            <Flex
-                textAlign="center"
-                flexDirection="column"
-                flexWrap="wrap"
-                css={boxCss.css({
-                    [DoesWrapper]: {
-                        mt: 2,
-                        mie: 4,
-                    },
-                    [DoesList]: { mis: '1em' },
-                    [mediaUp('md')()]: {
-                        maxHeight: '630px',
+            <Flex flexDirection={['column', null, null, 'row']}>
+                <Flex
+                    flex={1}
+                    textAlign="center"
+                    flexDirection="column"
+                    flexWrap="wrap"
+                    css={boxCss.css({
                         [DoesWrapper]: {
-                            maxWidth: '45%',
+                            mt: 2,
+                            mie: 9,
                         },
-                    },
-                    [mediaUp('lg')()]: {
-                        maxHeight: '530px',
-                        [DoesWrapper]: {
-                            maxWidth: '33%',
+                        [DoesList]: { mis: '1em' },
+                        [mediaUp('md')()]: {
+                            maxHeight: '630px',
+                            [DoesWrapper]: {
+                                maxWidth: '45%',
+                            },
                         },
-                        [DoesList]: { mis: '-1em' },
-                    },
-                    [mediaUp('xl')()]: {
-                        maxHeight: '330px',
-                        [DoesWrapper]: {
-                            maxWidth: '25%',
+                        [mediaUp('lg')()]: {
+                            maxHeight: '530px',
+                            [DoesWrapper]: {
+                                maxWidth: '28%',
+                            },
+                            [DoesList]: { mis: '-1em' },
                         },
-                    },
-                })}
-            >
-                <DoesWrapper>
-                    <DoesTitle>API</DoesTitle>
-                    <DoesList>
-                        <DoesItem>
-                            Serverless services, deployed to Zeit Now v2 on top of AWS
-                            lambda
-                        </DoesItem>
-                        <DoesItem>JWT in cookie authentication</DoesItem>
-                        <DoesItem>
-                            Email service with MailGun API, MJML templates
-                        </DoesItem>
-                    </DoesList>
-                </DoesWrapper>
+                        [mediaUp('xl')()]: {
+                            maxHeight: '630px',
+                            [DoesWrapper]: {
+                                maxWidth: '40%',
+                            },
+                        },
+                    })}
+                >
+                    <DoesWrapper>
+                        <DoesTitle>API</DoesTitle>
+                        <DoesList>
+                            <DoesItem>
+                                Serverless services, deployed to Zeit Now v2 on top of AWS
+                                lambda
+                            </DoesItem>
+                            <DoesItem>JWT in cookie authentication</DoesItem>
+                            <DoesItem>
+                                Email service with MailGun API, MJML templates
+                            </DoesItem>
+                        </DoesList>
+                    </DoesWrapper>
 
-                <DoesWrapper>
-                    <DoesTitle>Emails generator</DoesTitle>
-                    <DoesList>
-                        <DoesItem>React rendering</DoesItem>
-                        <DoesItem>MJML markup</DoesItem>
-                        <DoesItem>DOT templates</DoesItem>
-                    </DoesList>
-                </DoesWrapper>
+                    <DoesWrapper>
+                        <DoesTitle>Emails generator</DoesTitle>
+                        <DoesList>
+                            <DoesItem>React rendering</DoesItem>
+                            <DoesItem>MJML markup</DoesItem>
+                            <DoesItem>DOT templates</DoesItem>
+                        </DoesList>
+                    </DoesWrapper>
 
-                <DoesWrapper>
-                    <DoesTitle>Content managment</DoesTitle>
-                    <DoesList>
-                        <DoesItem>DATO Headless CMS</DoesItem>
-                        <DoesItem>
-                            <NavLink href="https://www.datocms.com" display="inline" />
-                        </DoesItem>
-                        <DoesItem>GraphQL API</DoesItem>
-                    </DoesList>
-                </DoesWrapper>
+                    <DoesWrapper>
+                        <DoesTitle>Content managment</DoesTitle>
+                        <DoesList>
+                            <DoesItem>DATO Headless CMS</DoesItem>
+                            <DoesItem>
+                                <NavLink
+                                    href="https://www.datocms.com"
+                                    display="inline"
+                                />
+                            </DoesItem>
+                            <DoesItem>GraphQL API</DoesItem>
+                        </DoesList>
+                    </DoesWrapper>
 
-                <DoesWrapper>
-                    <DoesTitle>DB</DoesTitle>
-                    <DoesList>
-                        <DoesItem>Hasura GraphQL engine</DoesItem>
-                        <DoesItem>Docker on Heroku</DoesItem>
-                        <DoesItem>Migrations</DoesItem>
-                        <DoesItem>Permissions</DoesItem>
-                        <DoesItem>Postgress</DoesItem>
-                    </DoesList>
-                </DoesWrapper>
+                    <DoesWrapper>
+                        <DoesTitle>DB</DoesTitle>
+                        <DoesList>
+                            <DoesItem>Hasura GraphQL engine</DoesItem>
+                            <DoesItem>Docker on Heroku</DoesItem>
+                            <DoesItem>Migrations</DoesItem>
+                            <DoesItem>Permissions</DoesItem>
+                            <DoesItem>Postgress</DoesItem>
+                        </DoesList>
+                    </DoesWrapper>
 
-                <DoesWrapper>
-                    <DoesTitle>Client</DoesTitle>
-                    <DoesList>
-                        <DoesItem>Next.js SSR dynamic deploy</DoesItem>
-                        <DoesItem>SEO optimized</DoesItem>
-                        <DoesItem>
-                            SCSS, imported Bootstrap, Emotion, Styled-System{' '}
-                        </DoesItem>
-                        <DoesItem>
-                            React state management: Easy-Peasy (Redux + React-hooks)
-                        </DoesItem>
-                        <DoesItem>PayPal API</DoesItem>
-                        <DoesItem>
-                            Design implemented according to design requirements given in
-                            Invision
-                        </DoesItem>
-                        <DoesItem>
-                            Responsive & adaptive design to 4 types of devices
-                        </DoesItem>
-                        <DoesItem>
-                            Latest CSS qualities: Flex, Grid, CSS custom and logical
-                            properties
-                        </DoesItem>
-                    </DoesList>
-                </DoesWrapper>
-            </Flex>
+                    <DoesWrapper>
+                        <DoesTitle>Client</DoesTitle>
+                        <DoesList>
+                            <DoesItem>Next.js SSR dynamic deploy</DoesItem>
+                            <DoesItem>SEO optimized</DoesItem>
+                            <DoesItem>
+                                SCSS, imported Bootstrap, Emotion, Styled-System{' '}
+                            </DoesItem>
+                            <DoesItem>
+                                React state management: Easy-Peasy (Redux + React-hooks)
+                            </DoesItem>
+                            <DoesItem>PayPal API</DoesItem>
+                            <DoesItem>
+                                Design implemented according to design requirements given
+                                in Invision
+                            </DoesItem>
+                            <DoesItem>
+                                Responsive & adaptive design to 4 types of devices
+                            </DoesItem>
+                            <DoesItem>
+                                Latest CSS qualities: Flex, Grid, CSS custom and logical
+                                properties
+                            </DoesItem>
+                        </DoesList>
+                    </DoesWrapper>
+                </Flex>
 
-            <Flex justifyContent="center">
-                <Box mt={5} width="100%" maxWidth="600px">
-                    <Gallery
-                        showThumbnails
-                        images={[1, 2, 3, 4, 5, 6].map(
-                            index => `/img/salsa/${index}.png`
-                        )}
-                    />
-                </Box>
+                <Flex justifyContent="center">
+                    <Box mt={5} width="100%" maxWidth="600px">
+                        <Gallery
+                            showThumbnails
+                            images={[1, 2, 3, 4, 5, 6].map(
+                                index => `/img/salsa/${index}.png`
+                            )}
+                        />
+                    </Box>
+                </Flex>
             </Flex>
         </Box>
     )

@@ -5,12 +5,7 @@ import { ProjectTitle } from './common'
 export const Site = props => (
     <Box {...props}>
         <ProjectTitle>This Site</ProjectTitle>
-        <Flex
-            as="p"
-            alignItems={['flex-start', 'center']}
-            flexDirection={['column', 'row-column']}
-            overflow="hidden"
-        >
+        <Flex as="p" flexDirection={['column', 'row']} overflow="hidden">
             <Span mie="1em">Source:</Span>
             <NavLink href="https://github.com/lishine/lishine.github.io/tree/dev" />
         </Flex>

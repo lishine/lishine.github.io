@@ -107,7 +107,7 @@ export const Gallery = props => (
 // const LineTo = dynamic(() => import('react-lineto').then(r => r), { ssr: false })
 
 export const ProjectTitle = props => (
-    <H3 fontWeight="400" borderBottom="1px solid currentColor" {...props} />
+    <H3 fontWeight="500" borderBottom="1px solid currentColor" {...props} />
 )
 
 export const SubRemark = props => (
@@ -115,7 +115,7 @@ export const SubRemark = props => (
 )
 
 export const DoesTitle = props => (
-    <H4 textAlign="start" mt={1} mb={1} fontWeight="400" {...props} />
+    <H4 textAlign="start" mt={1} mb={1} fontWeight="500" {...props} />
 )
 export const DoesItem = props => <LI textAlign="start" mb="4px" {...props} />
 
