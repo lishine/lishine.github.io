@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { default as nextRouter } from 'next/router'
+import { withRouter, default as nextRouter } from 'next/router'
 import App, { Container } from 'next/app'
 import { ThemeProvider } from 'emotion-theming'
 import camelCase from 'lodash/camelCase'
@@ -33,7 +33,7 @@ class MyApp extends App {
         }
     }
     render() {
-        const { Component } = this.props
+        const { Component, router } = this.props
 
         if (process.browser) {
             console.log('$ BROWSER in render _app')
@@ -54,17 +54,21 @@ class MyApp extends App {
         // const { titleSuffix } = store.getState().common.data.general
         // const { favicon } = store.getState().common.data.general
         // title = title.toUpperCase()
-
+        console.log('router.pathname', router.pathname)
         return (
             <div>
                 <Head>
                     {/* <title>{`${title} ${titleSuffix}`}</title> */}
                     {/* <meta name="description" content={description} /> */}
-                    <meta
-                        charSet="utf-8"
-                        name="viewport"
-                        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                    />
+                    {router.pathname === '/resume' ? (
+                        <meta charSet="utf-8" name="viewport" content="width=1168" />
+                    ) : (
+                        <meta
+                            charSet="utf-8"
+                            name="viewport"
+                            content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+                        />
+                    )}
                     <link
                         href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:300,400,500|Permanent+Marker"
                         rel="stylesheet"
@@ -95,4 +99,4 @@ class MyApp extends App {
     }
 }
 
-export default MyApp
+export default withRouter(MyApp)
