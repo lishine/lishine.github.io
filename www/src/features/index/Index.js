@@ -17,7 +17,7 @@ export const Index = () => (
             <PageTitle>
                 <strong>Portfolio</strong>
             </PageTitle>
-            <H4 mb={3} textAlign="center">
+            <H4 mt={1} mb={3} textAlign="center">
                 Projects I have done and technologies I have used during my web
                 development career
             </H4>
