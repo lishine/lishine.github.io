@@ -1,12 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { H1, H4, H3, LI, Box, Flex } from 'styles/ss-components'
-// import dynamic from 'next/dynamic'
-import { ArcherContainer, ArcherElement } from 'react-archer'
-// import LineTo from 'react-lineto'
 import { isMobile } from 'react-device-detect'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/scss/image-gallery.scss'
-
 import { boxCss } from 'styles/ss-utils'
 
 const _Gallery = ({ images, className, ...props }) => {
@@ -60,6 +56,9 @@ const _Gallery = ({ images, className, ...props }) => {
         <Flex
             className={className}
             css={boxCss.css({
+                '.image-gallery': {
+                    width: '100%',
+                },
                 '.fullscreen .image-gallery-slide.center': {
                     display: 'flex',
                     bg: 'black !important',
