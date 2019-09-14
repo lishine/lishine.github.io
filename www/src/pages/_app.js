@@ -86,7 +86,7 @@ class MyApp extends App {
                         <Header />
                         <Flex
                             flexDirection="column"
-                            pb={[`${76 + !isResumePage && 56}px`, '76px']}
+                            pb={[`${76 + !isResumePage * 56}px`, '76px']}
                             flex={1}
                         >
                             <Component />
