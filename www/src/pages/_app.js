@@ -54,13 +54,13 @@ class MyApp extends App {
         // const { titleSuffix } = store.getState().common.data.general
         // const { favicon } = store.getState().common.data.general
         // title = title.toUpperCase()
-        console.log('router.pathname', router.pathname)
+        const isResumePage = router.pathname === '/resume'
         return (
             <div>
                 <Head>
                     {/* <title>{`${title} ${titleSuffix}`}</title> */}
                     {/* <meta name="description" content={description} /> */}
-                    {router.pathname === '/resume' ? (
+                    {isResumePage ? (
                         <meta charSet="utf-8" name="viewport" content="width=1168" />
                     ) : (
                         <meta
@@ -86,11 +86,11 @@ class MyApp extends App {
                         <Header />
                         <Flex
                             flexDirection="column"
-                            pb={[`${76 + 56}px`, '76px']}
+                            pb={[`${76 + !isResumePage && 56}px`, '76px']}
                             flex={1}
                         >
                             <Component />
-                            <Footer />
+                            <Footer height="76px" mb={[!isResumePage && '56px', 0]} />
                         </Flex>
                     </Flex>
                 </ThemeProvider>

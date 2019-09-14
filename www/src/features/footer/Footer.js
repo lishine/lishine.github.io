@@ -6,16 +6,15 @@ import { Form, P, Box, Flex, Span, Image, H3, Button } from 'styles/ss-component
 import { RouteLink } from 'common/RouteLink'
 import { boxCss } from 'styles/ss-utils'
 
-export const Footer = () => {
+export const Footer = props => {
     return (
         <Box
             bg="secondary"
-            mb={['56px', null]}
-            height="76px"
             position="absolute"
             bottom={0}
             className="grid-container padding-container"
             maxWidth={[null, null, '100%']}
+            {...props}
         />
     )
 }
