@@ -47,7 +47,9 @@ const styles = {
         bottom: 0,
         right: 0,
         zIndex: '100',
+        pb: '4px',
         height: '56px',
         bg: 'light-normal',
+        boxShadow: '0 4px 28px 4px rgba(0, 0, 0, .15)',
     },
 }
