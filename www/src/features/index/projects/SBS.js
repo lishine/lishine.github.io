@@ -28,7 +28,7 @@ export const SBS = props => (
                 mie={5}
                 mt={[3, null, 2]}
                 justifyContent="space-between"
-                gridTemplateColumns="repeat(auto-fill, minmax(170px, 1fr))"
+                gridTemplateColumns="repeat(auto-fill, minmax(185px, 1fr))"
                 gridColumnGap={2}
                 gridRowGap={3}
                 css={boxCss.css({
