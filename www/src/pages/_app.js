@@ -80,7 +80,11 @@ class MyApp extends App {
                     <GlobalCss />
                     <Flex flexDirection="column" className="page-container">
                         <Header />
-                        <Flex flexDirection="column" pb="76px" flex={1}>
+                        <Flex
+                            flexDirection="column"
+                            pb={[`${76 + 56}px`, '76px']}
+                            flex={1}
+                        >
                             <Component />
                             <Footer />
                         </Flex>

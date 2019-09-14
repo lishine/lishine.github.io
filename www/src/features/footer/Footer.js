@@ -10,6 +10,7 @@ export const Footer = () => {
     return (
         <Box
             bg="secondary"
+            mb={['56px', null]}
             height="76px"
             position="absolute"
             bottom={0}
