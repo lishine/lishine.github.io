@@ -10,7 +10,6 @@ import 'react-image-gallery/styles/scss/image-gallery.scss'
 import { boxCss } from 'styles/ss-utils'
 
 const _Gallery = ({ images, className, ...props }) => {
-    const ref1 = useRef(null)
     const ref = useRef(null)
     const thumbClicked = useRef(false)
 
@@ -21,15 +20,8 @@ const _Gallery = ({ images, className, ...props }) => {
             if (isMobile) {
                 return
             }
-            console.log('event')
             if (isFullScreen) {
-                console.log('1')
-                console.log('thumbClicked.current', thumbClicked.current)
-                console.log('2')
-                // console.log('handling event', e)
-                // if (ref1 && ref1.current && isFullScreen && !ref1.current.contains(e.target)) {
                 if (!thumbClicked.current) {
-                    console.log('3')
                     ref.current.exitFullScreen()
                     setFullScreen(false)
                 }
@@ -65,10 +57,21 @@ const _Gallery = ({ images, className, ...props }) => {
     }, [isFullScreen])
 
     return (
-        <Flex ref={ref1}>
+        <Flex
+            className={className}
+            css={boxCss.css({
+                '.fullscreen .image-gallery-slide.center': {
+                    display: 'flex',
+                    bg: 'black !important',
+                },
+                '.fullscreen .image-gallery-image': {
+                    mx: 'auto',
+                    maxWidth: '1024px',
+                },
+            })}
+        >
             <ImageGallery
                 ref={ref}
-                additionalClass={className}
                 showFullscreenButton={false}
                 showPlayButton={false}
                 showBullets={false}
@@ -78,31 +81,16 @@ const _Gallery = ({ images, className, ...props }) => {
                     if (isMobile) {
                         return
                     }
-                    console.log('Thumbnail click')
                     if (isFullScreen) {
-                        console.log('4')
                         thumbClicked.current = true
                     }
-                    //  else {
-                    // e.stopPropagation()
-                    // e.preventDefault()
-                    // }
                 }}
                 onClick={e => {
-                    console.log('gallery click')
                     if (!isFullScreen) {
-                        // ref.current.exitFullScreen()
-                        // setFullScreen(false)
-                        // } else {
                         ref.current.fullScreen()
                         setFullScreen(true)
                     }
-                    //  else {
-                    // e.stopPropagation()
-                    // e.preventDefault()
-                    // }
                 }}
-                showThumbnails={false}
                 items={images.map(url => ({
                     original: url,
                     thumbnail: url,
@@ -112,6 +100,7 @@ const _Gallery = ({ images, className, ...props }) => {
         </Flex>
     )
 }
+
 export const Gallery = props => (
     <_Gallery {...props} css={boxCss.css({ bg: 'lightgrey', p: 1, cursor: 'pointer' })} />
 )

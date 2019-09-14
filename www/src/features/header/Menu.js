@@ -30,6 +30,7 @@ export const Menu = props => {
 }
 
 const styles = {
+    letterSpacing: '0.07em',
     [mediaUp('md')()]: {
         mt: 3,
         mb: 4,

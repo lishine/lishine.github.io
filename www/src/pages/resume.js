@@ -48,23 +48,19 @@ const Page = () => {
                 height="1350px"
                 color="black"
                 css={boxCss.css({
-                    h1: {
+                    'h1, h4, p, li, a, span, dt, dd': {
                         fontFamily: 'Crimson Pro, serif',
+                    },
+                    h1: {
                         fontSize: '40px',
                         transform: 'translateY(7px)',
                         letterSpacing: '0.03em',
                     },
-                    h4: {
-                        fontFamily: 'Crimson Pro, serif',
-                        fontWeight: 600,
+                    [H4]: {
                         fontSize: '24px',
                         letterSpacing: '0.03em',
-                        '> light': {
-                            fontWeight: 500,
-                        },
                     },
                     'p, li, a, span, dt, dd': {
-                        fontFamily: 'Crimson Pro, serif',
                         fontSize: '20px',
                         lineHeight: '24px',
                         '> strong': {
@@ -74,6 +70,7 @@ const Page = () => {
                     'p, ol, ul, dl': { transform: 'translateY(5px)' },
                     'p, ul': { mb: 3 },
                     '.sectionHeader': {
+                        fontWeight: 600,
                         mb: 1,
                     },
                     '--link': '#6387C5',
@@ -82,8 +79,8 @@ const Page = () => {
                 <H1 mb={1}>
                     <strong>Pavel Ravits</strong>
                 </H1>
-                <H4 mt="-5px">
-                    <light>React developer</light>
+                <H4 mt="-5px" fontWeight="500">
+                    React developer
                 </H4>
 
                 <H1 mt={6} mb={7} color="link">
@@ -264,9 +261,9 @@ const Page = () => {
                                 </Grid>
                             </LI>
                         </UL>
-                        <UL>
+                        {/* <UL>
                             <LI>References available on request</LI>
-                        </UL>
+                        </UL> */}
                     </Flex>
                 </Grid>
             </Flex>
