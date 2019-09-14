@@ -203,6 +203,7 @@ const Page = () => {
                             <LI>Front End UI</LI>
                             <LI>Distributed Software</LI>
                             <LI>Cloud</LI>
+                            <LI>Blockchain</LI>
                         </UL>
                         <H4 className="sectionHeader">Hobbies</H4>
                         <UL>
