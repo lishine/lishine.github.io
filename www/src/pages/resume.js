@@ -11,18 +11,33 @@ import {
     H4,
     Grid,
     P,
-    Svg,
     NavLink,
     Span,
     DD,
     DT,
-    Button,
 } from 'styles/ss-components'
 import { boxCss } from 'styles/ss-utils'
 
 import { Email, Web, Phone, Israel } from 'svg/icons/index'
 
-const LI = props => <_LI {...{ textIndent: 0, pis: '1.5em', dot: '·', ...props }} />
+const LI = props => (
+    <_LI
+        {...{
+            textIndent: 0,
+            pis: '1em',
+            dot: (
+                <Span
+                    display="inline-block"
+                    transform="translateY(-1px)"
+                    fontWeight="600"
+                >
+                    ·
+                </Span>
+            ),
+            ...props,
+        }}
+    />
+)
 const UL = styled(_UL)({ mis: 0 })
 
 const Page = () => {
@@ -60,7 +75,7 @@ const Page = () => {
                         fontSize: '24px',
                         letterSpacing: '0.03em',
                     },
-                    'p, li, a, span, dt, dd': {
+                    'p, li, a, [Span], dt, dd': {
                         fontSize: '20px',
                         lineHeight: '24px',
                         '> strong': {
@@ -244,7 +259,7 @@ const Page = () => {
                                         </NavLink>
                                     </DD>
                                     <DT>
-                                        <Email />
+                                        <Email fill="var(--tertiary)" />
                                     </DT>
                                     <DD>
                                         <NavLink

@@ -56,11 +56,11 @@ export const Gallery = ({ images, className, ...props }) => {
         <Flex
             className={className}
             css={boxCss.css({
-                bg: 'lightgrey',
+                bg: '#EEEEEE',
                 cursor: 'pointer',
                 boxShadow: '0 0 38px 8px rgba(0, 0, 0, .15)',
                 '.thumb': {
-                    boxShadow: '0 0 18px 8px rgba(0, 0, 0, .2)',
+                    boxShadow: '0 0 28px 4px rgba(0, 0, 0, .2)',
                 },
                 '.image-gallery': {
                     width: '100%',
