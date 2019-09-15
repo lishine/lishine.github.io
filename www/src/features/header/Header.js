@@ -8,10 +8,10 @@ import { boxCss } from 'styles/ss-utils'
 // Local
 import { Menu } from './Menu'
 
-export const Header = () => {
+export const Header = ({ mobileHeaderHeight }) => {
     return (
         <Box className="grid-container">
-            <Menu />
+            <Menu mobileHeaderHeight={mobileHeaderHeight} />
         </Box>
     )
 }

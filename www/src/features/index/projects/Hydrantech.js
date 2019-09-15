@@ -83,14 +83,14 @@ export const Hydrantech = props => (
                 </ArcherElement>
             </Grid>
         </ArcherContainer>
-        <Flex mt={4} flexDirection={['column', 'row']}>
-            <Box mie={[null, 2]} width={[null, '60%']}>
+        <Flex mt={4} flexDirection={['column', 'row']} justifyContent="space-between">
+            <Box mie={[null, 2]} width={[null, '55%']}>
                 <Gallery
                     showThumbnails
                     images={[1, 2, 3, 4, 5].map(index => `/img/hd/${index}.png`)}
                 />
             </Box>
-            <Box mt={[2, null]} width={[null, '40%']}>
+            <Box mt={[6, null]} width={[null, '35%']}>
                 <Gallery
                     showThumbnails
                     images={[1, 2, 3, 4].map(index => `/img/hdm/${index}.jpg`)}

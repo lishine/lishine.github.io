@@ -5,7 +5,7 @@ import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/scss/image-gallery.scss'
 import { boxCss } from 'styles/ss-utils'
 
-const _Gallery = ({ images, className, ...props }) => {
+export const Gallery = ({ images, className, ...props }) => {
     const ref = useRef(null)
     const thumbClicked = useRef(false)
 
@@ -56,6 +56,12 @@ const _Gallery = ({ images, className, ...props }) => {
         <Flex
             className={className}
             css={boxCss.css({
+                bg: 'lightgrey',
+                cursor: 'pointer',
+                boxShadow: '0 0 38px 8px rgba(0, 0, 0, .15)',
+                '.thumb': {
+                    boxShadow: '0 0 18px 8px rgba(0, 0, 0, .2)',
+                },
                 '.image-gallery': {
                     width: '100%',
                 },
@@ -93,18 +99,13 @@ const _Gallery = ({ images, className, ...props }) => {
                 items={images.map(url => ({
                     original: url,
                     thumbnail: url,
+                    thumbnailClass: 'thumb',
                 }))}
                 {...props}
             />
         </Flex>
     )
 }
-
-export const Gallery = props => (
-    <_Gallery {...props} css={boxCss.css({ bg: 'lightgrey', p: 1, cursor: 'pointer' })} />
-)
-
-// const LineTo = dynamic(() => import('react-lineto').then(r => r), { ssr: false })
 
 export const ProjectTitle = props => (
     <H3 fontWeight="500" borderBottom="1px solid currentColor" {...props} />
@@ -118,7 +119,3 @@ export const DoesTitle = props => (
     <H4 textAlign="start" mt={1} mb={1} fontWeight="500" {...props} />
 )
 export const DoesItem = props => <LI textAlign="start" mb="4px" {...props} />
-
-// const Feature = styled(Box)(
-//     boxCss.css({ border: '1px solid var(--onwhite-border)', p: 1 })
-// )

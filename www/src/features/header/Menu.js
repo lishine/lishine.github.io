@@ -13,7 +13,7 @@ const activeLink = {
     color: '#496DAA',
 }
 
-export const Menu = props => {
+export const Menu = ({ mobileHeaderHeight, ...props }) => {
     return (
         <Flex
             as="nav"
@@ -51,7 +51,7 @@ export const Menu = props => {
                     right: 0,
                     zIndex: '100',
                     pb: '2px',
-                    height: '56px',
+                    height: `${mobileHeaderHeight}px`,
                     bg: 'light-normal',
                     boxShadow: '0 4px 28px 4px rgba(0, 0, 0, .15)',
                     a: {

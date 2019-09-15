@@ -55,6 +55,8 @@ class MyApp extends App {
         // const { favicon } = store.getState().common.data.general
         // title = title.toUpperCase()
         const isResumePage = router.pathname === '/resume'
+        const footerHeight = 66
+        const mobileHeaderHeight = 56
         return (
             <div>
                 <Head>
@@ -83,14 +85,20 @@ class MyApp extends App {
                 <ThemeProvider theme={theme}>
                     <GlobalCss />
                     <Flex flexDirection="column" className="page-container">
-                        <Header />
+                        <Header mobileHeaderHeight={mobileHeaderHeight} />
                         <Flex
                             flexDirection="column"
-                            pb={[`${76 + !isResumePage * 56}px`, '76px']}
+                            pb={[
+                                `${footerHeight + !isResumePage * mobileHeaderHeight}px`,
+                                `${mobileHeaderHeight}px`,
+                            ]}
                             flex={1}
                         >
                             <Component />
-                            <Footer height="76px" mb={[!isResumePage && '56px', 0]} />
+                            <Footer
+                                height={`${footerHeight}px`}
+                                mb={[!isResumePage && `${mobileHeaderHeight}px`, 0]}
+                            />
                         </Flex>
                     </Flex>
                 </ThemeProvider>
