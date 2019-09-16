@@ -6,6 +6,8 @@ import { ArcherContainer, ArcherElement } from 'react-archer'
 import { boxCss } from 'styles/ss-utils'
 import { ProjectTitle, Gallery, SubRemark } from './common'
 
+const projectTitle = 'System to manage internet connected fire hydrants'
+
 export const Hydrantech = props => (
     <Box {...props}>
         <ArcherContainer strokeColor="red">
@@ -30,9 +32,7 @@ export const Hydrantech = props => (
                 ]}
             >
                 <Flex mt={4} pb={1} flexDirection="column">
-                    <ProjectTitle>
-                        System to to manage internet connected fire hydrants
-                    </ProjectTitle>
+                    <ProjectTitle>{projectTitle}</ProjectTitle>
                     <SubRemark>Built from the ground up</SubRemark>
                     <NavLink mt={1} href="https://app.hydrant-system.com">
                         https://app.hydrant-system.com
@@ -87,13 +87,19 @@ export const Hydrantech = props => (
             <Box mie={[null, 2]} width={[null, '55%']}>
                 <Gallery
                     showThumbnails
-                    images={[1, 2, 3, 4, 5].map(index => `/img/hd/${index}.png`)}
+                    images={[1, 2, 3, 4, 5].map(index => ({
+                        alt: `${projectTitle} - web React app`,
+                        url: `/img/hd/${index}.png`,
+                    }))}
                 />
             </Box>
             <Box mt={[6, null]} width={[null, '35%']}>
                 <Gallery
                     showThumbnails
-                    images={[1, 2, 3, 4].map(index => `/img/hdm/${index}.jpg`)}
+                    images={[1, 2, 3, 4].map(index => ({
+                        alt: `${projectTitle} - mobile React Native app`,
+                        url: `/img/hdm/${index}.jpg`,
+                    }))}
                 />
             </Box>
         </Flex>

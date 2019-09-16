@@ -41,27 +41,12 @@ class MyApp extends App {
             console.log('$ SERVER in render _app')
         }
 
-        // let title, description
-        // const route = camelCase(store.getState().router.route)
-        // if (route) {
-        //     const pageStore = store.getState()[route]
-        //     if (pageStore) {
-        //         ;({ title, seoDescription: description } = pageStore.data | {})
-        //     }
-        // }
-        // title = title || store.getState().common.data.general.title
-        // description = description || store.getState().common.data.general.description
-        // const { titleSuffix } = store.getState().common.data.general
-        // const { favicon } = store.getState().common.data.general
-        // title = title.toUpperCase()
         const isResumePage = router.pathname === '/resume'
         const footerHeight = 66
         const mobileHeaderHeight = 56
         return (
             <div>
                 <Head>
-                    {/* <title>{`${title} ${titleSuffix}`}</title> */}
-                    {/* <meta name="description" content={description} /> */}
                     {isResumePage ? (
                         <meta charSet="utf-8" name="viewport" content="width=1168" />
                     ) : (
@@ -76,10 +61,10 @@ class MyApp extends App {
                         rel="stylesheet"
                     />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500, 600, 700&display=swap"
+                        href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500,600,700&display=swap"
                         rel="stylesheet"
                     />
-                    {/* <link rel="icon" type="image/x-icon" href={favicon.url} /> */}
+                    <link rel="icon" type="image/x-icon" href="/favicon.png" />
                 </Head>
 
                 <ThemeProvider theme={theme}>

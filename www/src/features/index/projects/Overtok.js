@@ -2,9 +2,11 @@ import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
 import { ProjectTitle, Gallery } from './common'
 
+const projectTitle = 'Overtok - users engagement and convertion'
+
 export const Overtok = props => (
     <Box {...props}>
-        <ProjectTitle>Overtok - users engagement and convertion</ProjectTitle>
+        <ProjectTitle>{projectTitle}</ProjectTitle>
         <NavLink mt={1} href="https://overtok.com">
             https://overtok.com
         </NavLink>
@@ -29,16 +31,15 @@ export const Overtok = props => (
                 </UL>
             </Box>
             <Box mt={3} width="100%" height="100%" maxWidth="600px">
-                <Gallery images={['/img/overtok/1.png']} />
+                <Gallery
+                    images={[
+                        {
+                            alt: `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`,
+                            url: `/img/overtok/1.jpg`,
+                        },
+                    ]}
+                />
             </Box>
-            {/* <Image
-                        css={imageFrameStyles}
-                        mt={3}
-                        width="100%"
-                        height="100%"
-                        maxWidth="600px"
-                        src="/img/overtok/1.png"
-                    /> */}
         </Flex>
     </Box>
 )

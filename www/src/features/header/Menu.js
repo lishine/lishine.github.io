@@ -35,8 +35,8 @@ export const Menu = ({ mobileHeaderHeight, ...props }) => {
                     '&.active': activeLink,
                 },
                 [mediaUp('md')()]: {
-                    mt: 3,
-                    mb: 4,
+                    mt: 2,
+                    mb: 2,
                     gridAutoFlow: 'column',
                     gridColumnGap: 10,
                     justifyContent: 'grid-start',

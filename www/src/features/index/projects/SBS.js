@@ -11,9 +11,10 @@ const FeatureSpan = styled(Span)()
 const DoesWrapper = styled(Box)()
 const DoesList = styled(UL)()
 
+const projectTitle = 'Street Building Sign'
 export const SBS = props => (
     <Box {...props}>
-        <ProjectTitle>Street Building Sign</ProjectTitle>
+        <ProjectTitle>{projectTitle}</ProjectTitle>
         <Flex mt={1} alignItems="flex-start" flexDirection={['column', null, 'row']}>
             <Box mie={5}>
                 <SubRemark>Built from the ground up</SubRemark>
@@ -153,7 +154,10 @@ export const SBS = props => (
                 <Box mt={5} width="100%" maxWidth="600px">
                     <Gallery
                         showThumbnails
-                        images={[1, 2, 3, 4].map(index => `/img/sbs/${index}.png`)}
+                        images={[1, 2, 3, 4].map(index => ({
+                            alt: `${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`,
+                            url: `/img/sbs/${index}.png`,
+                        }))}
                     />
                 </Box>
             </Flex>

@@ -5,6 +5,8 @@ import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/scss/image-gallery.scss'
 import { boxCss } from 'styles/ss-utils'
 
+export const altPrefix = 'React projects by Pavel Ravits | '
+
 export const Gallery = ({ images, className, ...props }) => {
     const ref = useRef(null)
     const thumbClicked = useRef(false)
@@ -96,10 +98,11 @@ export const Gallery = ({ images, className, ...props }) => {
                         setFullScreen(true)
                     }
                 }}
-                items={images.map(url => ({
+                items={images.map(({ url, alt }) => ({
                     original: url,
                     thumbnail: url,
                     thumbnailClass: 'thumb',
+                    originalAlt: `${altPrefix}${alt}`,
                 }))}
                 {...props}
             />
