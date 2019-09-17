@@ -16,6 +16,7 @@ import {
     Span,
     DD,
     DT,
+    DL,
 } from 'styles/ss-components'
 import { boxCss } from 'styles/ss-utils'
 
@@ -37,7 +38,8 @@ const LI = props => (
         }}
     />
 )
-const UL = styled(_UL)(boxCss.css({ mis: 0 }))
+const UL = styled(_UL)()
+const Years = styled(DT)()
 
 const Page = () => {
     const ref = useRef(null)
@@ -71,7 +73,7 @@ const Page = () => {
                     height="1350px"
                     color="black"
                     css={boxCss.css({
-                        'h1, h4, p, li, a, span, dt, dd, strong': {
+                        'h1, h4, p, li, a, span, dt, dd, ul': {
                             fontFamily: 'Crimson Pro, serif',
                         },
                         h1: {
@@ -83,7 +85,7 @@ const Page = () => {
                             fontSize: '24px',
                             letterSpacing: '0.03em',
                         },
-                        'p, li, a, [Span], dt, dd, strong': {
+                        'p, li, a, [Span], dt, dd, ul': {
                             fontSize: '19px',
                             lineHeight: '24px',
                             '> strong': {
@@ -124,15 +126,15 @@ const Page = () => {
                                 that specializes in <strong>Front-End, React</strong> and
                                 state management.
                                 <br />
-                                <Span italic>
-                                    In your team I will be the positive, calm and
-                                    attentive guy.
-                                </Span>
-                                <br />
                                 Have been developing for
                                 <strong> 3 years in Web and React ecosystem</strong>,
                                 since switching from Electronics Engineering and Embedded
                                 C Programming.
+                                <br />
+                                <Span italic>
+                                    In your team I will be the positive, calm and
+                                    attentive guy.
+                                </Span>
                                 {/* <br />
                                 <br />
                                 I have done projects from requirements to production.
@@ -173,78 +175,87 @@ const Page = () => {
                                     help.
                                 </LI>
                             </UL>
-                            <H4 className="sectionHeader">Selected Experience</H4>
-                            <Grid
-                                as="dl"
-                                gridAutoFlow="row"
-                                gridTemplateColumns="130px 1fr"
+                            <DL
+                                css={boxCss.css({
+                                    [Years]: {
+                                        ml: '1em',
+                                        mr: 4,
+                                        whiteSpace: 'nowrap',
+                                    },
+                                })}
                             >
-                                <DT>2017 - today</DT>
-                                <DD>
-                                    <strong>React Full Stack Web Developer</strong>
-                                    <br />
-                                    <Span>Freelance at Xlucidity</Span>
-                                    <UL>
-                                        <LI>
-                                            Full Stack desktop and mobile Apps built from
-                                            requirements to production.
-                                        </LI>
-                                        <LI>
-                                            <strong>
-                                                SSR Next.js and React single page
-                                                applications
-                                            </strong>
-                                            , React Native mobile apps. Using Javascript,
-                                            Typescript and Mobx.
-                                        </LI>
-                                        <LI>
-                                            <strong>Worked in a remote team</strong>,
-                                            using Clojurescript, Javascript, Node.js, AWS
-                                            Lambda, Dynamodb, Postgresql and
-                                            <strong> part time managing</strong>.
-                                        </LI>
-                                        <LI>
-                                            <NavLink
-                                                target="_blank"
-                                                href="https://lishine.github.io"
-                                            >
-                                                <Span fontStyle="italic">
-                                                    More details on my website
-                                                </Span>
-                                            </NavLink>
-                                        </LI>
-                                    </UL>
-                                </DD>
-                                <DT>2003 - 2016</DT>
-                                <DD>
-                                    <strong>Software & Electronics engineer</strong>
-                                    <br />
-                                    <Span>At Syqe Medical / Start ups / Freelance</Span>
-                                    <UL>
-                                        <LI>Embedded Software - C</LI>
-                                        <LI>Board design (Altium)</LI>
-                                        <LI>Layout</LI>
-                                    </UL>
-                                </DD>
-                            </Grid>
-                            <H4 className="sectionHeader">Education</H4>
-                            <Grid
-                                as="dl"
-                                gridAutoFlow="row"
-                                gridTemplateColumns="130px 1fr"
-                            >
-                                <DT>1996 - 2003</DT>
-                                <DD>
-                                    <strong>
-                                        BA.Sc. Electronics Computing and Communication
-                                        Engineering
-                                    </strong>
-                                    <br />
-                                    <Span color="mute-onwhite">
-                                        Technion - Israel institute of technology
-                                    </Span>
-                                </DD>
-                            </Grid>
+                                <H4 className="sectionHeader">Selected Experience</H4>
+                                <Flex>
+                                    <Years>2017 - today</Years>
+                                    <DD>
+                                        <strong>React Full Stack Web Developer</strong>
+                                        <br />
+                                        <Span>Freelance at Xlucidity</Span>
+                                    </DD>
+                                </Flex>
+                                <UL>
+                                    <LI>
+                                        Full Stack desktop and mobile Apps built from
+                                        requirements to production.
+                                    </LI>
+                                    <LI>
+                                        <strong>
+                                            Next.js SSR and React single page applications
+                                        </strong>{' '}
+                                        using latest CSS-IN-JS technology
+                                    </LI>
+                                    <LI>
+                                        React Native mobile apps using Javascript,
+                                        Typescript and Mobx.
+                                    </LI>
+                                    <LI>
+                                        <strong>Worked in a remote team</strong>, using
+                                        Clojurescript, Javascript, Node.js, AWS Lambda,
+                                        Dynamodb, Postgresql and
+                                        <strong> part time managing</strong>.
+                                    </LI>
+                                    <LI>IOT - internet connected devices</LI>
+                                    <LI>
+                                        <NavLink
+                                            target="_blank"
+                                            href="https://lishine.github.io"
+                                        >
+                                            <Span fontStyle="italic">
+                                                More details on my website
+                                            </Span>
+                                        </NavLink>
+                                    </LI>
+                                </UL>
+                                <Flex>
+                                    <Years>2003 - 2016</Years>
+                                    <DD>
+                                        <strong>Software & Electronics engineer</strong>
+                                        <br />
+                                        <Span>
+                                            At Syqe Medical / Start ups / Freelance
+                                        </Span>
+                                    </DD>
+                                </Flex>
+                                <UL>
+                                    <LI>Embedded Software - C</LI>
+                                    <LI>Board design (Altium)</LI>
+                                    <LI>Layout</LI>
+                                </UL>
+                                <H4 className="sectionHeader">Education</H4>
+                                <Flex>
+                                    <Years>1996 - 2003</Years>
+                                    <DD>
+                                        <strong>
+                                            BA.Sc. Electronics Computing and Communication
+                                            Engineering
+                                        </strong>
+                                        <br />
+                                        <Span color="mute-onwhite">
+                                            Technion - Israel institute of technology
+                                        </Span>
+                                    </DD>
+                                </Flex>
+                            </DL>
                         </Box>
                         <Flex flexDirection="column">
                             <H4 className="sectionHeader">Skills</H4>
@@ -263,7 +274,6 @@ const Page = () => {
                                 </LI>
                                 <LI>Webpack, Traefik, Docker, Service workers</LI>
                                 <LI>Development / staging / production setup</LI>
-                                <LI>IOT - internet connected devices</LI>
                             </UL>
                             <H4 className="sectionHeader">Areas of Interest</H4>
                             <UL>
