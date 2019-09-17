@@ -75,7 +75,6 @@ export const Salsa = props => {
                             mt: 2,
                             mie: 9,
                         },
-                        [DoesList]: { mis: '1em' },
                         [mediaUp('md')()]: {
                             maxHeight: '630px',
                             [DoesWrapper]: {
@@ -87,7 +86,6 @@ export const Salsa = props => {
                             [DoesWrapper]: {
                                 maxWidth: '28%',
                             },
-                            [DoesList]: { mis: '-1em' },
                         },
                         [mediaUp('xl')()]: {
                             maxHeight: '630px',

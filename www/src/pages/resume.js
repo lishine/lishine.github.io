@@ -54,7 +54,7 @@ const Page = () => {
             <Box pb={15} className="grid-container" position="relative">
                 <ReactToPrint
                     trigger={() => (
-                        <Box position="absolute" top={4} right={9}>
+                        <Box position="absolute" top={3} right={9}>
                             <button className="btn" bg="white">
                                 PRINT
                             </button>
@@ -154,8 +154,8 @@ const Page = () => {
                                 <LI>Great as solo and in a team.</LI>
                                 <LI>
                                     Great at solving problems by myself but easily ask for
+                                    help.
                                 </LI>
-                                help.
                             </UL>
                             <H4 className="sectionHeader">Selected Experience</H4>
                             <Grid

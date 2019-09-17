@@ -130,7 +130,7 @@ export const UL = styled(Box)`
 `
 UL.defaultProps = {
     as: 'ul',
-    mis: '1em',
+    mis: 0,
 }
 
 // export const LI = styled(Box)`

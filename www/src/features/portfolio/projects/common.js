@@ -7,6 +7,19 @@ import { boxCss } from 'styles/ss-utils'
 
 export const altPrefix = 'React projects by Pavel Ravits | '
 
+export const ProjectTitle = props => (
+    <H3 fontWeight="500" borderBottom="1px solid currentColor" {...props} />
+)
+
+export const SubRemark = props => (
+    <H4 fontStyle="italic" fontSize="18px" color="var(--onwhite-menu)" {...props} />
+)
+
+export const DoesTitle = props => (
+    <H4 textAlign="start" mt={1} mb={1} fontWeight="500" {...props} />
+)
+export const DoesItem = props => <LI textAlign="start" mb="4px" {...props} />
+
 export const Gallery = ({ images, className, ...props }) => {
     const ref = useRef(null)
     const thumbClicked = useRef(false)
@@ -109,16 +122,3 @@ export const Gallery = ({ images, className, ...props }) => {
         </Flex>
     )
 }
-
-export const ProjectTitle = props => (
-    <H3 fontWeight="500" borderBottom="1px solid currentColor" {...props} />
-)
-
-export const SubRemark = props => (
-    <H4 fontStyle="italic" fontSize="18px" color="var(--onwhite-menu)" {...props} />
-)
-
-export const DoesTitle = props => (
-    <H4 textAlign="start" mt={1} mb={1} fontWeight="500" {...props} />
-)
-export const DoesItem = props => <LI textAlign="start" mb="4px" {...props} />
