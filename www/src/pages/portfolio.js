@@ -7,10 +7,7 @@ export default () => (
         <Head>
             <link rel="canonical" href="https://lishine.github.io" />
             <title>Pavel Ravits - React Web Developer - Portfolio</title>
-            <meta
-                name="description"
-                content="Pavel Ravits - React Web Developer - Portfolio"
-            />
+            <meta name="description" content="Portfolio" />
         </Head>
 
         <Portfolio />

@@ -13,7 +13,7 @@ const PageTitle = props => <H1 textAlign="center" {...props} />
 export const Portfolio = () => (
     <Box mb={8} className="grid-container padding-container">
         <Box mb={3}>
-            <PageTitle>
+            <PageTitle mt={1}>
                 <strong>Portfolio</strong>
             </PageTitle>
             <H4 mt={1} mb={3} textAlign="center">

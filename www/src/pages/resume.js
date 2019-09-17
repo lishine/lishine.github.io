@@ -47,10 +47,7 @@ const Page = () => {
         <>
             <Head>
                 <title>Pavel Ravits - React Web Developer - Resume</title>
-                <meta
-                    name="description"
-                    content="Pavel Ravits - React Web Developer - Resume"
-                />
+                <meta name="description" content="Resume" />
             </Head>
 
             <Box pb={15} className="grid-container" position="relative">

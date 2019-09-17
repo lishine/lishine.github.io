@@ -7,10 +7,7 @@ const Page = () => (
     <>
         <Head>
             <title>Pavel Ravits - React Web Developer - Contact</title>
-            <meta
-                name="description"
-                content="Pavel Ravits - React Web Developer - Contact"
-            />
+            <meta name="description" content="Contact" />
         </Head>
 
         <Flex
