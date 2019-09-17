@@ -26,7 +26,7 @@ const Page = () => (
                 </DT>
                 <DD>
                     <NavLink rel="nofollow" href="tel:+972-52-3747324">
-                        +972-52-3747324
+                        972-52-3747324
                     </NavLink>
                 </DD>
                 <DT>
