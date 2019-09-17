@@ -12,7 +12,6 @@ const PageTitle = props => <H1 textAlign="center" {...props} />
 
 export const Portfolio = () => (
     <Box mb={8} className="grid-container padding-container">
-        {/* <H4 my={2}>🚧 UNDER CONSTRUCTION 👷</H4> */}
         <Box mb={3}>
             <PageTitle>
                 <strong>Portfolio</strong>

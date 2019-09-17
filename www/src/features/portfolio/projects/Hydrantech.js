@@ -38,7 +38,7 @@ export const Hydrantech = props => (
                         https://app.hydrant-system.com
                     </NavLink>
                     <Grid
-                        mt={1}
+                        mt={3}
                         justifyContent="space-around"
                         gridAutoColumns="1fx"
                         gridAutoFlow="column"
@@ -84,7 +84,7 @@ export const Hydrantech = props => (
             </Grid>
         </ArcherContainer>
         <Flex mt={4} flexDirection={['column', 'row']} justifyContent="space-between">
-            <Box mie={[null, 2]} width={[null, '55%']}>
+            <Box mb={[8, null]} mie={[null, 2]} width={[null, '55%']}>
                 <Gallery
                     showThumbnails
                     images={[1, 2, 3, 4, 5].map(index => ({
@@ -93,7 +93,11 @@ export const Hydrantech = props => (
                     }))}
                 />
             </Box>
-            <Box mt={[6, null]} width={[null, '35%']}>
+            <Box
+                pt={[8, null]}
+                borderTop={['4px solid var(--onwhite-border)', '']}
+                width={[null, '35%']}
+            >
                 <Gallery
                     showThumbnails
                     images={[1, 2, 3, 4].map(index => ({

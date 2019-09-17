@@ -8,7 +8,7 @@ import { boxCss } from 'styles/ss-utils'
 export const altPrefix = 'React projects by Pavel Ravits | '
 
 export const ProjectTitle = props => (
-    <H3 fontWeight="500" borderBottom="1px solid currentColor" {...props} />
+    <H3 pt={3} fontWeight="500" borderBottom="1px solid currentColor" {...props} />
 )
 
 export const SubRemark = props => (
@@ -16,7 +16,7 @@ export const SubRemark = props => (
 )
 
 export const DoesTitle = props => (
-    <H4 textAlign="start" mt={1} mb={1} fontWeight="500" {...props} />
+    <H4 textAlign="start" mt={1} fontWeight="500" {...props} />
 )
 export const DoesItem = props => <LI textAlign="start" mb="4px" {...props} />
 
@@ -73,9 +73,9 @@ export const Gallery = ({ images, className, ...props }) => {
             css={boxCss.css({
                 bg: '#EEEEEE',
                 cursor: 'pointer',
-                boxShadow: '0 0 38px 8px rgba(0, 0, 0, .15)',
+                boxShadow: '0 0 38px 4px rgba(0, 0, 0, .1)',
                 '.thumb': {
-                    boxShadow: '0 0 28px 4px rgba(0, 0, 0, .2)',
+                    boxShadow: '0 0 28px 4px rgba(0, 0, 0, .1)',
                 },
                 '.image-gallery': {
                     width: '100%',

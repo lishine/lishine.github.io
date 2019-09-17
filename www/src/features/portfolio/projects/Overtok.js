@@ -30,12 +30,12 @@ export const Overtok = props => (
                     <LI>Git, Jira, Slack</LI>
                 </UL>
             </Box>
-            <Box mt={3} width="100%" height="100%" maxWidth="600px">
+            <Box mt={4} width="100%" height="100%" maxWidth="600px">
                 <Gallery
                     images={[
                         {
                             alt: `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`,
-                            url: `/img/overtok/1.jpg`,
+                            url: `/img/overtok/1.png`,
                         },
                     ]}
                 />

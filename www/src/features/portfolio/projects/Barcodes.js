@@ -10,13 +10,13 @@ export const Barcodes = props => (
             Source - https://github.com/lishine/login-full-stack
         </NavLink>
         <H4 mt={1}>Features</H4>
-        <UL mt={1}>
+        <UL>
             <LI>JWT authentication with emails</LI>
             <LI>Forms</LI>
             <LI>User profile</LI>
         </UL>
-        <H4 mt={1}>Technologies being used</H4>
-        <UL mt={1}>
+        <H4 mt={2}>Technologies being used</H4>
+        <UL>
             <LI>Webpack 4</LI>
             <LI>React</LI>
             <LI>Router - redux-saga-first-router</LI>
