@@ -36,11 +36,10 @@ class MyApp extends App {
         const { Component, router } = this.props
 
         if (process.browser) {
-            window.addEventListener('resize', () => {
-                // We execute the same script as before
-                let vh = window.innerHeight * 0.01
-                document.documentElement.style.setProperty('--vh', `${vh}px`)
-            })
+            // window.addEventListener('resize', () => {
+            // let vh = window.innerHeight * 0.01
+            // document.documentElement.style.setProperty('--vh', `${vh}px`)
+            // })
             console.log('$ BROWSER in render _app')
         } else {
             console.log('$ SERVER in render _app')

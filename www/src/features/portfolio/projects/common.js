@@ -73,7 +73,7 @@ export const Gallery = ({ images, className, ...props }) => {
             css={boxCss.css({
                 bg: '#EEEEEE',
                 cursor: 'pointer',
-                boxShadow: '0 0 38px 4px rgba(0, 0, 0, .1)',
+                boxShadow: '0 0 38px 12px rgba(0, 0, 0, .15)',
                 '.thumb': {
                     boxShadow: '0 0 28px 4px rgba(0, 0, 0, .1)',
                 },
