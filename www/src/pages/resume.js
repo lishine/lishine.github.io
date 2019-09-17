@@ -71,7 +71,7 @@ const Page = () => {
                     height="1350px"
                     color="black"
                     css={boxCss.css({
-                        'h1, h4, p, li, a, span, dt, dd': {
+                        'h1, h4, p, li, a, span, dt, dd, strong': {
                             fontFamily: 'Crimson Pro, serif',
                         },
                         h1: {
@@ -83,11 +83,12 @@ const Page = () => {
                             fontSize: '24px',
                             letterSpacing: '0.03em',
                         },
-                        'p, li, a, [Span], dt, dd': {
+                        'p, li, a, [Span], dt, dd, strong': {
                             fontSize: '19px',
                             lineHeight: '24px',
                             '> strong': {
-                                color: '#333333',
+                                fontWeight: 600,
+                                // color: '#333333',
                             },
                         },
                         'p, ol, ul, dl': { transform: 'translateY(5px)' },
@@ -119,13 +120,20 @@ const Page = () => {
                         <Box>
                             <H4 className="sectionHeader">Background</H4>
                             <P>
-                                I am a full stack web & mobile developer that specializes
-                                in Front-End, React and state management.
+                                I am a full stack <strong>web & mobile</strong> developer
+                                that specializes in <strong>Front-End, React</strong> and
+                                state management.
                                 <br />
-                                I have been developing for 3 years in the Web and React
-                                ecosystem, since switching from Electronics Engineering
-                                and Embedded C Programming.
+                                <Span italic>
+                                    In your team I will be the positive, calm and
+                                    attentive guy.
+                                </Span>
                                 <br />
+                                Have been developing for
+                                <strong> 3 years in Web and React ecosystem</strong>,
+                                since switching from Electronics Engineering and Embedded
+                                C Programming.
+                                {/* <br />
                                 <br />
                                 I have done projects from requirements to production.
                                 <br />
@@ -134,24 +142,32 @@ const Page = () => {
                                 <br />
                                 Worked in a remote team, used Clojurescript, Javascript,
                                 Node.js, AWS Lambda, Dynamodb, Postgresql, part time
-                                managing remote team.
+                                managing remote team. */}
                             </P>
                             <UL>
-                                <strong>A little about my coding discipline:</strong>
+                                <strong>A little about my coding practice</strong>
                                 <LI>Practice code optimization and refactoring</LI>
-                                <LI>Adhere to DRY and KISS software principles</LI>
+                                <LI>
+                                    Adhere to <strong>DRY and KISS</strong> software
+                                    principles
+                                </LI>
                                 <LI>Separate Business logic from the view</LI>
                                 <LI>Use latest javascript es6</LI>
                                 <LI>
-                                    Always learning, expanding knowledge (blogs, books,
-                                    newsletters, medium, dev.to)
+                                    <strong>Always learning</strong>, expanding knowledge
+                                    (blogs, books, newsletters, medium, dev.to)
                                 </LI>
                                 <LI>
                                     Trying new things, keeping up with the advancements in
                                     Javascript, React and Cloud
                                 </LI>
-                                <LI>Excited and dedicated about web development.</LI>
-                                <LI>Great as solo and in a team.</LI>
+                                <LI>
+                                    <strong>Excited and dedicated</strong> about web
+                                    development.
+                                </LI>
+                                <LI>
+                                    <strong>Great as solo and in a team.</strong>
+                                </LI>
                                 <LI>
                                     Great at solving problems by myself but easily ask for
                                     help.
@@ -161,7 +177,7 @@ const Page = () => {
                             <Grid
                                 as="dl"
                                 gridAutoFlow="row"
-                                gridTemplateColumns="150px 1fr"
+                                gridTemplateColumns="130px 1fr"
                             >
                                 <DT>2017 - today</DT>
                                 <DD>
@@ -171,10 +187,31 @@ const Page = () => {
                                     <UL>
                                         <LI>
                                             Full Stack desktop and mobile Apps built from
-                                            the ground up
+                                            requirements to production.
                                         </LI>
                                         <LI>
-                                            <strong>More details on my website</strong>
+                                            <strong>
+                                                SSR Next.js and React single page
+                                                applications
+                                            </strong>
+                                            , React Native mobile apps. Using Javascript,
+                                            Typescript and Mobx.
+                                        </LI>
+                                        <LI>
+                                            <strong>Worked in a remote team</strong>,
+                                            using Clojurescript, Javascript, Node.js, AWS
+                                            Lambda, Dynamodb, Postgresql and
+                                            <strong> part time managing</strong>.
+                                        </LI>
+                                        <LI>
+                                            <NavLink
+                                                target="_blank"
+                                                href="https://lishine.github.io"
+                                            >
+                                                <Span fontStyle="italic">
+                                                    More details on my website
+                                                </Span>
+                                            </NavLink>
                                         </LI>
                                     </UL>
                                 </DD>
@@ -194,7 +231,7 @@ const Page = () => {
                             <Grid
                                 as="dl"
                                 gridAutoFlow="row"
-                                gridTemplateColumns="150px 1fr"
+                                gridTemplateColumns="130px 1fr"
                             >
                                 <DT>1996 - 2003</DT>
                                 <DD>
@@ -226,6 +263,7 @@ const Page = () => {
                                 </LI>
                                 <LI>Webpack, Traefik, Docker, Service workers</LI>
                                 <LI>Development / staging / production setup</LI>
+                                <LI>IOT - internet connected devices</LI>
                             </UL>
                             <H4 className="sectionHeader">Areas of Interest</H4>
                             <UL>
@@ -234,10 +272,10 @@ const Page = () => {
                                 <LI>Cloud</LI>
                                 <LI>Blockchain, DAPP, DLT</LI>
                             </UL>
-                            <H4 className="sectionHeader">Hobbies</H4>
+                            <H4 className="sectionHeader">In my free time</H4>
                             <UL>
-                                <LI>Sport</LI>
-                                <LI>Medidation</LI>
+                                <LI>Doing sport and meditation</LI>
+                                <LI>Learning new staff</LI>
                             </UL>
                             <H4 className="sectionHeader">Spoken Languages</H4>
                             <UL>

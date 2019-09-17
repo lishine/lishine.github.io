@@ -56,6 +56,12 @@ export const mirorIfRTL = style({
     transformValue: () => theme.direction === 'rtl' && 'scaleX(-1)',
 })
 
+export const italic = style({
+    prop: 'italic',
+    cssProperty: 'fontStyle',
+    transformValue: () => 'italic',
+})
+
 const visibility = style({
     prop: 'visibility',
 })
@@ -161,6 +167,7 @@ const text = ({ text }) =>
     }[text]
 
 const extraParamsObject = {
+    italic,
     whiteSpace,
     mirorIfRTL,
     direction,
