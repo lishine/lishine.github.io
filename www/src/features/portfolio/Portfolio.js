@@ -10,7 +10,7 @@ import { Site } from './projects/Site'
 
 const PageTitle = props => <H1 textAlign="center" {...props} />
 
-export const Index = () => (
+export const Portfolio = () => (
     <Box mb={8} className="grid-container padding-container">
         {/* <H4 my={2}>🚧 UNDER CONSTRUCTION 👷</H4> */}
         <Box mb={3}>

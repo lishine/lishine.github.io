@@ -130,7 +130,7 @@ export const UL = styled(Box)`
 `
 UL.defaultProps = {
     as: 'ul',
-    mis: '12px',
+    mis: '1em',
 }
 
 // export const LI = styled(Box)`
@@ -148,8 +148,8 @@ UL.defaultProps = {
 //     content: '•',
 // }
 
-export const LI = styled(({ dot, ...props }) => (
-    <Box {...props}>
+export const LI = styled(({ dot, textIndent, ...props }) => (
+    <Box css={{ textIndent }} {...props}>
         <Span position="absolute" left={0}>
             {dot}
         </Span>
@@ -159,7 +159,7 @@ export const LI = styled(({ dot, ...props }) => (
 
 LI.defaultProps = {
     as: 'li',
-    textIndent: '1em',
+    textIndent: 0,
     pis: '1em',
     dot: '•',
 }

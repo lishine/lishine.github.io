@@ -24,8 +24,6 @@ import { Email, Web, Phone, Israel } from 'svg/icons/index'
 const LI = props => (
     <_LI
         {...{
-            textIndent: 0,
-            pis: '1em',
             dot: (
                 <Span
                     display="inline-block"
@@ -39,7 +37,7 @@ const LI = props => (
         }}
     />
 )
-const UL = styled(_UL)({ mis: 0 })
+const UL = styled(_UL)(boxCss.css({ mis: 0 }))
 
 const Page = () => {
     const ref = useRef(null)
@@ -67,7 +65,7 @@ const Page = () => {
                 <Flex
                     ref={ref}
                     flexDirection="column"
-                    pt={10}
+                    pt={8}
                     px={9}
                     width="1024px"
                     height="1350px"
@@ -77,7 +75,7 @@ const Page = () => {
                             fontFamily: 'Crimson Pro, serif',
                         },
                         h1: {
-                            fontSize: '40px',
+                            fontSize: '38px',
                             transform: 'translateY(7px)',
                             letterSpacing: '0.03em',
                         },
@@ -86,7 +84,7 @@ const Page = () => {
                             letterSpacing: '0.03em',
                         },
                         'p, li, a, [Span], dt, dd': {
-                            fontSize: '20px',
+                            fontSize: '19px',
                             lineHeight: '24px',
                             '> strong': {
                                 color: '#333333',
@@ -108,7 +106,7 @@ const Page = () => {
                         React developer
                     </H4>
 
-                    <H1 mt={6} mb={7} color="link">
+                    <H1 mt={3} mb={4} color="link">
                         ...seeking <strong>collaboration</strong> with{' '}
                         <strong>passionate</strong> developers
                     </H1>
@@ -121,46 +119,44 @@ const Page = () => {
                         <Box>
                             <H4 className="sectionHeader">Background</H4>
                             <P>
-                                I have been developing for 3 years in the{' '}
-                                <strong>Web and React ecosystem</strong> since switching
-                                from Electronics engineering and Embedded programming.
+                                I am a full stack web & mobile developer that specializes
+                                in Front-End, React and state management.
+                                <br />
+                                I have been developing for 3 years in the Web and React
+                                ecosystem, since switching from Electronics Engineering
+                                and Embedded C Programming.
                                 <br />
                                 <br />
-                                Done 2 <strong>Next.js projects</strong> using Css-In-Js
-                                according to design
+                                I have done projects from requirements to production.
                                 <br />
-                                Developed <strong>mobile app</strong> using React-Native,{' '}
-                                <strong>Javascript, Typescript</strong> and Mobx.
+                                Next.js SSR, React Single page application, React-Native
+                                mobile apps, Javascript, Typescript and Mobx.
                                 <br />
-                                Half year worked with a remote team using{' '}
-                                <strong>Clojurescript</strong> on web and mobile clients
-                                and Node.js on AWS Lambda + Dynamodb +
-                                Redshift/Postgresql.
-                                <br />
-                                Developed web app using React + Meteor
-                                <br />
-                                <br />
-                                Mostly I like{' '}
-                                <Span fontStyle="italic">
-                                    {' '}
-                                    Front-end and state management{' '}
-                                </Span>
-                                .
-                                <br />I care about the time I am payed for and use it for
-                                efficient production.{' '}
-                                <strong>
-                                    I care the most about code quality and refactor a lot
-                                </strong>
-                                , adhere to{' '}
-                                <Span fontStyle="italic"> DRY, KISS, YAGNI</Span> software
-                                principles,{' '}
-                                <Span fontStyle="italic">
-                                    {' '}
-                                    can work autonomously and in a team{' '}
-                                </Span>
-                                . Can solve problems by myself but easily ask for help.
-                                Used communication tools - slack, Jira, Timedoctor.
+                                Worked in a remote team, used Clojurescript, Javascript,
+                                Node.js, AWS Lambda, Dynamodb, Postgresql, part time
+                                managing remote team.
                             </P>
+                            <UL>
+                                <strong>A little about my coding discipline:</strong>
+                                <LI>Practice code optimization and refactoring</LI>
+                                <LI>Adhere to DRY and KISS software principles</LI>
+                                <LI>Separate Business logic from the view</LI>
+                                <LI>Use latest javascript es6</LI>
+                                <LI>
+                                    Always learning, expanding knowledge (blogs, books,
+                                    newsletters, medium, dev.to)
+                                </LI>
+                                <LI>
+                                    Trying new things, keeping up with the advancements in
+                                    Javascript, React and Cloud
+                                </LI>
+                                <LI>Excited and dedicated about web development.</LI>
+                                <LI>Great as solo and in a team.</LI>
+                                <LI>
+                                    Great at solving problems by myself but easily ask for
+                                </LI>
+                                help.
+                            </UL>
                             <H4 className="sectionHeader">Selected Experience</H4>
                             <Grid
                                 as="dl"
@@ -178,12 +174,7 @@ const Page = () => {
                                             the ground up
                                         </LI>
                                         <LI>
-                                            Projects in detail:
-                                            <br />
-                                            <NavLink
-                                                target="_blank"
-                                                href="https://lishine.github.io/portfolio"
-                                            />
+                                            <strong>More details on my website</strong>
                                         </LI>
                                     </UL>
                                 </DD>
@@ -193,7 +184,7 @@ const Page = () => {
                                     <br />
                                     <Span>At Syqe Medical / Start ups / Freelance</Span>
                                     <UL>
-                                        <LI>Embedded Software</LI>
+                                        <LI>Embedded Software - C</LI>
                                         <LI>Board design (Altium)</LI>
                                         <LI>Layout</LI>
                                     </UL>
@@ -222,38 +213,42 @@ const Page = () => {
                             <H4 className="sectionHeader">Skills</H4>
                             <UL>
                                 <LI>React, React Native</LI>
-                                <LI>JavaScript, Typescript, ClojureScript</LI>
+                                <LI>JavaScript, Typescript, ClojureScript, C</LI>
                                 <LI>Redux, Mobx</LI>
-                                <LI>Postgres, MongoDB, GraphQL</LI>
+                                <LI>PostgreSQL, DynamoDB, MongoDB, GraphQL</LI>
                                 <LI>Headless CMS - DatoCMS</LI>
                                 <LI>Node, Express, Meteor</LI>
-                                <LI>AWS - Lambda</LI>
-                                <LI>Next.js, SSR, Now v2</LI>
+                                <LI>AWS Lambda</LI>
+                                <LI>Next.js, SSR, Now v2, Microservices, Serverless</LI>
                                 <LI>SMS, Emails, Authentication, PayPal API</LI>
-                                <LI>SCSS, CSS in JS, Emotion, Styled-System</LI>
-                                <LI>Traefik, Docker, Serverless, Service workers</LI>
+                                <LI>
+                                    HTML, CSS, SCSS, CSS in JS, Emotion, Styled-System
+                                </LI>
+                                <LI>Webpack, Traefik, Docker, Service workers</LI>
+                                <LI>Development / staging / production setup</LI>
                             </UL>
                             <H4 className="sectionHeader">Areas of Interest</H4>
                             <UL>
-                                <LI>Front End UI</LI>
+                                <LI>Front-End, UI</LI>
                                 <LI>Distributed Software</LI>
                                 <LI>Cloud</LI>
-                                <LI>Blockchain</LI>
+                                <LI>Blockchain, DAPP, DLT</LI>
                             </UL>
                             <H4 className="sectionHeader">Hobbies</H4>
                             <UL>
                                 <LI>Sport</LI>
+                                <LI>Medidation</LI>
                             </UL>
                             <H4 className="sectionHeader">Spoken Languages</H4>
                             <UL>
-                                <LI>English</LI>
-                                <LI>Hebrew</LI>
-                                <LI>Russian</LI>
+                                <LI>English - Fluent</LI>
+                                <LI>Hebrew - Native</LI>
+                                <LI>Russian - Native</LI>
                             </UL>
                             <H4 className="sectionHeader">Tools</H4>
                             <UL>
                                 <LI>Linux, Windows, Mac</LI>
-                                <LI>VSCode</LI>
+                                <LI>VSCode, Webstorm</LI>
                                 <LI>Eslint, Prettier</LI>
                             </UL>
                             <H4 className="sectionHeader">Contact</H4>

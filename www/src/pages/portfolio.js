@@ -1,10 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
-import { Index } from 'features/index/Index'
+import { Portfolio } from 'features/portfolio/Portfolio'
 
 export default () => (
     <>
         <Head>
+            <link rel="canonical" href="https://lishine.github.io" />
             <title>Pavel Ravits - React Web Developer - Portfolio</title>
             <meta
                 name="description"
@@ -12,6 +13,6 @@ export default () => (
             />
         </Head>
 
-        <Index />
+        <Portfolio />
     </>
 )
