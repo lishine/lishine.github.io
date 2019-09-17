@@ -82,7 +82,6 @@ class MyApp extends App {
                                 `${mobileHeaderHeight}px`,
                             ]}
                             flex={1}
-                            height="100vh"
                         >
                             <Component />
                             <Footer
