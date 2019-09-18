@@ -111,12 +111,16 @@ export const Gallery = ({ images, className, ...props }) => {
                         setFullScreen(true)
                     }
                 }}
-                items={images.map(({ url, alt }) => ({
-                    original: url,
-                    thumbnail: url,
-                    thumbnailClass: 'thumb',
-                    originalAlt: `${altPrefix}${alt}`,
-                }))}
+                items={images.map(({ url, alt }) => {
+                    const _alt = `${altPrefix}${alt}`
+                    return {
+                        original: url,
+                        thumbnail: url,
+                        thumbnailClass: 'thumb',
+                        originalAlt: _alt,
+                        thumbnailAlt: _alt,
+                    }
+                })}
                 {...props}
             />
         </Flex>

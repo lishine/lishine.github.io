@@ -56,17 +56,11 @@ class MyApp extends App {
                         <meta
                             charSet="utf-8"
                             name="viewport"
-                            content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+                            content="width=device-width, initial-scale=1, shrink-to-fit=no"
                         />
                     )}
                     <link
-                        href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:300,400,500|Permanent+Marker"
-                        rel="preload"
-                        as="style"
-                        onLoad="this.onload=null;this.rel='stylesheet'"
-                    />
-                    <link
-                        href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,500,600,700&display=swap"
+                        href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700"
                         rel="preload"
                         as="style"
                         onLoad="this.onload=null;this.rel='stylesheet'"
