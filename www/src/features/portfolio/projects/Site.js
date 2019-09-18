@@ -10,7 +10,7 @@ export const Site = props => (
             <NavLink href="https://github.com/lishine/lishine.github.io" />
         </Flex>
         <UL mt={2}>
-            <LI>Static Next.js + React</LI>
+            <LI>Static Next.js ++ React</LI>
             <LI>Deployed to github-pages</LI>
             <LI>SCSS, imported Bootstrap, Emotion, Styled-System </LI>
             <LI>Clean design :)</LI>

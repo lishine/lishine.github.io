@@ -92,6 +92,7 @@ export const Gallery = ({ images, className, ...props }) => {
         >
             <ImageGallery
                 ref={ref}
+                lazyLoad
                 showFullscreenButton={false}
                 showPlayButton={false}
                 showBullets={false}
