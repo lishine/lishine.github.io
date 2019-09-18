@@ -1,6 +1,9 @@
-### Puppeteer install
-- sudo apt-get update
-- sudo apt-get install aptitude
-- sudo apt-get install libnss3-dev
-- sudo apt-get install libcups2
-- sudo aptitude search libXss
+### Personal site
+<a href="http://lishine.github.io">lishine.github.io</a>
+* Static Next.js + React
+* Deployed to github-pages
+* SCSS, imported Bootstrap, Emotion, Styled-System
+* Clean design 😊
+* Responsive & adaptive
+* SEO optimized
+* Latest CSS qualities: Flex, Grid, CSS custom and logical properties

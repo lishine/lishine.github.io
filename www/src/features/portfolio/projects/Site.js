@@ -7,7 +7,7 @@ export const Site = props => (
         <ProjectTitle>This Site</ProjectTitle>
         <Flex as="p" flexDirection={['column', 'row']} overflow="hidden">
             <Span mie="1em">Source:</Span>
-            <NavLink href="https://github.com/lishine/lishine.github.io/tree/dev" />
+            <NavLink href="https://github.com/lishine/lishine.github.io" />
         </Flex>
         <UL mt={2}>
             <LI>Static Next.js + React</LI>
