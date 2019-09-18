@@ -89,7 +89,7 @@ export const Hydrantech = props => (
                     showThumbnails
                     images={[1, 2, 3, 4, 5].map(index => ({
                         alt: `${projectTitle} - web React app`,
-                        url: `/img/hd/${index}.png`,
+                        url: `/img/hd/${index}.jpg`,
                     }))}
                 />
             </Box>

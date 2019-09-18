@@ -35,7 +35,7 @@ export const Overtok = props => (
                     images={[
                         {
                             alt: `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`,
-                            url: `/img/overtok/1.png`,
+                            url: `/img/overtok/1.jpg`,
                         },
                     ]}
                 />

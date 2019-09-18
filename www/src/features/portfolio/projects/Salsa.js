@@ -176,7 +176,7 @@ export const Salsa = props => {
                             showThumbnails
                             images={[1, 2, 3, 4, 5, 6].map(index => ({
                                 alt: `${projectTitle} - React Next.js SSR web app, Serverless backend, Graphql Postgres db, Headless CMS`,
-                                url: `/img/salsa/${index}.png`,
+                                url: `/img/salsa/${index}.jpg`,
                             }))}
                         />
                     </Box>
