@@ -13,7 +13,7 @@ export const Site = props => (
             <LI>Static Next.js + React</LI>
             <LI>Deployed to github-pages</LI>
             <LI>SCSS, imported Bootstrap, Emotion, Styled-System </LI>
-            <LI>Clean design 😊</LI>
+            <LI>Clean design :)</LI>
             <LI>Responsive & adaptive</LI>
             <LI>SEO optimized</LI>
             <LI>Latest CSS qualities: Flex, Grid, CSS custom and logical properties</LI>
