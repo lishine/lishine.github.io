@@ -1,15 +1,17 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
-import { ProjectTitle, Gallery } from './common'
+import { ProjectTitle, Gallery, SubLink } from './common'
 
 const projectTitle = 'Overtok - users engagement and convertion'
 
 export const Overtok = props => (
     <Box {...props}>
         <ProjectTitle>{projectTitle}</ProjectTitle>
-        <NavLink mt={1} href="https://overtok.com">
-            https://overtok.com
-        </NavLink>
+        <SubLink>
+            <NavLink mt={1} href="https://overtok.com">
+                https://overtok.com
+            </NavLink>
+        </SubLink>
         <Flex mt={1} flexDirection={['column', null, 'row']}>
             <Box mie={4}>
                 <H4>Working in a team</H4>

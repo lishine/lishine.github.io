@@ -4,7 +4,7 @@ import { Box, Flex, H1, H2, H4, LI, Grid, P, Span, NavLink } from 'styles/ss-com
 // import LineTo from 'react-lineto'
 import { ArcherContainer, ArcherElement } from 'react-archer'
 import { boxCss } from 'styles/ss-utils'
-import { ProjectTitle, Gallery, SubRemark } from './common'
+import { ProjectTitle, Gallery, SubRemark, SubLink } from './common'
 
 const projectTitle = 'System to manage internet connected fire hydrants'
 
@@ -34,9 +34,11 @@ export const Hydrantech = props => (
                 <Flex mt={4} pb={1} flexDirection="column">
                     <ProjectTitle>{projectTitle}</ProjectTitle>
                     <SubRemark>Built from the ground up</SubRemark>
-                    <NavLink mt={1} href="https://app.hydrant-system.com">
-                        https://app.hydrant-system.com
-                    </NavLink>
+                    <SubLink>
+                        <NavLink href="https://app.hydrant-system.com">
+                            https://app.hydrant-system.com
+                        </NavLink>
+                    </SubLink>
                     <Grid
                         mt={3}
                         justifyContent="space-around"

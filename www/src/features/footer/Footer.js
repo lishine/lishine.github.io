@@ -24,14 +24,26 @@ export const Footer = props => {
                 gridColumnGap={10}
                 gridAutoFlow="column"
             >
-                <a href="https://github.com/lishine" target="_blank">
-                    <Image src="/logo/github-onwhite.png" height={logoHeight} />
+                <a href="https://github.com/lishine" rel="noopener" target="_blank">
+                    <Image
+                        src="/logo/github-onwhite.png"
+                        alt="github logo"
+                        height={logoHeight}
+                    />
                 </a>
-                <a href="https://gitlab.com/vim55k" target="_blank">
-                    <Image src="/logo/gitlab.png" height={logoHeight} />
+                <a href="https://gitlab.com/vim55k" rel="noopener" target="_blank">
+                    <Image src="/logo/gitlab.png" alt="gitlab logo" height={logoHeight} />
                 </a>
-                <a href="https://www.linkedin.com/in/pvrv/" target="_blank">
-                    <Image src="/logo/li-in.png" height={logoHeight} />
+                <a
+                    href="https://www.linkedin.com/in/pvrv/"
+                    rel="noopener"
+                    target="_blank"
+                >
+                    <Image
+                        src="/logo/li-in.png"
+                        alt="linkedin logo"
+                        height={logoHeight}
+                    />
                 </a>
             </Grid>
         </Flex>

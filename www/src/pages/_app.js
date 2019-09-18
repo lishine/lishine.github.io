@@ -21,6 +21,55 @@ export const redirect = (ctx, path) => {
     }
 }
 
+const fixChromeReactBug = () => {
+    const EVENTS_TO_MODIFY = [
+        'touchstart',
+        'touchmove',
+        'touchend',
+        'touchcancel',
+        'wheel',
+    ]
+
+    const originalAddEventListener = document.addEventListener.bind()
+    document.addEventListener = (type, listener, options, wantsUntrusted) => {
+        let modOptions = options
+        if (EVENTS_TO_MODIFY.includes(type)) {
+            if (typeof options === 'boolean') {
+                modOptions = {
+                    capture: options,
+                    passive: false,
+                }
+            } else if (typeof options === 'object') {
+                modOptions = {
+                    ...options,
+                    passive: false,
+                }
+            }
+        }
+
+        return originalAddEventListener(type, listener, modOptions, wantsUntrusted)
+    }
+
+    const originalRemoveEventListener = document.removeEventListener.bind()
+    document.removeEventListener = (type, listener, options) => {
+        let modOptions = options
+        if (EVENTS_TO_MODIFY.includes(type)) {
+            if (typeof options === 'boolean') {
+                modOptions = {
+                    capture: options,
+                    passive: false,
+                }
+            } else if (typeof options === 'object') {
+                modOptions = {
+                    ...options,
+                    passive: false,
+                }
+            }
+        }
+        return originalRemoveEventListener(type, listener, modOptions)
+    }
+}
+
 export let globalCtx
 
 class MyApp extends App {
@@ -60,7 +109,7 @@ class MyApp extends App {
                         />
                     )}
                     <link
-                        href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700"
+                        href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700"
                         rel="preload"
                         as="style"
                         onLoad="this.onload=null;this.rel='stylesheet'"

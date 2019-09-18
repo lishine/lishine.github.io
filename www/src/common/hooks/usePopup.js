@@ -37,13 +37,15 @@ export const usePopup = (props = {}) => {
             // setTrack(track)
             document.addEventListener('keydown', handleEsc)
             document.addEventListener('mousedown', handleCloseEvent)
-            document.addEventListener('touchstart', handleCloseEvent)
+            document.addEventListener('touchstart', handleCloseEvent, { passive: true })
 
             return () => {
                 // setTrack(false)
                 document.removeEventListener('keydown', handleEsc)
                 document.removeEventListener('mousedown', handleCloseEvent)
-                document.removeEventListener('touchstart', handleCloseEvent)
+                document.removeEventListener('touchstart', handleCloseEvent, {
+                    passive: true,
+                })
             }
         }
     }, [state])

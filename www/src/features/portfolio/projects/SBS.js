@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, LI, UL, Grid, H4, Span, NavLink, P } from 'styles/ss-components'
-import { ProjectTitle, DoesTitle, SubRemark, Gallery, DoesItem } from './common'
+import { ProjectTitle, DoesTitle, SubRemark, Gallery, DoesItem, SubLink } from './common'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 import styled from '@emotion/styled'
@@ -18,9 +18,9 @@ export const SBS = props => (
         <Flex mt={1} alignItems="flex-start" flexDirection={['column', null, 'row']}>
             <Box mie={5}>
                 <SubRemark>Built from the ground up</SubRemark>
-                <P>
+                <SubLink>
                     <NavLink href="https://sbs.golden-minutes.com" />
-                </P>
+                </SubLink>
             </Box>
             <Grid
                 w={1}

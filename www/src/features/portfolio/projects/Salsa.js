@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, Grid, Span, NavLink } from 'styles/ss-components'
-import { ProjectTitle, SubRemark, Gallery, DoesTitle, DoesItem } from './common'
+import { ProjectTitle, SubRemark, Gallery, DoesTitle, DoesItem, SubLink } from './common'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 import styled from '@emotion/styled'
@@ -18,12 +18,12 @@ export const Salsa = props => {
         <Box {...props}>
             <ProjectTitle>{projectTitle}</ProjectTitle>
             <Flex mt={1} alignItems="flex-start" flexDirection={['column', null, 'row']}>
-                <Box mie={5}>
-                    <SubRemark>Built from the ground up</SubRemark>
-                    <Flex as="p" alignItems="center">
+                <Box mie={5} as="dl">
+                    <SubRemark as="dt">Built from the ground up</SubRemark>
+                    <SubLink as="dd" alignItems="center">
                         <Span mie="0.5em">Take a look:</Span>
                         <NavLink href="https://do-salsa.tk" />
-                    </Flex>
+                    </SubLink>
                 </Box>
                 <Grid
                     w={1}

@@ -96,7 +96,7 @@ const Page = () => {
                             fontWeight: 600,
                             mb: 1,
                         },
-                        '--link': '#6387C5',
+                        // '--link': '#6387C5',
                     })}
                 >
                     <H1 mb={1}>

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { H1, H4, H3, LI, Box, Flex } from 'styles/ss-components'
+import { H1, H4, H3, LI, Box, Flex, Span } from 'styles/ss-components'
 import { isMobile } from 'react-device-detect'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/scss/image-gallery.scss'
@@ -8,12 +8,13 @@ import { boxCss } from 'styles/ss-utils'
 export const altPrefix = 'React projects by Pavel Ravits | '
 
 export const ProjectTitle = props => (
-    <H3 pt={3} fontWeight="500" borderBottom="1px solid currentColor" {...props} />
+    <H3 pt={3} mb={1} fontWeight="500" borderBottom="1px solid currentColor" {...props} />
 )
 
 export const SubRemark = props => (
-    <H4 fontStyle="italic" fontSize="18px" color="var(--onwhite-menu)" {...props} />
+    <Span fontStyle="italic" fontWeight="300" fontSize="19px" {...props} />
 )
+export const SubLink = props => <Flex {...props} />
 
 export const DoesTitle = props => (
     <H4 textAlign="start" mt={1} fontWeight="500" {...props} />
@@ -57,13 +58,13 @@ export const Gallery = ({ images, className, ...props }) => {
         if (isFullScreen) {
             document.addEventListener('keydown', handleEsc)
             document.addEventListener('mousedown', handleCloseEvent)
-            document.addEventListener('touchstart', handleCloseEvent)
+            // document.addEventListener('touchstart', handleCloseEvent)
         }
 
         return () => {
             document.removeEventListener('keydown', handleEsc)
             document.removeEventListener('mousedown', handleCloseEvent)
-            document.removeEventListener('touchstart', handleCloseEvent)
+            // document.removeEventListener('touchstart', handleCloseEvent)
         }
     }, [isFullScreen])
 
@@ -92,7 +93,6 @@ export const Gallery = ({ images, className, ...props }) => {
         >
             <ImageGallery
                 ref={ref}
-                lazyLoad
                 showFullscreenButton={false}
                 showPlayButton={false}
                 showBullets={false}
