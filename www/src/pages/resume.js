@@ -87,24 +87,20 @@ const Page = () => {
                             lineHeight: '24px',
                             '> strong': {
                                 fontWeight: 600,
-                                // color: '#333333',
                             },
                         },
                         'p, ol, ul, dl': { transform: 'translateY(5px)' },
-                        'p, ul': { mb: 3 },
+                        'p, ul': { mb: 2 },
                         '.sectionHeader': {
                             fontWeight: 600,
                             mb: 1,
                         },
-                        // '--link': '#6387C5',
                     })}
                 >
-                    <H1 mb={1}>
+                    <H1>
                         <strong>Pavel Ravits</strong>
                     </H1>
-                    <H4 mt="-5px" fontWeight="500">
-                        React developer
-                    </H4>
+                    <H4 fontWeight="500">React developer</H4>
 
                     <H1 mt={3} mb={4} color="link">
                         ...seeking <strong>collaboration</strong> with{' '}
@@ -128,20 +124,12 @@ const Page = () => {
                                 since switching from Electronics Engineering and Embedded
                                 C Programming.
                                 <br />
+                                Programming since age 13.
+                                <br />
                                 <Span italic>
                                     In your team I will be the positive, calm and
                                     attentive guy.
                                 </Span>
-                                {/* <br />
-                                <br />
-                                I have done projects from requirements to production.
-                                <br />
-                                Next.js SSR, React Single page application, React-Native
-                                mobile apps, Javascript, Typescript and Mobx.
-                                <br />
-                                Worked in a remote team, used Clojurescript, Javascript,
-                                Node.js, AWS Lambda, Dynamodb, Postgresql, part time
-                                managing remote team. */}
                             </P>
                             <UL>
                                 <strong>A little about my coding practice</strong>
@@ -172,7 +160,8 @@ const Page = () => {
                                     help.
                                 </LI>
                             </UL>
-                            <DL
+                            <H4 className="sectionHeader">Selected Experience</H4>
+                            <Box
                                 css={boxCss.css({
                                     [Years]: {
                                         ml: '1em',
@@ -181,8 +170,7 @@ const Page = () => {
                                     },
                                 })}
                             >
-                                <H4 className="sectionHeader">Selected Experience</H4>
-                                <Flex>
+                                <Flex as="dl">
                                     <Years>2017 - today</Years>
                                     <DD>
                                         <strong>React Full Stack Web Developer</strong>
@@ -223,7 +211,7 @@ const Page = () => {
                                         </NavLink>
                                     </LI>
                                 </UL>
-                                <Flex>
+                                <Flex as="dl">
                                     <Years>2003 - 2016</Years>
                                     <DD>
                                         <strong>Software & Electronics engineer</strong>
@@ -233,18 +221,24 @@ const Page = () => {
                                         </Span>
                                     </DD>
                                 </Flex>
-                                <UL>
-                                    <LI>Embedded Software - C</LI>
-                                    <LI>Board design (Altium)</LI>
-                                    <LI>Layout</LI>
-                                </UL>
-                                <H4 className="sectionHeader">Education</H4>
                                 <Flex>
+                                    <UL flex={1}>
+                                        <LI>Embedded Software - C</LI>
+                                        <LI>Board design (Altium)</LI>
+                                        <LI>Digital and analog</LI>
+                                    </UL>
+                                    <UL flex={1} ml={3}>
+                                        <LI>Audio and Iot and medical applications</LI>
+                                        <LI>Layout</LI>
+                                    </UL>
+                                </Flex>
+                                <H4 className="sectionHeader">Education</H4>
+                                <Flex as="dl">
                                     <Years>1996 - 2003</Years>
                                     <DD>
                                         <strong>
-                                            BA.Sc. Electronics Computing and Communication
-                                            Engineering
+                                            BA.Sc. Electronics, Computing and
+                                            Communication Engineering
                                         </strong>
                                         <br />
                                         <Span color="mute-onwhite">
@@ -252,7 +246,7 @@ const Page = () => {
                                         </Span>
                                     </DD>
                                 </Flex>
-                            </DL>
+                            </Box>
                         </Box>
                         <Flex flexDirection="column">
                             <H4 className="sectionHeader">Skills</H4>
