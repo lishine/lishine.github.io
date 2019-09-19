@@ -58,13 +58,11 @@ export const Gallery = ({ images, className, ...props }) => {
         if (isFullScreen) {
             document.addEventListener('keydown', handleEsc)
             document.addEventListener('mousedown', handleCloseEvent)
-            // document.addEventListener('touchstart', handleCloseEvent)
         }
 
         return () => {
             document.removeEventListener('keydown', handleEsc)
             document.removeEventListener('mousedown', handleCloseEvent)
-            // document.removeEventListener('touchstart', handleCloseEvent)
         }
     }, [isFullScreen])
 
