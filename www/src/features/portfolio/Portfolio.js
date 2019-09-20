@@ -26,12 +26,12 @@ export const Portfolio = () => (
             </P>
         </Box>
 
-        {/* <Site mt={2} /> */}
+        <Site mt={2} />
         <SBS mt={5} />
-        {/* <Salsa mt={5} /> */}
-        {/* <Overtok mt={5} /> */}
-        {/* <Barcodes mt={5} /> */}
-        {/* <Hydrantech mt={5} /> */}
-        {/* <First mt={5} /> */}
+        <Salsa mt={5} />
+        <Overtok mt={5} />
+        <Barcodes mt={5} />
+        <Hydrantech mt={5} />
+        <First mt={5} />
     </Box>
 )

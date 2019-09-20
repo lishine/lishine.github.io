@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Portfolio } from 'features/portfolio/Portfolio'
 
 export default () => (
-    <>
+    <div>
         <Head>
             <link rel="canonical" href="https://lishine.github.io" />
             <title>Pavel Ravits - React Web Developer - Portfolio</title>
@@ -11,5 +11,5 @@ export default () => (
         </Head>
 
         <Portfolio />
-    </>
+    </div>
 )

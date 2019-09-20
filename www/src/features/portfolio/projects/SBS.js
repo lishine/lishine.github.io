@@ -13,6 +13,8 @@ const DoesWrapper = styled(Box)()
 const DoesList = styled(UL)()
 
 const projectTitle = 'Street Building Sign'
+const alt = `${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`
+
 export const SBS = props => (
     <Box {...props}>
         <ProjectTitle>{projectTitle}</ProjectTitle>
@@ -153,12 +155,71 @@ export const SBS = props => (
                 <Box mt={5} width="100%" maxWidth="600px">
                     <Gallery
                         showThumbnails
-                        alt={`${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`}
                         images={[
-                            require('./1.png?webp&resize&size=500'),
-                            require('static/img/sbs/2.png'),
-                            require('static/img/sbs/3.png'),
-                            require('static/img/sbs/4.png'),
+                            {
+                                thumbnail: require('../images/sbs/1-t.png'),
+                                thumbnailAlt: alt,
+                                original: require('../images/sbs/1.png'),
+                                originalAlt: alt,
+                                imageSet: [
+                                    {
+                                        srcSet: require('../images/sbs/1.png?webp'),
+                                        type: 'image/webp',
+                                    },
+                                    {
+                                        src: require('../images/sbs/1.png'),
+                                        type: 'image/png',
+                                    },
+                                ],
+                            },
+                            {
+                                thumbnail: require('../images/sbs/2-t.png'),
+                                thumbnailAlt: alt,
+                                original: require('../images/sbs/2.png'),
+                                originalAlt: alt,
+                                imageSet: [
+                                    {
+                                        srcSet: require('../images/sbs/2.png?webp'),
+                                        type: 'image/webp',
+                                    },
+                                    {
+                                        src: require('../images/sbs/2.png'),
+                                        type: 'image/png',
+                                    },
+                                ],
+                            },
+                            {
+                                thumbnail: require('../images/sbs/3-t.png'),
+                                thumbnailAlt: alt,
+                                original: require('../images/sbs/3.png'),
+                                originalAlt: alt,
+                                imageSet: [
+                                    {
+                                        srcSet: require('../images/sbs/3.png?webp'),
+                                        type: 'image/webp',
+                                    },
+                                    {
+                                        src: require('../images/sbs/3.png'),
+                                        type: 'image/png',
+                                    },
+                                ],
+                            },
+                            {
+                                thumbnail: require('../images/sbs/4-t.png'),
+                                thumbnailAlt: alt,
+                                original: require('../images/sbs/4.png'),
+                                originalAlt: alt,
+                                imageSet: [
+                                    {
+                                        srcSet: require('../images/sbs/4.png?webp'),
+                                        type: 'image/webp',
+                                    },
+                                    {
+                                        src: require('../images/sbs/4.png'),
+                                        type: 'image/png',
+                                    },
+                                ],
+                            },
                         ]}
                     />
                 </Box>

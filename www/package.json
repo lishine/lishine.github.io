@@ -4,9 +4,9 @@
     "license": "ISC",
     "scripts": {
         "dev": "cd src && next dev",
-        "build": "cd src && next build",
-        "export": "cd src && next export --outdir ../out",
-        "start": "yarn build && cd src && next start",
+        "build": "cd src && NODE_ENV=production next build",
+        "export": "cd src && NODE_ENV=production next export --outdir ../out",
+        "start": "yarn build && cd src && NODE_ENV=production next start",
         "test": "node src/test/1.js"
     },
     "dependencies": {

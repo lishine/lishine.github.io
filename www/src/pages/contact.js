@@ -4,7 +4,7 @@ import { Box, Grid, DT, DD, NavLink, Image, Flex } from 'styles/ss-components'
 import { Phone, Israel, Email } from 'svg/icons'
 
 const Page = () => (
-    <>
+    <div>
         <Head>
             <title>Pavel Ravits - React Web Developer - Contact</title>
             <meta name="description" content="Contact" />
@@ -17,7 +17,12 @@ const Page = () => (
             pl={5}
             className="grid-container padding-container"
         >
-            <Grid gridAutoFlow="row" gridRowGap={1} gridTemplateColumns="35px 1fr">
+            <Grid
+                as="dl"
+                gridAutoFlow="row"
+                gridRowGap={1}
+                gridTemplateColumns="35px 1fr"
+            >
                 <DT>
                     <Phone />
                 </DT>
@@ -39,9 +44,14 @@ const Page = () => (
                 </DT>
                 <DD>Israel</DD>
             </Grid>
-            <Image mt={3} width="200px" src={require('static/img/photo.jpg')} />
+            <Image
+                mt={3}
+                width="200px"
+                alt="Pavel Ravits"
+                src={require('../static/img/photo.jpg')}
+            />
         </Flex>
-    </>
+    </div>
 )
 
 export default Page

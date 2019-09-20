@@ -4,6 +4,7 @@ import { ProjectTitle, SubLink } from '../common'
 import { Gallery } from '../Gallery'
 
 const projectTitle = 'Overtok - users engagement and convertion'
+const alt = `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`
 
 export const Overtok = props => (
     <Box {...props}>
@@ -38,8 +39,20 @@ export const Overtok = props => (
                     <Gallery
                         images={[
                             {
-                                alt: `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`,
-                                url: `/img/overtok/1.jpg`,
+                                thumbnail: require('../images/overtok/1-t.jpg'),
+                                thumbnailAlt: alt,
+                                original: require('../images/overtok/1.jpg'),
+                                originalAlt: alt,
+                                imageSet: [
+                                    {
+                                        srcSet: require('../images/overtok/1.jpg?webp'),
+                                        type: 'image/webp',
+                                    },
+                                    {
+                                        src: require('../images/overtok/1.jpg'),
+                                        type: 'image/jpg',
+                                    },
+                                ],
                             },
                         ]}
                     />

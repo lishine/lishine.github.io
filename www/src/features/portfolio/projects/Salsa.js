@@ -13,6 +13,7 @@ const DoesWrapper = styled(Box)()
 const DoesList = styled(UL)()
 
 const projectTitle = 'Video courses of Salsa dancing'
+const alt = `${projectTitle} - React Next.js SSR web app, Serverless backend, Graphql Postgres db, Headless CMS`
 
 export const Salsa = props => {
     return (
@@ -173,24 +174,106 @@ export const Salsa = props => {
 
                 <Flex justifyContent="center">
                     <Box mt={5} width="100%" maxWidth="600px">
-                        {/* <Gallery
-                            showThumbnails
-                            alt={`${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`}
-                            images={[
-                                require('static/img/sbs/1.jpg'),
-                                require('static/img/sbs/2.jpg'),
-                                require('static/img/sbs/3.jpg'),
-                                require('static/img/sbs/4.jpg'),
-                                require('static/img/sbs/5.jpg'),
-                                require('static/img/sbs/6.jpg'),
-                            ]}
-                        /> */}
                         <Gallery
                             showThumbnails
-                            images={[1, 2, 3, 4, 5, 6].map(index => ({
-                                alt: `${projectTitle} - React Next.js SSR web app, Serverless backend, Graphql Postgres db, Headless CMS`,
-                                url: `/img/salsa/${index}.jpg`,
-                            }))}
+                            images={[
+                                {
+                                    thumbnail: require('../images/salsa/1-t.jpg'),
+                                    thumbnailAlt: alt,
+                                    original: require('../images/salsa/1.jpg'),
+                                    originalAlt: alt,
+                                    imageSet: [
+                                        {
+                                            srcSet: require('../images/salsa/1.jpg?webp'),
+                                            type: 'image/webp',
+                                        },
+                                        {
+                                            src: require('../images/salsa/1.jpg'),
+                                            type: 'image/jpg',
+                                        },
+                                    ],
+                                },
+                                {
+                                    thumbnail: require('../images/salsa/2-t.jpg'),
+                                    thumbnailAlt: alt,
+                                    original: require('../images/salsa/2.jpg'),
+                                    originalAlt: alt,
+                                    imageSet: [
+                                        {
+                                            srcSet: require('../images/salsa/2.jpg?webp'),
+                                            type: 'image/webp',
+                                        },
+                                        {
+                                            src: require('../images/salsa/2.jpg'),
+                                            type: 'image/jpg',
+                                        },
+                                    ],
+                                },
+                                {
+                                    thumbnail: require('../images/salsa/3-t.jpg'),
+                                    thumbnailAlt: alt,
+                                    original: require('../images/salsa/3.jpg'),
+                                    originalAlt: alt,
+                                    imageSet: [
+                                        {
+                                            srcSet: require('../images/salsa/3.jpg?webp'),
+                                            type: 'image/webp',
+                                        },
+                                        {
+                                            src: require('../images/salsa/3.jpg'),
+                                            type: 'image/jpg',
+                                        },
+                                    ],
+                                },
+                                {
+                                    thumbnail: require('../images/salsa/4-t.jpg'),
+                                    thumbnailAlt: alt,
+                                    original: require('../images/salsa/4.jpg'),
+                                    originalAlt: alt,
+                                    imageSet: [
+                                        {
+                                            srcSet: require('../images/salsa/4.jpg?webp'),
+                                            type: 'image/webp',
+                                        },
+                                        {
+                                            src: require('../images/salsa/4.jpg'),
+                                            type: 'image/jpg',
+                                        },
+                                    ],
+                                },
+                                {
+                                    thumbnail: require('../images/salsa/5-t.jpg'),
+                                    thumbnailAlt: alt,
+                                    original: require('../images/salsa/5.jpg'),
+                                    originalAlt: alt,
+                                    imageSet: [
+                                        {
+                                            srcSet: require('../images/salsa/5.jpg?webp'),
+                                            type: 'image/webp',
+                                        },
+                                        {
+                                            src: require('../images/salsa/5.jpg'),
+                                            type: 'image/jpg',
+                                        },
+                                    ],
+                                },
+                                {
+                                    thumbnail: require('../images/salsa/6-t.jpg'),
+                                    thumbnailAlt: alt,
+                                    original: require('../images/salsa/6.jpg'),
+                                    originalAlt: alt,
+                                    imageSet: [
+                                        {
+                                            srcSet: require('../images/salsa/6.jpg?webp'),
+                                            type: 'image/webp',
+                                        },
+                                        {
+                                            src: require('../images/salsa/6.jpg'),
+                                            type: 'image/jpg',
+                                        },
+                                    ],
+                                },
+                            ]}
                         />
                     </Box>
                 </Flex>

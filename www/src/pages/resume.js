@@ -44,7 +44,7 @@ const Years = styled(DT)()
 const Page = () => {
     const ref = useRef(null)
     return (
-        <>
+        <div>
             <Head>
                 <title>Pavel Ravits - React Web Developer - Resume</title>
                 <meta name="description" content="Resume" />
@@ -299,41 +299,41 @@ const Page = () => {
                                         gridRowGap={1}
                                         gridTemplateColumns="35px 1fr"
                                     >
-                                        <DT>
+                                        <span>
                                             <Web />
-                                        </DT>
-                                        <DD>
+                                        </span>
+                                        <span>
                                             <NavLink
                                                 target="_blank"
                                                 href="https://lishine.github.io"
                                             />
-                                        </DD>
-                                        <DT>
+                                        </span>
+                                        <span>
                                             <Phone />
-                                        </DT>
-                                        <DD>
+                                        </span>
+                                        <span>
                                             <NavLink
                                                 rel="nofollow"
                                                 href="tel:+972-52-3747324"
                                             >
                                                 +972-52-3747324
                                             </NavLink>
-                                        </DD>
-                                        <DT>
+                                        </span>
+                                        <span>
                                             <Email fill="var(--tertiary)" />
-                                        </DT>
-                                        <DD>
+                                        </span>
+                                        <span>
                                             <NavLink
                                                 rel="nofollow"
                                                 href="mailto:vim55k@gmail.com"
                                             >
                                                 vim55k@gmail.com
                                             </NavLink>
-                                        </DD>
-                                        <DT>
+                                        </span>
+                                        <span>
                                             <Israel />
-                                        </DT>
-                                        <DD>Israel</DD>
+                                        </span>
+                                        <span>Israel</span>
                                     </Grid>
                                 </LI>
                             </UL>
@@ -344,7 +344,7 @@ const Page = () => {
                     </Grid>
                 </Flex>
             </Box>
-        </>
+        </div>
     )
 }
 

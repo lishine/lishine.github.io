@@ -56,6 +56,18 @@ const useClickOpen = () => {
 
 export const Gallery = ({ images, alt, className, ...props }) => {
     const { galleryRef, thumbClicked, isFullScreen, setFullScreen } = useClickOpen()
+
+    const [_images, setImages] = useState(
+        images.map(image => ({
+            ...image,
+            original: image.thumbnail,
+            imageSet: [{ srcSet: image.thumbnail }],
+        }))
+    )
+
+    useEffect(() => {
+        setImages(images)
+    }, [])
     return (
         <Flex
             className={className}
@@ -81,7 +93,9 @@ export const Gallery = ({ images, alt, className, ...props }) => {
         >
             <ImageGallery
                 ref={galleryRef}
-                onImageLoad={e => console.log(e.currentTarget)}
+                // onImageLoad={e =>
+                // console.log('e.currentTarget.src = ', e.currentTarget.src)
+                // }
                 showFullscreenButton={false}
                 showPlayButton={false}
                 showBullets={false}

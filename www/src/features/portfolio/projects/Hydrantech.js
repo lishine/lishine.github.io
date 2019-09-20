@@ -8,6 +8,8 @@ import { ProjectTitle, SubRemark, SubLink } from '../common'
 import { Gallery } from '../Gallery'
 
 const projectTitle = 'System to manage internet connected fire hydrants'
+const altDesktop = `${projectTitle} - web React app`
+const altMobile = `${projectTitle} - mobile React Native app`
 
 export const Hydrantech = props => (
     <Box {...props}>
@@ -90,11 +92,89 @@ export const Hydrantech = props => (
             <Box mb={[8, null]} mie={[null, 2]} width={[null, '55%']}>
                 <Gallery
                     showThumbnails
-                    images={[1, 2, 3, 4, 5].map(index => ({
-                        alt: `${projectTitle} - web React app`,
-                        url: `/img/hd/${index}.jpg`,
-                    }))}
-                />
+                    images={[
+                        {
+                            thumbnail: require('../images/hd/1-t.jpg'),
+                            thumbnailAlt: altDesktop,
+                            original: require('../images/hd/1.jpg'),
+                            originalAlt: altDesktop,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hd/1.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hd/1.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hd/2-t.jpg'),
+                            thumbnailAlt: altDesktop,
+                            original: require('../images/hd/2.jpg'),
+                            originalAlt: altDesktop,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hd/2.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hd/2.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hd/3-t.jpg'),
+                            thumbnailAlt: altDesktop,
+                            original: require('../images/hd/3.jpg'),
+                            originalAlt: altDesktop,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hd/3.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hd/3.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hd/4-t.jpg'),
+                            thumbnailAlt: altDesktop,
+                            original: require('../images/hd/4.jpg'),
+                            originalAlt: altDesktop,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hd/4.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hd/4.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hd/5-t.jpg'),
+                            thumbnailAlt: altDesktop,
+                            original: require('../images/hd/5.jpg'),
+                            originalAlt: altDesktop,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hd/5.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hd/5.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                    ]}
+                />{' '}
             </Box>
             <Box
                 pt={[8, 0]}
@@ -103,11 +183,73 @@ export const Hydrantech = props => (
             >
                 <Gallery
                     showThumbnails
-                    images={[1, 2, 3, 4].map(index => ({
-                        alt: `${projectTitle} - mobile React Native app`,
-                        url: `/img/hdm/${index}.jpg`,
-                    }))}
-                />
+                    images={[
+                        {
+                            thumbnail: require('../images/hdm/1-t.jpg'),
+                            thumbnailAlt: altMobile,
+                            original: require('../images/hdm/1.jpg'),
+                            originalAlt: altMobile,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hdm/1.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hdm/1.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hdm/2-t.jpg'),
+                            thumbnailAlt: altMobile,
+                            original: require('../images/hdm/2.jpg'),
+                            originalAlt: altMobile,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hdm/2.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hdm/2.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hdm/3-t.jpg'),
+                            thumbnailAlt: altMobile,
+                            original: require('../images/hdm/3.jpg'),
+                            originalAlt: altMobile,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hdm/3.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hdm/3.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                        {
+                            thumbnail: require('../images/hdm/4-t.jpg'),
+                            thumbnailAlt: altMobile,
+                            original: require('../images/hdm/4.jpg'),
+                            originalAlt: altMobile,
+                            imageSet: [
+                                {
+                                    srcSet: require('../images/hdm/4.jpg?webp'),
+                                    type: 'image/webp',
+                                },
+                                {
+                                    src: require('../images/hdm/4.jpg'),
+                                    type: 'image/jpg',
+                                },
+                            ],
+                        },
+                    ]}
+                />{' '}
             </Box>
         </Flex>
     </Box>
