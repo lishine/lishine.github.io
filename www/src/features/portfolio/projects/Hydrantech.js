@@ -4,7 +4,8 @@ import { Box, Flex, H1, H2, H4, LI, Grid, P, Span, NavLink } from 'styles/ss-com
 // import LineTo from 'react-lineto'
 import { ArcherContainer, ArcherElement } from 'react-archer'
 import { boxCss } from 'styles/ss-utils'
-import { ProjectTitle, Gallery, SubRemark, SubLink } from './common'
+import { ProjectTitle, SubRemark, SubLink } from '../common'
+import { Gallery } from '../Gallery'
 
 const projectTitle = 'System to manage internet connected fire hydrants'
 
@@ -96,8 +97,8 @@ export const Hydrantech = props => (
                 />
             </Box>
             <Box
-                pt={[8, null]}
-                borderTop={['4px solid var(--onwhite-border)', '']}
+                pt={[8, 0]}
+                borderTop={['4px solid var(--onwhite-border)', '0']}
                 width={[null, '35%']}
             >
                 <Gallery

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, Grid, Span, NavLink } from 'styles/ss-components'
-import { ProjectTitle, SubRemark, Gallery, DoesTitle, DoesItem, SubLink } from './common'
+import { ProjectTitle, SubRemark, DoesTitle, DoesItem, SubLink } from '../common'
+import { Gallery } from '../Gallery'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 import styled from '@emotion/styled'
@@ -172,6 +173,18 @@ export const Salsa = props => {
 
                 <Flex justifyContent="center">
                     <Box mt={5} width="100%" maxWidth="600px">
+                        {/* <Gallery
+                            showThumbnails
+                            alt={`${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`}
+                            images={[
+                                require('static/img/sbs/1.jpg'),
+                                require('static/img/sbs/2.jpg'),
+                                require('static/img/sbs/3.jpg'),
+                                require('static/img/sbs/4.jpg'),
+                                require('static/img/sbs/5.jpg'),
+                                require('static/img/sbs/6.jpg'),
+                            ]}
+                        /> */}
                         <Gallery
                             showThumbnails
                             images={[1, 2, 3, 4, 5, 6].map(index => ({

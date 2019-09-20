@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
-import { ProjectTitle, Gallery, SubLink } from './common'
+import { ProjectTitle, SubLink } from '../common'
+import { Gallery } from '../Gallery'
 
 const projectTitle = 'Overtok - users engagement and convertion'
 
@@ -32,16 +33,18 @@ export const Overtok = props => (
                     <LI>Git, Jira, Slack</LI>
                 </UL>
             </Box>
-            <Box mt={4} width="100%" height="100%" maxWidth="600px">
-                <Gallery
-                    images={[
-                        {
-                            alt: `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`,
-                            url: `/img/overtok/1.jpg`,
-                        },
-                    ]}
-                />
-            </Box>
+            <Flex justifyContent="center">
+                <Box mt={4} width="100%" height="100%" maxWidth="600px">
+                    <Gallery
+                        images={[
+                            {
+                                alt: `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`,
+                                url: `/img/overtok/1.jpg`,
+                            },
+                        ]}
+                    />
+                </Box>
+            </Flex>
         </Flex>
     </Box>
 )

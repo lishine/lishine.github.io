@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Box, Flex, LI, UL, Grid, H4, Span, NavLink, P } from 'styles/ss-components'
-import { ProjectTitle, DoesTitle, SubRemark, Gallery, DoesItem, SubLink } from './common'
+import { ProjectTitle, DoesTitle, SubRemark, DoesItem, SubLink } from '../common'
+import { Gallery } from '../Gallery'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 import styled from '@emotion/styled'
@@ -152,10 +153,13 @@ export const SBS = props => (
                 <Box mt={5} width="100%" maxWidth="600px">
                     <Gallery
                         showThumbnails
-                        images={[1, 2, 3, 4].map(index => ({
-                            alt: `${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`,
-                            url: `/img/sbs/${index}.png`,
-                        }))}
+                        alt={`${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`}
+                        images={[
+                            require('./1.png?webp&resize&size=500'),
+                            require('static/img/sbs/2.png'),
+                            require('static/img/sbs/3.png'),
+                            require('static/img/sbs/4.png'),
+                        ]}
                     />
                 </Box>
             </Flex>

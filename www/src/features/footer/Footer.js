@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import get from 'lodash/fp/get'
 
 import { Form, P, Box, Flex, Span, Image, NavLink, Grid } from 'styles/ss-components'
@@ -26,13 +26,17 @@ export const Footer = props => {
             >
                 <a href="https://github.com/lishine" rel="noopener" target="_blank">
                     <Image
-                        src="/logo/github-onwhite.png"
+                        src={require('static/logo/github-onwhite.png')}
                         alt="github logo"
                         height={logoHeight}
                     />
                 </a>
                 <a href="https://gitlab.com/vim55k" rel="noopener" target="_blank">
-                    <Image src="/logo/gitlab.png" alt="gitlab logo" height={logoHeight} />
+                    <Image
+                        src={require('static/logo/gitlab.png')}
+                        alt="gitlab logo"
+                        height={logoHeight}
+                    />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/pvrv/"
@@ -40,7 +44,7 @@ export const Footer = props => {
                     target="_blank"
                 >
                     <Image
-                        src="/logo/li-in.png"
+                        src={require('static/logo/li-in.png')}
                         alt="linkedin logo"
                         height={logoHeight}
                     />

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
-import { ProjectTitle, SubRemark, SubLink } from './common'
+import { ProjectTitle, SubRemark, SubLink } from '../common'
 
 export const Barcodes = props => (
     <Box {...props}>

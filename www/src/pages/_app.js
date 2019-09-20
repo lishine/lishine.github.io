@@ -1,16 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
-import { withRouter, default as nextRouter } from 'next/router'
-import App, { Container } from 'next/app'
+import { default as nextRouter } from 'next/router'
+import App from 'next/app'
 import { ThemeProvider } from 'emotion-theming'
-import camelCase from 'lodash/camelCase'
+import { PageTransition } from 'next-page-transitions'
 
 import { GlobalCss, theme } from 'styles/theme'
 import { Header } from 'features/header/Header'
 import { Footer } from 'features/footer/Footer'
 
 import 'scss/index.scss'
-import { Box, Flex } from 'styles/ss-components'
+import { Flex } from 'styles/ss-components'
 
 export const redirect = (ctx, path) => {
     if (process.browser) {
@@ -82,8 +82,7 @@ class MyApp extends App {
         }
     }
     render() {
-        const { Component, router } = this.props
-
+        const { Component, pageProps, router } = this.props
         if (process.browser) {
             // window.addEventListener('resize', () => {
             // let vh = window.innerHeight * 0.01
@@ -109,10 +108,10 @@ class MyApp extends App {
                         />
                     )}
                     <link
-                        href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700"
-                        rel="preload"
-                        as="style"
-                        onLoad="this.onload=null;this.rel='stylesheet'"
+                        href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700&display=swap"
+                        rel="stylesheet"
+                        // as="style"
+                        // onLoad="this.onload=null;this.rel='stylesheet'"
                     />
                     <link rel="icon" type="image/x-icon" href="/favicon.png" />
                 </Head>
@@ -129,7 +128,27 @@ class MyApp extends App {
                             ]}
                             flex={1}
                         >
-                            <Component />
+                            <PageTransition timeout={300} classNames="page-transition">
+                                <Component {...pageProps} key={router.route} />
+                            </PageTransition>
+                            <style jsx global>{`
+                                .page-transition-enter {
+                                    opacity: 0;
+                                    transform: translate3d(0, 20px, 0);
+                                }
+                                .page-transition-enter-active {
+                                    opacity: 1;
+                                    transform: translate3d(0, 0, 0);
+                                    transition: opacity 300ms, transform 300ms;
+                                }
+                                .page-transition-exit {
+                                    opacity: 1;
+                                }
+                                .page-transition-exit-active {
+                                    opacity: 0;
+                                    transition: opacity 300ms;
+                                }
+                            `}</style>
                             <Footer
                                 height={`${footerHeight}px`}
                                 mb={[!isResumePage && `${mobileHeaderHeight}px`, 0]}
@@ -142,4 +161,4 @@ class MyApp extends App {
     }
 }
 
-export default withRouter(MyApp)
+export default MyApp

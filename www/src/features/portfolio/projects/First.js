@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, UL, H3, Grid, P, Span, NavLink } from 'styles/ss-components'
-import { ProjectTitle, DoesItem } from './common'
+import { ProjectTitle, DoesItem } from '../common'
 
 export const First = props => (
     <Box {...props}>

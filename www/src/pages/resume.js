@@ -115,7 +115,7 @@ const Page = () => {
                         <Box>
                             <H4 className="sectionHeader">Background</H4>
                             <P>
-                                I am a full stack <strong>web & mobile</strong> developer
+                                I am a Full Stack <strong>web & mobile</strong> developer
                                 that specializes in <strong>Front-End, React</strong> and
                                 state management.
                                 <br />
@@ -251,6 +251,7 @@ const Page = () => {
                         <Flex flexDirection="column">
                             <H4 className="sectionHeader">Skills</H4>
                             <UL>
+                                <LI>Build Server/Client applications</LI>
                                 <LI>React, React Native</LI>
                                 <LI>JavaScript, Typescript, ClojureScript, C</LI>
                                 <LI>Redux, Mobx</LI>
@@ -271,7 +272,7 @@ const Page = () => {
                                 <LI>Front-End, UI</LI>
                                 <LI>Distributed Software</LI>
                                 <LI>Cloud</LI>
-                                <LI>Blockchain, DAPP, DLT</LI>
+                                <LI>Blockchain DAPP</LI>
                             </UL>
                             <H4 className="sectionHeader">In my free time</H4>
                             <UL>

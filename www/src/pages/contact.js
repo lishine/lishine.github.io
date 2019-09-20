@@ -39,7 +39,7 @@ const Page = () => (
                 </DT>
                 <DD>Israel</DD>
             </Grid>
-            <Image mt={3} width="200px" src="/photo.jpg" />
+            <Image mt={3} width="200px" src={require('static/img/photo.jpg')} />
         </Flex>
     </>
 )

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, LI, UL, H3, Grid, P, Span, NavLink, Flex } from 'styles/ss-components'
-import { ProjectTitle, SubLink } from './common'
+import { ProjectTitle, SubLink } from '../common'
 
 export const Site = props => (
     <Box {...props}>

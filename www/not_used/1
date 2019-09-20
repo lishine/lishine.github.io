@@ -1,0 +1,50 @@
+    const preloadImages = useRef([])
+    const [_images, setImages] = useState(
+        images.map(() => {
+            const _alt = `${altPrefix}${alt}`
+            return {
+                original: require('static/img/loading.jpg'),
+                thumbnail: require('static/img/loading.jpg'),
+                thumbnailClass: 'thumb',
+                originalAlt: _alt,
+                thumbnailAlt: _alt,
+            }
+        })
+    )
+    useEffect(() => {
+        images.map(url => {
+            const image = new Image()
+            image.src = url
+            image.onload = () => {
+                const found = preloadImages.current.find(i => i.url === url)
+                if (found) {
+                    found.loaded = true
+                    const countLoaded = preloadImages.current.filter(
+                        ({ loaded }) => loaded
+                    ).length
+                    const countPreloaded = preloadImages.current.length
+                    const allLoaded = countLoaded === countPreloaded
+                    if (allLoaded) {
+                        setImages(preloadImages.current)
+                    }
+                }
+            }
+
+            const _alt = `${altPrefix}${alt}`
+            const _image = {
+                original: require('static/img/loading.jpg'),
+                thumbnail: require('static/img/loading.jpg'),
+                thumbnailClass: 'thumb',
+                originalAlt: _alt,
+                thumbnailAlt: _alt,
+            }
+            preloadImages.current.push({
+                image,
+                url,
+                loaded: false,
+                ..._image,
+                original: url,
+                thumbnail: url,
+            })
+        })
+    }, [])
