@@ -4,7 +4,7 @@ import { Box, Grid, DT, DD, NavLink, Image, Flex } from 'styles/ss-components'
 import { Phone, Israel, Email } from 'svg/icons'
 
 const Page = () => (
-    <div>
+    <main>
         <Head>
             <title>Pavel Ravits - React Web Developer - Contact</title>
             <meta name="description" content="Contact" />
@@ -51,7 +51,7 @@ const Page = () => (
                 src={require('../static/img/photo.jpg')}
             />
         </Flex>
-    </div>
+    </main>
 )
 
 export default Page

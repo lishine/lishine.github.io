@@ -107,12 +107,12 @@ class MyApp extends App {
                             content="width=device-width, initial-scale=1, shrink-to-fit=no"
                         />
                     )}
-                    <link
+                    {/* <link
                         href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700&display=swap"
                         rel="stylesheet"
                         // as="style"
                         // onLoad="this.onload=null;this.rel='stylesheet'"
-                    />
+                    /> */}
                     <link rel="icon" type="image/x-icon" href="/favicon.png" />
                 </Head>
 

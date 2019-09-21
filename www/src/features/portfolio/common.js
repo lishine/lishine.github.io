@@ -4,8 +4,6 @@ import 'react-image-gallery/styles/scss/image-gallery.scss'
 // Common
 import { H1, H4, H3, LI, Box, Flex, Span } from 'styles/ss-components'
 
-export const altPrefix = 'React projects by Pavel Ravits | '
-
 export const ProjectTitle = props => (
     <H3 pt={3} mb={1} fontWeight="500" borderBottom="1px solid currentColor" {...props} />
 )

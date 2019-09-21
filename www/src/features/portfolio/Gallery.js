@@ -54,8 +54,11 @@ const useClickOpen = () => {
     return { galleryRef, thumbClicked, isFullScreen, setFullScreen }
 }
 
+const altPrefix = 'React projects by Pavel Ravits | '
+
 export const Gallery = ({ images, alt, className, ...props }) => {
     const { galleryRef, thumbClicked, isFullScreen, setFullScreen } = useClickOpen()
+    const [ref, inView] = useInView()
 
     const [_images, setImages] = useState(
         images.map(image => ({
@@ -66,10 +69,20 @@ export const Gallery = ({ images, alt, className, ...props }) => {
     )
 
     useEffect(() => {
-        setImages(images)
-    }, [])
+        if (inView) {
+            setImages(
+                images.map(image => ({
+                    ...image,
+                    originalAlt: `${altPrefix}${image.originalAlt}`,
+                    thumbnailAlt: `${altPrefix}${image.thumbnailAlt}`,
+                }))
+            )
+        }
+    }, [inView])
+
     return (
         <Flex
+            ref={ref}
             className={className}
             css={boxCss.css({
                 bg: '#EEEEEE',
