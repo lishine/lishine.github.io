@@ -13,7 +13,9 @@ const nextConfig = {
     ) {
         return {
             '/': { page: '/portfolio' },
-            ...defaultPathMap,
+            '/portfolio': { page: '/portfolio' },
+            '/contact': { page: '/contact' },
+            '/resume': { page: '/resume' },
         }
     },
     // target: 'serverless',

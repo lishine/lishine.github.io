@@ -18,6 +18,7 @@ export const Site = props => (
             <LI>SEO optimized</LI>
             <LI>Latest CSS solutions: Flex, Grid, custom and logical CSS properties</LI>
             <LI>Lighthouse audit ~100</LI>
+            <LI>Page Animation</LI>
         </UL>
     </Box>
 )

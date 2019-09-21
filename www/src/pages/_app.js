@@ -96,6 +96,7 @@ class MyApp extends App {
             // let vh = window.innerHeight * 0.01
             // document.documentElement.style.setProperty('--vh', `${vh}px`)
             // })
+            console.log('router', router)
             console.log('router.pathname', router.pathname)
             console.log('$ BROWSER in render _app')
         } else {
@@ -215,6 +216,12 @@ class MyApp extends App {
 
 `}
                     </style>
+                    {/* {router.asPath === '/' && (
+                        <link
+                            rel="canonical"
+                            href="https://lishine.github.io/portfolio"
+                        />
+                    )} */}
                     {isResumePage ? (
                         <meta charSet="utf-8" name="viewport" content="width=1168" />
                     ) : (

@@ -8,3 +8,4 @@
 * SEO optimized
 * Latest CSS solutions: Flex, Grid, custom and logical CSS properties
 * Lighthouse audit ~100
+* Page Animation
