@@ -17,6 +17,7 @@ import {
     DD,
     DT,
     DL,
+    H5,
 } from 'styles/ss-components'
 import { boxCss } from 'styles/ss-utils'
 
@@ -77,17 +78,23 @@ const Page = () => {
                             fontSize: '38px',
                             transform: 'translateY(7px)',
                             letterSpacing: '0.03em',
+                            '> strong': {
+                                fontWeight: 600,
+                            },
                         },
                         [H4]: {
                             fontSize: '24px',
                             letterSpacing: '0.03em',
                         },
-                        'p, li, a, [Span], dt, dd, ul': {
+                        'p, li, a, span, dt, dd, ul': {
                             fontSize: '19px',
                             lineHeight: '24px',
                             '> strong': {
                                 fontWeight: 600,
                             },
+                        },
+                        strong: {
+                            fontWeight: 600,
                         },
                         'p, ol, ul, dl': { transform: 'translateY(5px)' },
                         'p, ul': { mb: 2 },
@@ -131,8 +138,10 @@ const Page = () => {
                                     attentive guy.
                                 </Span>
                             </P>
-                            <UL>
+                            <H5>
                                 <strong>A little about my coding practice</strong>
+                            </H5>
+                            <UL>
                                 <LI>Practice code optimization and refactoring</LI>
                                 <LI>
                                     Adhere to <strong>DRY and KISS</strong> software

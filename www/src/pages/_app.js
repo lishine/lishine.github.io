@@ -8,9 +8,10 @@ import { PageTransition } from 'next-page-transitions'
 import { GlobalCss, theme } from 'styles/theme'
 import { Header } from 'features/header/Header'
 import { Footer } from 'features/footer/Footer'
-
-import 'scss/index.scss'
 import { Flex } from 'styles/ss-components'
+
+import 'scss/fonts.css'
+import 'scss/index.scss'
 
 export const redirect = (ctx, path) => {
     if (process.browser) {
@@ -98,6 +99,114 @@ class MyApp extends App {
         return (
             <div>
                 <Head>
+                    <style>
+                        {`
+
+/* lato-300 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'),
+         url('../fonts/lato-v16-latin-300.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+    font-display: swap;
+  }
+  /* lato-300italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Lato Light Italic'), local('Lato-LightItalic'),
+         url('../fonts/lato-v16-latin-300italic.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+         font-display: swap;
+
+  }
+  /* lato-regular - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'),
+         url('../fonts/lato-v16-latin-regular.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+         font-display: swap;
+        }
+  /* lato-italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'),
+         url('../fonts/lato-v16-latin-italic.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+         font-display: swap;
+        }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'),
+         url('../fonts/lato-v16-latin-700.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+         font-display: swap;
+        }
+
+        /* oswald-regular - latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/oswald-v25-latin-regular.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+       font-display: swap;
+    }
+/* oswald-500 - latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/oswald-v25-latin-500.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+       font-display: swap;
+    }
+/* oswald-600 - latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/oswald-v25-latin-600.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+       font-display: swap;
+    }
+
+    /* crimson-pro-regular - latin */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/crimson-pro-v7-latin-regular.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+       font-display: swap;
+}
+/* crimson-pro-italic - latin */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/crimson-pro-v7-latin-italic.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+       font-display: swap;
+}
+/* crimson-pro-600 - latin */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/crimson-pro-v7-latin-600.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+       font-display: swap;
+}
+
+`}
+                    </style>
                     {isResumePage ? (
                         <meta charSet="utf-8" name="viewport" content="width=1168" />
                     ) : (
@@ -108,7 +217,7 @@ class MyApp extends App {
                         />
                     )}
                     {/* <link
-                        href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500|Crimson+Pro:400,500,600,700&display=swap"
+                        href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700|Oswald:400,500,600|Crimson+Pro:400,400i,600&display=swap"
                         rel="stylesheet"
                         // as="style"
                         // onLoad="this.onload=null;this.rel='stylesheet'"

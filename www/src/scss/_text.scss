@@ -49,13 +49,14 @@
 // }
 
 
+
 h1, h2, h3, h4, h5, h6, p, dl, ul, ol {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	@include f(17px, 24px, 6px);
     font-weight: 400;
     > strong {
-        font-weight: 600;
+        font-weight: 700;
     }
 }
 
@@ -65,6 +66,12 @@ ol, ul, dl {
 
 dd, dt, li {
 	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	@include f(17px, 24px, 0);
+}
+
+a, span {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	@include f(17px, 24px, 0);
@@ -143,17 +150,6 @@ h3 {
 	font-weight: 300;
 }
 
-
-h5 {
-	font-family: 'Lato', sans-serif;
-	@include f(16px, 24px, 6px);
-	font-weight: 700;
-  
-	@include media-breakpoint-up(lg) {
-		@include oswald;
-		@include f(32px, 40px, 6px);
-	}
-}
 
 h6 {
 	font-family: 'Oswald', sans-serif;
