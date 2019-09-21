@@ -46,9 +46,9 @@ const Page = () => (
             </Grid>
             <Image
                 mt={3}
-                width="200px"
+                width="300px"
                 alt="Pavel Ravits"
-                src={require('../static/img/photo.jpg')}
+                src={require('../static/img/photo.png')}
             />
         </Flex>
     </main>
