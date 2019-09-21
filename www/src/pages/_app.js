@@ -216,12 +216,12 @@ class MyApp extends App {
 
 `}
                     </style>
-                    {/* {router.asPath === '/' && (
+                    {router.asPath === '/' && (
                         <link
                             rel="canonical"
                             href="https://lishine.github.io/portfolio"
                         />
-                    )} */}
+                    )}
                     {isResumePage ? (
                         <meta charSet="utf-8" name="viewport" content="width=1168" />
                     ) : (
