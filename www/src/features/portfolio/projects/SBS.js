@@ -144,8 +144,7 @@ export const SBS = props => (
                         </DoesItem>
                         <DoesItem>Design - currently, by self consideration</DoesItem>
                         <DoesItem>
-                            Latest CSS qualities: Flex, Grid, CSS custom and logical
-                            properties
+                            Latest CSS tech: Flex, Grid, custom and logical CSS properties
                         </DoesItem>
                     </DoesList>
                 </DoesWrapper>

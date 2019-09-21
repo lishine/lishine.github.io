@@ -3,7 +3,7 @@ import { Box, Flex, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
 import { ProjectTitle, SubLink } from '../common'
 import { Gallery } from '../Gallery'
 
-const projectTitle = 'Overtok - users engagement and convertion'
+const projectTitle = 'Overtok - users engagement and conversion'
 const alt = `${projectTitle} - web React app, mobile React Native app, AWS Lambda backend, Clojurescript web admin client`
 
 export const Overtok = props => (

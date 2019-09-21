@@ -12,18 +12,18 @@ export const First = props => (
         <UL mt={2}>
             <DoesItem>
                 Instead of building the usual desktop solution using Delphi/Vb/C#, I
-                turned to develop distributed system which will be available through a
+                turned to develop a distributed system which will be available through a
                 client anywhere
             </DoesItem>
             <DoesItem>
-                Meteor enabled me to get started easily and build Full-Stack solution
+                Meteor enabled me to get started easily and build a Full-Stack solution
             </DoesItem>
             <DoesItem>
                 React made me excited to write a client structured with components
             </DoesItem>
             <DoesItem>React is the main reason I started web-coding.</DoesItem>
             <DoesItem>
-                I was able to take advantage of community built components, this
+                I was able to take advantage of community-built components, this
                 opportunity was the main reason to ditch the desktop way of development
             </DoesItem>
         </UL>

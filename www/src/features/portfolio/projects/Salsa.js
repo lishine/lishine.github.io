@@ -101,7 +101,7 @@ export const Salsa = props => {
                         <DoesTitle>API</DoesTitle>
                         <DoesList>
                             <DoesItem>
-                                Serverless services, deployed to Zeit Now v2 on top of AWS
+                                Serverless services deployed to Zeit Now v2 on top of AWS
                                 lambda
                             </DoesItem>
                             <DoesItem>JWT in cookie authentication</DoesItem>
@@ -121,7 +121,7 @@ export const Salsa = props => {
                     </DoesWrapper>
 
                     <DoesWrapper>
-                        <DoesTitle>Content managment</DoesTitle>
+                        <DoesTitle>Content management</DoesTitle>
                         <DoesList>
                             <DoesItem>DATO Headless CMS</DoesItem>
                             <DoesItem>

@@ -134,7 +134,7 @@ const Page = () => {
                                 Programming since age 13.
                                 <br />
                                 <Span italic>
-                                    In your team I will be the positive, calm and
+                                    In your team, I will be the positive, calm and
                                     attentive guy.
                                 </Span>
                             </P>
@@ -158,8 +158,7 @@ const Page = () => {
                                     Javascript, React and Cloud
                                 </LI>
                                 <LI>
-                                    <strong>Excited and dedicated</strong> about web
-                                    development.
+                                    <strong>Excited</strong> about web development.
                                 </LI>
                                 <LI>
                                     <strong>Great as solo and in a team.</strong>
@@ -194,13 +193,13 @@ const Page = () => {
                                     </LI>
                                     <LI>
                                         <strong>
-                                            Next.js SSR and React single page applications
+                                            Next.js SSR and React single-page applications
                                         </strong>{' '}
                                         using latest CSS-IN-JS technology
                                     </LI>
                                     <LI>
                                         React Native mobile apps using Javascript,
-                                        Typescript and Mobx.
+                                        Typescript, and Mobx.
                                     </LI>
                                     <LI>
                                         <strong>Worked in a remote team</strong>, using
@@ -208,7 +207,7 @@ const Page = () => {
                                         Dynamodb, Postgresql and
                                         <strong> part time managing</strong>.
                                     </LI>
-                                    <LI>IOT - internet connected devices</LI>
+                                    <LI>IOT - internet-connected devices</LI>
                                     <LI>
                                         <NavLink
                                             target="_blank"
@@ -226,7 +225,7 @@ const Page = () => {
                                         <strong>Software & Electronics engineer</strong>
                                         <br />
                                         <Span>
-                                            At Syqe Medical / Start ups / Freelance
+                                            At Syqe Medical / Startups / Freelance
                                         </Span>
                                     </DD>
                                 </Flex>
@@ -237,7 +236,7 @@ const Page = () => {
                                         <LI>Digital and analog</LI>
                                     </UL>
                                     <UL flex={1} ml={3}>
-                                        <LI>Audio and Iot and medical applications</LI>
+                                        <LI>Audio and IOT and medical applications</LI>
                                         <LI>Layout</LI>
                                     </UL>
                                 </Flex>
@@ -251,7 +250,7 @@ const Page = () => {
                                         </strong>
                                         <br />
                                         <Span color="mute-onwhite">
-                                            Technion - Israel institute of technology
+                                            Technion - Israel Institute of technology
                                         </Span>
                                     </DD>
                                 </Flex>

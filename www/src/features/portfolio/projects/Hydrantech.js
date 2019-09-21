@@ -7,7 +7,7 @@ import { boxCss } from 'styles/ss-utils'
 import { ProjectTitle, SubRemark, SubLink } from '../common'
 import { Gallery } from '../Gallery'
 
-const projectTitle = 'System to manage internet connected fire hydrants'
+const projectTitle = 'System to manage internet-connected fire hydrants'
 const altDesktop = `${projectTitle} - web React app`
 const altMobile = `${projectTitle} - mobile React Native app`
 

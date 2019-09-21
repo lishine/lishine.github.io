@@ -11,7 +11,7 @@ export const Site = props => (
         </SubLink>
         <UL mt={1}>
             <LI>Static Next.js + React</LI>
-            <LI>Deployed to github-pages</LI>
+            <LI>Deployed to Github-pages</LI>
             <LI>SCSS, Emotion, Styled-System </LI>
             <LI>Clean design :)</LI>
             <LI>Responsive & adaptive</LI>
