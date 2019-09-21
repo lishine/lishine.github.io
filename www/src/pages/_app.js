@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Head from 'next/head'
 import { default as nextRouter } from 'next/router'
 import App from 'next/app'
 import { ThemeProvider } from 'emotion-theming'
 import { PageTransition } from 'next-page-transitions'
+import { useSwipeable, Swipeable } from 'react-swipeable'
 
 import { GlobalCss, theme } from 'styles/theme'
 import { Header } from 'features/header/Header'
@@ -84,11 +85,18 @@ class MyApp extends App {
     }
     render() {
         const { Component, pageProps, router } = this.props
+        // if (process.browser && router.path === '/') {
+        //     useEffect(() => {
+        //         nextRouter.push('/portfolio', '/portfolio', { shallow: true })
+        //     }, [])
+        //     return null
+        // }
         if (process.browser) {
             // window.addEventListener('resize', () => {
             // let vh = window.innerHeight * 0.01
             // document.documentElement.style.setProperty('--vh', `${vh}px`)
             // })
+            console.log('router.pathname', router.pathname)
             console.log('$ BROWSER in render _app')
         } else {
             console.log('$ SERVER in render _app')
@@ -227,43 +235,73 @@ class MyApp extends App {
 
                 <ThemeProvider theme={theme}>
                     <GlobalCss />
-                    <Flex flexDirection="column" className="page-container">
-                        <Header mobileHeaderHeight={mobileHeaderHeight} />
-                        <Flex
-                            flexDirection="column"
-                            pb={[
-                                `${footerHeight + !isResumePage * mobileHeaderHeight}px`,
-                                `${mobileHeaderHeight}px`,
-                            ]}
-                            flex={1}
-                        >
-                            <PageTransition timeout={300} classNames="page-transition">
-                                <Component {...pageProps} key={router.route} />
-                            </PageTransition>
-                            <style jsx global>{`
-                                .page-transition-enter {
-                                    opacity: 0;
-                                    transform: translate3d(0, 20px, 0);
+                    <Swipeable
+                        onSwiped={eventData => {
+                            const { dir } = eventData
+                            if (dir === 'Right') {
+                                if (
+                                    router.pathname === '/' ||
+                                    router.pathname === '/portfolio'
+                                ) {
+                                    nextRouter.push('/contact')
+                                } else if (router.pathname === '/resume') {
+                                    nextRouter.push('/portfolio')
                                 }
-                                .page-transition-enter-active {
-                                    opacity: 1;
-                                    transform: translate3d(0, 0, 0);
-                                    transition: opacity 300ms, transform 300ms;
+                            } else if (dir === 'Left') {
+                                if (
+                                    router.pathname === '/' ||
+                                    router.pathname === '/portfolio'
+                                ) {
+                                    nextRouter.push('/resume')
+                                } else if (router.pathname === '/contact') {
+                                    nextRouter.push('/portfolio')
                                 }
-                                .page-transition-exit {
-                                    opacity: 1;
-                                }
-                                .page-transition-exit-active {
-                                    opacity: 0;
-                                    transition: opacity 300ms;
-                                }
-                            `}</style>
-                            <Footer
-                                height={`${footerHeight}px`}
-                                mb={[!isResumePage && `${mobileHeaderHeight}px`, 0]}
-                            />
+                            }
+                            console.log('swiped', eventData.dir)
+                        }}
+                    >
+                        <Flex flexDirection="column" className="page-container">
+                            <Header mobileHeaderHeight={mobileHeaderHeight} />
+                            <Flex
+                                flexDirection="column"
+                                pb={[
+                                    `${footerHeight +
+                                        !isResumePage * mobileHeaderHeight}px`,
+                                    `${mobileHeaderHeight}px`,
+                                ]}
+                                flex={1}
+                            >
+                                <PageTransition
+                                    timeout={300}
+                                    classNames="page-transition"
+                                >
+                                    <Component {...pageProps} key={router.route} />
+                                </PageTransition>
+                                <style jsx global>{`
+                                    .page-transition-enter {
+                                        opacity: 0;
+                                        transform: translate3d(0, 20px, 0);
+                                    }
+                                    .page-transition-enter-active {
+                                        opacity: 1;
+                                        transform: translate3d(0, 0, 0);
+                                        transition: opacity 300ms, transform 300ms;
+                                    }
+                                    .page-transition-exit {
+                                        opacity: 1;
+                                    }
+                                    .page-transition-exit-active {
+                                        opacity: 0;
+                                        transition: opacity 300ms;
+                                    }
+                                `}</style>
+                                <Footer
+                                    height={`${footerHeight}px`}
+                                    mb={[!isResumePage && `${mobileHeaderHeight}px`, 0]}
+                                />
+                            </Flex>
                         </Flex>
-                    </Flex>
+                    </Swipeable>
                 </ThemeProvider>
             </div>
         )

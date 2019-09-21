@@ -7,6 +7,15 @@ const optimizedImages = require('next-optimized-images')
 const nextConfig = {
     distDir: '../.next',
     experimental: { publicDirectory: true },
+    exportPathMap: async function(
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+    ) {
+        return {
+            '/': { page: '/portfolio' },
+            ...defaultPathMap,
+        }
+    },
     // target: 'serverless',
     webpack: (config, { dev }) => {
         config.optimization.minimizer[0].options.terserOptions.compress.inline = false
