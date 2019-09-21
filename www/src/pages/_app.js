@@ -211,7 +211,12 @@ class MyApp extends App {
 `}
                     </style>
                     {isResumePage ? (
-                        <meta charSet="utf-8" name="viewport" content="width=1168" />
+                        <meta
+                            charSet="utf-8"
+                            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                            name="viewport"
+                            // content="width=1168"
+                        />
                     ) : (
                         <meta
                             charSet="utf-8"

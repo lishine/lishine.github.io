@@ -64,15 +64,11 @@ export const Menu = ({ mobileHeaderHeight, ...props }) => {
             })}
             {...props}
         >
-            <RouteLink menu href="/contact">
-                CONTACT
-            </RouteLink>
-            <RouteLink menu href="/portfolio" alternativeHref="/">
+            <RouteLink href="/contact">CONTACT</RouteLink>
+            <RouteLink href="/portfolio" alternativeHref="/">
                 PORTFOLIO
             </RouteLink>
-            <RouteLink menu href="/resume">
-                RESUME
-            </RouteLink>
+            <RouteLink href="/resume">RESUME</RouteLink>
         </Flex>
     )
 }
