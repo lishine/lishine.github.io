@@ -85,12 +85,6 @@ class MyApp extends App {
     }
     render() {
         const { Component, pageProps, router } = this.props
-        // if (process.browser && router.path === '/') {
-        //     useEffect(() => {
-        //         nextRouter.push('/portfolio', '/portfolio', { shallow: true })
-        //     }, [])
-        //     return null
-        // }
         if (process.browser) {
             // window.addEventListener('resize', () => {
             // let vh = window.innerHeight * 0.01
@@ -216,12 +210,6 @@ class MyApp extends App {
 
 `}
                     </style>
-                    {router.asPath === '/' && (
-                        <link
-                            rel="canonical"
-                            href="https://lishine.github.io/portfolio"
-                        />
-                    )}
                     {isResumePage ? (
                         <meta charSet="utf-8" name="viewport" content="width=1168" />
                     ) : (

@@ -7,9 +7,9 @@ import styled from '@emotion/styled'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp, mediaDown } from 'styles/utils'
 
-export const RouteLink = ({ children, className, menu, ...props }) => {
+export const RouteLink = ({ children, className, alternativeHref, ...props }) => {
     const router = useRouter()
-    const active = router.pathname === props.href
+    const active = router.pathname === props.href || router.pathname === alternativeHref
 
     if (active) {
         className = `${className || ''} active`

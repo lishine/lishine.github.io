@@ -7,17 +7,17 @@ const optimizedImages = require('next-optimized-images')
 const nextConfig = {
     distDir: '../.next',
     experimental: { publicDirectory: true },
-    exportPathMap: async function(
-        defaultPathMap,
-        { dev, dir, outDir, distDir, buildId }
-    ) {
-        return {
-            '/': { page: '/portfolio' },
-            '/portfolio': { page: '/portfolio' },
-            '/contact': { page: '/contact' },
-            '/resume': { page: '/resume' },
-        }
-    },
+    // exportPathMap: async function(
+    //     defaultPathMap,
+    //     { dev, dir, outDir, distDir, buildId }
+    // ) {
+    //     return {
+    //         '/': { page: '/portfolio' },
+    //         '/portfolio': { page: '/portfolio' },
+    //         '/contact': { page: '/contact' },
+    //         '/resume': { page: '/resume' },
+    //     }
+    // },
     // target: 'serverless',
     webpack: (config, { dev }) => {
         config.optimization.minimizer[0].options.terserOptions.compress.inline = false
