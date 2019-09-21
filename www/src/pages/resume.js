@@ -54,7 +54,7 @@ const Page = () => {
             <Box pb={15} className="grid-container" position="relative">
                 <ReactToPrint
                     trigger={() => (
-                        <Box position="absolute" top={3} left={[1, '80%']}>
+                        <Box position="absolute" top={1} left={[1, '80%']}>
                             <button className="btn" bg="white">
                                 PRINT
                             </button>
