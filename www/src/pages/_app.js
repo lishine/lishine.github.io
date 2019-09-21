@@ -226,10 +226,6 @@ class MyApp extends App {
                         // onLoad="this.onload=null;this.rel='stylesheet'"
                     /> */}
                     <link rel="icon" type="image/x-icon" href="/favicon.png" />
-                    <meta
-                        name="google-site-verification"
-                        content="XtLYotgG271uweSX3eY0nJV-xwFU0Q3cS8Qot0XqDoc"
-                    />
                 </Head>
 
                 <ThemeProvider theme={theme}>
