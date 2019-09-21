@@ -49,24 +49,13 @@ class MyApp extends App {
         return (
             <div>
                 <Head>
+                    <meta
+                        charSet="utf-8"
+                        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                        name="viewport"
+                    />
                     <style>{fonts}</style>
-                    {isResumePage ? (
-                        <meta
-                            charSet="utf-8"
-                            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                            name="viewport"
-                            // content="width=1168"
-                        />
-                    ) : (
-                        <meta
-                            charSet="utf-8"
-                            name="viewport"
-                            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                        />
-                    )}
-                    <link rel="icon" type="image/x-icon" href="/favicon.png" />
                 </Head>
-
                 <ThemeProvider theme={theme}>
                     <GlobalCss />
                     <Swipeable
