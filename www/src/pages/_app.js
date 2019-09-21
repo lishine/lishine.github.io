@@ -236,6 +236,7 @@ class MyApp extends App {
                 <ThemeProvider theme={theme}>
                     <GlobalCss />
                     <Swipeable
+                        delta={250}
                         onSwiped={eventData => {
                             const { dir } = eventData
                             if (dir === 'Right') {
