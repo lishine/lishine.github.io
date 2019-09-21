@@ -12,11 +12,12 @@ export const Site = props => (
         <UL mt={1}>
             <LI>Static Next.js + React</LI>
             <LI>Deployed to github-pages</LI>
-            <LI>SCSS, imported Bootstrap, Emotion, Styled-System </LI>
+            <LI>SCSS, Emotion, Styled-System </LI>
             <LI>Clean design :)</LI>
             <LI>Responsive & adaptive</LI>
             <LI>SEO optimized</LI>
-            <LI>Latest CSS qualities: Flex, Grid, CSS custom and logical properties</LI>
+            <LI>Latest CSS solutions: Flex, Grid, custom and logical CSS properties</LI>
+            <LI>Lighthouse audit ~100</LI>
         </UL>
     </Box>
 )
