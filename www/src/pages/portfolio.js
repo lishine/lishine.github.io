@@ -5,7 +5,7 @@ import { Portfolio } from 'features/portfolio/Portfolio'
 export default () => (
     <div>
         <Head>
-            <title>Pavel Ravits - React Web Developer - Portfolio</title>
+            <title>Pavel Ravits -- React Web Developer - Portfolio</title>
             <meta name="description" content="Portfolio" />
         </Head>
 
