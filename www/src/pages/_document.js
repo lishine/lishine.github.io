@@ -23,12 +23,6 @@ class MyDocument extends Document {
                     <link rel="icon" type="image/x-icon" href="/favicon.png" />
                 </Head>
                 <body>
-                    <noscript
-                        dangerouslySetInnerHTML={{
-                            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT484LC"
-                        height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-                        }}
-                    />
                     <Main />
                     <NextScript />
                 </body>

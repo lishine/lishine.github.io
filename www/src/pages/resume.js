@@ -183,7 +183,7 @@ const Page = () => {
                                     <DD>
                                         <strong>React Full Stack Web Developer</strong>
                                         <br />
-                                        <Span>Freelance at Xlucidity</Span>
+                                        <Span italic>Freelance at Xlucidity</Span>
                                     </DD>
                                 </Flex>
                                 <UL>
@@ -224,7 +224,7 @@ const Page = () => {
                                     <DD>
                                         <strong>Software & Electronics engineer</strong>
                                         <br />
-                                        <Span>
+                                        <Span italic>
                                             At Syqe Medical / Startups / Freelance
                                         </Span>
                                     </DD>
@@ -249,7 +249,7 @@ const Page = () => {
                                             Communication Engineering
                                         </strong>
                                         <br />
-                                        <Span color="mute-onwhite">
+                                        <Span italic>
                                             Technion - Israel Institute of technology
                                         </Span>
                                     </DD>
