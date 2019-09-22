@@ -37,17 +37,18 @@ const combineBg = list => {
 
 export const mediaUp = from => (props = {}) => {
     const _theme = props.theme || theme
-    return `@media screen and (min-width: ${_theme.breakpointsObject[from]})`
+    return `@media screen and (min-width: ${_theme.breakpointsObject[from] || from})`
 }
 
 export const mediaDown = to => (props = {}) => {
     const _theme = props.theme || theme
-    return `@media screen and (max-width: ${_theme.breakpointsObject[to]})`
+    return `@media screen and (max-width: ${_theme.breakpointsObject[to] || to})`
 }
 
 export const mediaBetween = (from, to) => (props = {}) => {
     const _theme = props.theme || theme
-    return `@media screen and (min-width: ${_theme.breakpointsObject[from]}) and (max-width: ${theme.breakpointsObject[to]})`
+    return `@media screen and (min-width: ${_theme.breakpointsObject[from] ||
+        from}) and (max-width: ${theme.breakpointsObject[to] || to})`
 }
 
 // export const space = props => SS.space({ ...props, pt: [0, 2, 4], pl: 4 })

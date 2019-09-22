@@ -6,6 +6,7 @@ import { ArcherContainer, ArcherElement } from 'react-archer'
 import { boxCss } from 'styles/ss-utils'
 import { ProjectTitle, SubRemark, SubLink } from '../common'
 import { Gallery } from '../Gallery'
+import { mediaDown } from 'styles/utils'
 
 const projectTitle = 'System to manage internet-connected fire hydrants'
 const altDesktop = `${projectTitle} - web React app`
@@ -43,12 +44,14 @@ export const Hydrantech = props => (
                         </NavLink>
                     </SubLink>
                     <Grid
-                        mt={3}
+                        mt={1}
+                        mb={1}
                         justifyContent="space-around"
                         gridAutoColumns="1fx"
                         gridAutoFlow="column"
+                        gridColumnGap={2}
                         css={boxCss.css({
-                            Span: { mx: 1, lineHeight: '19px' },
+                            Span: { lineHeight: '20px' },
                         })}
                     >
                         <Span>Show Events</Span>
@@ -61,10 +64,16 @@ export const Hydrantech = props => (
             <Grid
                 textAlign="center"
                 mt={10}
+                gridColumnGap={2}
                 gridAutoColumns="1fx"
                 gridAutoFlow="column"
                 css={boxCss.css({
-                    P: { mx: 1, mb: 1, lineHeight: '19px' },
+                    [mediaDown('500px')()]: {
+                        gridColumnGap: 1,
+                        ml: -1,
+                    },
+                    [P]: { mb: '12px', lineHeight: '20px' },
+                    [H4]: { mb: 1 },
                 })}
             >
                 <ArcherElement id="B">
