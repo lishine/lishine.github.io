@@ -1,16 +1,20 @@
 import React, { useRef, useState } from 'react'
+import styled from '@emotion/styled'
 import { Box, Flex, LI, UL, Grid, H4, Span, NavLink, P } from 'styles/ss-components'
-import { ProjectTitle, DoesTitle, SubRemark, DoesItem, SubLink } from '../common'
+import {
+    ProjectTitle,
+    DoesTitle,
+    SubRemark,
+    DoesItem,
+    SubLink,
+    DoesWrapper,
+    DoesList,
+    FeatureWrapper,
+    FeatureSpan,
+} from '../common'
 import { Gallery } from '../Gallery'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
-import styled from '@emotion/styled'
-
-const FeatureWrapper = styled(Box)()
-const FeatureSpan = styled(Span)()
-
-const DoesWrapper = styled(Box)()
-const DoesList = styled(UL)()
 
 const projectTitle = 'Street Building Sign'
 const alt = `${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`

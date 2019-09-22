@@ -1,6 +1,13 @@
 import React, { useRef, useState } from 'react'
-import { Box, H4, LI, UL, NavLink, Image } from 'styles/ss-components'
-import { ProjectTitle, SubRemark, SubLink } from '../common'
+import { Box, H4, UL, NavLink, Image } from 'styles/ss-components'
+import {
+    ProjectTitle,
+    SubRemark,
+    SubLink,
+    DoesList,
+    DoesTitle,
+    DoesItem,
+} from '../common'
 
 export const Barcodes = props => (
     <Box {...props}>
@@ -11,24 +18,24 @@ export const Barcodes = props => (
                 Source - https://github.com/lishine/login-full-stack
             </NavLink>
         </SubLink>
-        <H4 mt={1}>Features</H4>
-        <UL>
-            <LI>JWT authentication with emails</LI>
-            <LI>Forms</LI>
-            <LI>User profile</LI>
-        </UL>
-        <H4 mt={2}>Technologies being used</H4>
-        <UL>
-            <LI>Webpack 4</LI>
-            <LI>React</LI>
-            <LI>Router - redux-saga-first-router</LI>
-            <LI>Client state management - Redux</LI>
-            <LI>Redux middleware - Redux-Saga</LI>
-            <LI>Client state management - React-easy-state</LI>
-            <LI>CSS in Js - Styled components</LI>
-            <LI>Server - Express</LI>
-            <LI>DB - PostgreSQL</LI>
-            <LI>DB Object interface - Massive</LI>
-        </UL>
+        <DoesTitle mt={1}>Features</DoesTitle>
+        <DoesList>
+            <DoesItem>JWT authentication with emails</DoesItem>
+            <DoesItem>Forms</DoesItem>
+            <DoesItem>User profile</DoesItem>
+        </DoesList>
+        <DoesTitle mt={2}>Technologies being used</DoesTitle>
+        <DoesList>
+            <DoesItem>Webpack 4</DoesItem>
+            <DoesItem>React</DoesItem>
+            <DoesItem>Router - redux-saga-first-router</DoesItem>
+            <DoesItem>Client state management - Redux</DoesItem>
+            <DoesItem>Redux middleware - Redux-Saga</DoesItem>
+            <DoesItem>Client state management - React-easy-state</DoesItem>
+            <DoesItem>CSS in Js - Styled components</DoesItem>
+            <DoesItem>Server - Express</DoesItem>
+            <DoesItem>DB - PostgreSQL</DoesItem>
+            <DoesItem>DB Object interface - Massive</DoesItem>
+        </DoesList>
     </Box>
 )
