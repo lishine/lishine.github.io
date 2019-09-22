@@ -135,7 +135,7 @@ const Page = () => {
                     <H1>
                         <strong>Pavel Ravits</strong>
                     </H1>
-                    <H4 fontWeight="500">React developer</H4>
+                    <H4 fontWeight="500">Full-Stack React web developer</H4>
 
                     <H1 mt={3} mb={4} color="link">
                         ...seeking <strong>collaboration</strong> with{' '}
