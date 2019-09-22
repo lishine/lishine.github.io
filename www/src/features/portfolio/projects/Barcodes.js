@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Box, H4, UL, NavLink, Image } from 'styles/ss-components'
+import { Box, H4, UL, NavLink, Image, Flex, Grid } from 'styles/ss-components'
 import {
     ProjectTitle,
     SubRemark,
@@ -7,6 +7,7 @@ import {
     DoesList,
     DoesTitle,
     DoesItem,
+    DoesWrapper,
 } from '../common'
 
 export const Barcodes = props => (
@@ -18,24 +19,30 @@ export const Barcodes = props => (
                 Source - https://github.com/lishine/login-full-stack
             </NavLink>
         </SubLink>
-        <DoesTitle mt={1}>Features</DoesTitle>
-        <DoesList>
-            <DoesItem>JWT authentication with emails</DoesItem>
-            <DoesItem>Forms</DoesItem>
-            <DoesItem>User profile</DoesItem>
-        </DoesList>
-        <DoesTitle mt={2}>Technologies being used</DoesTitle>
-        <DoesList>
-            <DoesItem>Webpack 4</DoesItem>
-            <DoesItem>React</DoesItem>
-            <DoesItem>Router - redux-saga-first-router</DoesItem>
-            <DoesItem>Client state management - Redux</DoesItem>
-            <DoesItem>Redux middleware - Redux-Saga</DoesItem>
-            <DoesItem>Client state management - React-easy-state</DoesItem>
-            <DoesItem>CSS in Js - Styled components</DoesItem>
-            <DoesItem>Server - Express</DoesItem>
-            <DoesItem>DB - PostgreSQL</DoesItem>
-            <DoesItem>DB Object interface - Massive</DoesItem>
-        </DoesList>
+        <Grid mt={1} gridAutoFlow={['row', 'column']}>
+            <DoesWrapper>
+                <DoesTitle>Technologies being used</DoesTitle>
+                <DoesList>
+                    <DoesItem>Webpack 4</DoesItem>
+                    <DoesItem>React</DoesItem>
+                    <DoesItem>Router - redux-saga-first-router</DoesItem>
+                    <DoesItem>Client state management - Redux</DoesItem>
+                    <DoesItem>Redux middleware - Redux-Saga</DoesItem>
+                    <DoesItem>Client state management - React-easy-state</DoesItem>
+                    <DoesItem>CSS in Js - Styled components</DoesItem>
+                    <DoesItem>Server - Express</DoesItem>
+                    <DoesItem>DB - PostgreSQL</DoesItem>
+                    <DoesItem>DB Object interface - Massive</DoesItem>
+                </DoesList>
+            </DoesWrapper>
+            <DoesWrapper mt={[1, 0]}>
+                <DoesTitle>Features</DoesTitle>
+                <DoesList>
+                    <DoesItem>JWT authentication with emails</DoesItem>
+                    <DoesItem>Forms</DoesItem>
+                    <DoesItem>User profile</DoesItem>
+                </DoesList>
+            </DoesWrapper>
+        </Grid>
     </Box>
 )

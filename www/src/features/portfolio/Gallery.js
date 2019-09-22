@@ -110,6 +110,7 @@ export const Gallery = ({ images, alt, className, ...props }) => {
                 // console.log('e.currentTarget.src = ', e.currentTarget.src)
                 // }
                 showFullscreenButton={false}
+                showThumbnails={false}
                 showPlayButton={false}
                 showBullets={false}
                 showNav={false}
