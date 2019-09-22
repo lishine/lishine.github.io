@@ -109,3 +109,16 @@ const fixChromeReactBug = () => {
         return originalRemoveEventListener(type, listener, modOptions)
     }
 }
+
+                <ReactToPrint
+                    trigger={() => (
+                        <Box position="absolute" top={1} left={[1, '80%']}>
+                            <button className="btn" bg="white">
+                                PRINT
+                            </button>
+                        </Box>
+                    )}
+                    content={() => ref.current}
+                />
+                <Flex
+                    ref={ref}

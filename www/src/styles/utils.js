@@ -42,13 +42,13 @@ export const mediaUp = from => (props = {}) => {
 
 export const mediaDown = to => (props = {}) => {
     const _theme = props.theme || theme
-    return `@media screen and (max-width: ${_theme.breakpointsObject[to] || to})`
+    return `@media screen and  (max-width: ${_theme.breakpointsObject[to] || to})`
 }
 
 export const mediaBetween = (from, to) => (props = {}) => {
     const _theme = props.theme || theme
-    return `@media screen and (min-width: ${_theme.breakpointsObject[from] ||
-        from}) and (max-width: ${theme.breakpointsObject[to] || to})`
+    return `@media screen and   (min-width: ${_theme.breakpointsObject[from] ||
+        from})  (max-width: ${theme.breakpointsObject[to] || to})`
 }
 
 // export const space = props => SS.space({ ...props, pt: [0, 2, 4], pl: 4 })
@@ -64,7 +64,9 @@ export const CancelContainerPadding = styled.div`
     ${props =>
         props.upto
             ? css`
-                  @media (max-width: ${props.theme.breakpointsObject[props.upto]}) {
+                  @media screen and (max-width: ${props.theme.breakpointsObject[
+                          props.upto
+                      ]}) {
                       ${cancelContainerPadding(props)}
                   }
               `

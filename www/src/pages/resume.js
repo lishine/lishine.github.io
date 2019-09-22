@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import Head from 'next/head'
 import styled from '@emotion/styled'
 import ReactToPrint from 'react-to-print'
+import { isMobile } from 'react-device-detect'
 
 import {
     LI as _LI,
@@ -22,6 +23,7 @@ import {
 import { boxCss } from 'styles/ss-utils'
 
 import { Email, Web, Phone, Israel } from 'svg/icons/index'
+import { mediaUp, mediaDown } from 'styles/utils'
 
 const LI = props => (
     <_LI
@@ -42,36 +44,61 @@ const LI = props => (
 const UL = styled(_UL)()
 const Years = styled(DT)()
 
+const title = 'Pavel Ravits - Full Stack React Web Developer - Resume'
+
 const Page = () => {
     const ref = useRef(null)
     return (
         <div>
             <Head>
-                <title>Pavel Ravits - React Web Developer - Resume</title>
+                <title>{title}</title>
                 <meta name="description" content="Resume" />
             </Head>
 
             <Box pb={15} className="grid-container" position="relative">
                 <ReactToPrint
                     trigger={() => (
-                        <Box position="absolute" top={1} left={[1, '80%']}>
-                            <button className="btn" bg="white">
-                                PRINT
-                            </button>
+                        <Box
+                            position="absolute"
+                            display={['none', 'none', 'block']}
+                            top={1}
+                            left={[1, '70%']}
+                        >
+                            <button className="btn">PRINT</button>
                         </Box>
                     )}
                     content={() => ref.current}
                 />
+                <Box position="absolute" top={[2, 1]} left={[2, '80%']}>
+                    <NavLink
+                        href={`/${title}.pdf`}
+                        target="_blank"
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <button className="btn">SHOW PDF</button>
+                    </NavLink>
+                </Box>
                 <Flex
                     ref={ref}
                     flexDirection="column"
-                    pt={8}
-                    px={[null, 9]}
-                    className="padding-container-down-md"
-                    width={[null, '1024px']}
-                    height={[null, '1350px']}
                     color="black"
                     css={boxCss.css({
+                        [mediaDown('lg')()]: {
+                            px: 3,
+                            pt: 9,
+                            maxWidth: '600px',
+                        },
+                        [mediaUp('lg')()]: {
+                            pt: 6,
+                            px: 9,
+                            width: '1024px',
+                        },
+                        '@media print': {
+                            pt: 6,
+                            px: 9,
+                            width: '1024px',
+                            height: '1350px',
+                        },
                         'h1, h4, p, li, a, span, dt, dd, ul': {
                             fontFamily: 'Crimson Pro, serif',
                         },
@@ -116,9 +143,18 @@ const Page = () => {
                     </H1>
                     <Grid
                         flex={1}
-                        gridAutoFlow={['row', 'column']}
-                        gridTemplateColumns={['1fr', '55fr 45fr']}
-                        gridColumnGap={8}
+                        gridAutoFlow="row"
+                        gridColumnGap={9}
+                        css={boxCss.css({
+                            [mediaUp('lg')()]: {
+                                gridAutoFlow: 'column',
+                                gridTemplateColumns: '55fr 45fr',
+                            },
+                            '@media print': {
+                                gridAutoFlow: 'column',
+                                gridTemplateColumns: '55fr 45fr',
+                            },
+                        })}
                     >
                         <Box>
                             <H4 className="sectionHeader">Background</H4>
@@ -187,7 +223,7 @@ const Page = () => {
                                         <Span italic>Freelance at Xlucidity</Span>
                                     </DD>
                                 </Flex>
-                                <UL>
+                                <UL mt={1}>
                                     <LI>
                                         Full Stack desktop and mobile Apps built from
                                         requirements to production.
@@ -230,7 +266,7 @@ const Page = () => {
                                         </Span>
                                     </DD>
                                 </Flex>
-                                <Flex>
+                                <Flex mt={1}>
                                     <UL flex={1}>
                                         <LI>Embedded Software - C</LI>
                                         <LI>Board design (Altium)</LI>
@@ -301,51 +337,45 @@ const Page = () => {
                                 <LI>Eslint, Prettier</LI>
                             </UL>
                             <H4 className="sectionHeader">Contact</H4>
-                            <UL>
-                                <LI>
-                                    <Grid
-                                        gridAutoFlow="row"
-                                        gridRowGap={1}
-                                        gridTemplateColumns="35px 1fr"
+                            <Grid
+                                as="dl"
+                                gridAutoFlow="row"
+                                gridRowGap={1}
+                                gridTemplateColumns="35px 1fr"
+                            >
+                                <DT>
+                                    <Web />
+                                </DT>
+                                <DD>
+                                    <NavLink
+                                        target="_blank"
+                                        href="https://lishine.github.io"
+                                    />
+                                </DD>
+                                <DT>
+                                    <Phone />
+                                </DT>
+                                <DD>
+                                    <NavLink rel="nofollow" href="tel:+972-52-3747324">
+                                        +972-52-3747324
+                                    </NavLink>
+                                </DD>
+                                <DT>
+                                    <Email fill="var(--tertiary)" />
+                                </DT>
+                                <DD>
+                                    <NavLink
+                                        rel="nofollow"
+                                        href="mailto:vim55k@gmail.com"
                                     >
-                                        <span>
-                                            <Web />
-                                        </span>
-                                        <span>
-                                            <NavLink
-                                                target="_blank"
-                                                href="https://lishine.github.io"
-                                            />
-                                        </span>
-                                        <span>
-                                            <Phone />
-                                        </span>
-                                        <span>
-                                            <NavLink
-                                                rel="nofollow"
-                                                href="tel:+972-52-3747324"
-                                            >
-                                                +972-52-3747324
-                                            </NavLink>
-                                        </span>
-                                        <span>
-                                            <Email fill="var(--tertiary)" />
-                                        </span>
-                                        <span>
-                                            <NavLink
-                                                rel="nofollow"
-                                                href="mailto:vim55k@gmail.com"
-                                            >
-                                                vim55k@gmail.com
-                                            </NavLink>
-                                        </span>
-                                        <span>
-                                            <Israel />
-                                        </span>
-                                        <span>Israel</span>
-                                    </Grid>
-                                </LI>
-                            </UL>
+                                        vim55k@gmail.com
+                                    </NavLink>
+                                </DD>
+                                <DT>
+                                    <Israel />
+                                </DT>
+                                <DD>Israel</DD>
+                            </Grid>
                         </Flex>
                     </Grid>
                 </Flex>

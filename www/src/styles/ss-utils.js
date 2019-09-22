@@ -152,7 +152,6 @@ const light = style({
 
 const whiteSpace = style({
     prop: 'whiteSpace',
-    cssProperty: 'white-space',
 })
 
 const text = ({ text }) =>
@@ -240,6 +239,6 @@ boxCss.css = fnOrObj => {
 }
 boxCss.media = (media, obj) => {
     boxParamsArray.map(func => ({
-        [media || '@media screen']: func({ theme, ...obj }),
+        [media || '@media screen and ']: func({ theme, ...obj }),
     }))
 }
