@@ -66,9 +66,10 @@ const Page = () => {
                     ref={ref}
                     flexDirection="column"
                     pt={8}
-                    px={9}
-                    width="1024px"
-                    height="1350px"
+                    px={[null, 9]}
+                    className="padding-container-down-md"
+                    width={[null, '1024px']}
+                    height={[null, '1350px']}
                     color="black"
                     css={boxCss.css({
                         'h1, h4, p, li, a, span, dt, dd, ul': {
@@ -115,8 +116,8 @@ const Page = () => {
                     </H1>
                     <Grid
                         flex={1}
-                        gridAutoFlow="column"
-                        gridTemplateColumns="55fr 45fr"
+                        gridAutoFlow={['row', 'column']}
+                        gridTemplateColumns={['1fr', '55fr 45fr']}
                         gridColumnGap={8}
                     >
                         <Box>
@@ -256,7 +257,7 @@ const Page = () => {
                                 </Flex>
                             </Box>
                         </Box>
-                        <Flex flexDirection="column">
+                        <Flex mt={[2, 0]} flexDirection="column">
                             <H4 className="sectionHeader">Skills</H4>
                             <UL>
                                 <LI>Build Server/Client applications</LI>
@@ -345,9 +346,6 @@ const Page = () => {
                                     </Grid>
                                 </LI>
                             </UL>
-                            {/* <UL>
-                            <LI>References available on request</LI>
-                        </UL> */}
                         </Flex>
                     </Grid>
                 </Flex>
