@@ -25,6 +25,8 @@ import { boxCss } from 'styles/ss-utils'
 import { Email, Web, Phone, Israel } from 'svg/icons/index'
 import { mediaUp, mediaDown } from 'styles/utils'
 
+const print = false
+
 const LI = props => (
     <_LI
         {...{
@@ -56,26 +58,28 @@ const Page = () => {
             </Head>
 
             <Box pb={15} className="grid-container" position="relative">
-                <ReactToPrint
-                    trigger={() => (
-                        <Box
-                            position="absolute"
-                            display={['none', 'none', 'block']}
-                            top={1}
-                            left={[1, '70%']}
-                        >
-                            <button className="btn">PRINT</button>
-                        </Box>
-                    )}
-                    content={() => ref.current}
-                />
+                {print && (
+                    <ReactToPrint
+                        trigger={() => (
+                            <Box
+                                position="absolute"
+                                display={['none', 'none', 'block']}
+                                top={1}
+                                left={[1, '70%']}
+                            >
+                                <button className="btn">PRINT</button>
+                            </Box>
+                        )}
+                        content={() => ref.current}
+                    />
+                )}
                 <Box position="absolute" top={[2, 1]} left={[2, '80%']}>
                     <NavLink
                         href={`/${title}.pdf`}
                         target="_blank"
                         style={{ textDecoration: 'none' }}
                     >
-                        <button className="btn">SHOW PDF</button>
+                        <button className="btn">DOWNLOAD PDF</button>
                     </NavLink>
                 </Box>
                 <Flex
@@ -279,7 +283,7 @@ const Page = () => {
                                 </Flex>
                                 <H4 className="sectionHeader">Education</H4>
                                 <Flex as="dl">
-                                    <Years>1996 - 2003</Years>
+                                    <Years>1996 - 2000</Years>
                                     <DD>
                                         <strong>
                                             BA.Sc. Electronics, Computing and
@@ -301,6 +305,7 @@ const Page = () => {
                                 <LI>JavaScript, Typescript, ClojureScript, C</LI>
                                 <LI>Redux, Mobx</LI>
                                 <LI>PostgreSQL, DynamoDB, MongoDB, GraphQL</LI>
+                                <LI>Functional Programming</LI>
                                 <LI>Headless CMS - DatoCMS</LI>
                                 <LI>Node, Express, Meteor</LI>
                                 <LI>AWS Lambda</LI>
@@ -352,14 +357,21 @@ const Page = () => {
                                         href="https://lishine.github.io"
                                     />
                                 </DD>
-                                <DT>
-                                    <Phone />
-                                </DT>
-                                <DD>
-                                    <NavLink rel="nofollow" href="tel:+972-52-3747324">
-                                        +972-52-3747324
-                                    </NavLink>
-                                </DD>
+                                {print && (
+                                    <>
+                                        <DT>
+                                            <Phone />
+                                        </DT>
+                                        <DD>
+                                            <NavLink
+                                                rel="nofollow"
+                                                href="tel:+972-52-3747324"
+                                            >
+                                                +972-52-3747324
+                                            </NavLink>
+                                        </DD>
+                                    </>
+                                )}
                                 <DT>
                                     <Email fill="var(--tertiary)" />
                                 </DT>

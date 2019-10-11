@@ -18,7 +18,6 @@ import {
 import { system, get as styledSystemGet } from '@styled-system/core'
 
 // Common
-import { map, omitProps, pick, omit } from 'utils/utils'
 
 // Local
 import { mediaDown, mediaUp } from './utils'
