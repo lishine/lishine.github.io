@@ -20,10 +20,11 @@ module.exports = {
 			"module-resolver",
 			{
 				"root": [
-					"."
+					"./"
 				]
 			}
 		],
-		"@babel/plugin-proposal-export-default-from"
+        "@babel/plugin-proposal-export-default-from",
+        'import-glob-array'
 	]
 }

@@ -65,6 +65,7 @@ export const Menu = ({ mobileHeaderHeight, ...props }) => {
             {...props}
         >
             <RouteLink href="/contact">CONTACT</RouteLink>
+            <RouteLink href="/blog">BLOG</RouteLink>
             <RouteLink href="/portfolio" alternativeHref="/">
                 PORTFOLIO
             </RouteLink>

@@ -5,6 +5,9 @@ import App from 'next/app'
 import { ThemeProvider } from 'emotion-theming'
 import { PageTransition } from 'next-page-transitions'
 import { useSwipeable, Swipeable } from 'react-swipeable'
+import { MDXProvider } from '@mdx-js/react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { okaidia as duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import { GlobalCss, theme } from 'styles/theme'
 import { Header } from 'features/header/Header'
@@ -24,6 +27,38 @@ export const redirect = (ctx, path) => {
 }
 
 export let globalCtx
+;({ children }) => {
+    return (
+        <Highlight {...defaultProps} code={children} language="javascript">
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre className={className} style={{ ...style, padding: '20px' }}>
+                    {tokens.map((line, i) => (
+                        <div key={i} {...getLineProps({ line, key: i })}>
+                            {line.map((token, key) => (
+                                <span key={key} {...getTokenProps({ token, key })} />
+                            ))}
+                        </div>
+                    ))}
+                </pre>
+            )}
+        </Highlight>
+    )
+}
+
+const CodeBlock = ({ children, className }) => {
+    const language = className.replace(/language-/, '')
+    return (
+        <SyntaxHighlighter language={language} style={duotoneDark}>
+            {children}
+        </SyntaxHighlighter>
+    )
+}
+
+const components = {
+    pre: props => <div {...props} />,
+    code: CodeBlock,
+    // props => <pre style={{ color: 'tomato' }} {...props} />,
+}
 
 class MyApp extends App {
     constructor(props) {
@@ -56,84 +91,90 @@ class MyApp extends App {
                     />
                     <style>{fonts}</style>
                 </Head>
-                <ThemeProvider theme={theme}>
-                    <GlobalCss />
-                    <Swipeable
-                        delta={250}
-                        onSwiped={eventData => {
-                            const { dir } = eventData
-                            if (dir === 'Right') {
-                                if (
-                                    router.pathname === '/' ||
-                                    router.pathname === '/portfolio'
-                                ) {
-                                    nextRouter.push('/contact')
-                                } else if (router.pathname === '/resume') {
-                                    nextRouter.push('/portfolio')
+                <MDXProvider components={components}>
+                    <ThemeProvider theme={theme}>
+                        <GlobalCss />
+                        <Swipeable
+                            delta={250}
+                            onSwiped={eventData => {
+                                const { dir } = eventData
+                                if (dir === 'Right') {
+                                    if (
+                                        router.pathname === '/' ||
+                                        router.pathname === '/portfolio'
+                                    ) {
+                                        nextRouter.push('/contact')
+                                    } else if (router.pathname === '/resume') {
+                                        nextRouter.push('/portfolio')
+                                    }
+                                } else if (dir === 'Left') {
+                                    if (
+                                        router.pathname === '/' ||
+                                        router.pathname === '/portfolio'
+                                    ) {
+                                        nextRouter.push('/resume')
+                                    } else if (router.pathname === '/contact') {
+                                        nextRouter.push('/portfolio')
+                                    }
                                 }
-                            } else if (dir === 'Left') {
-                                if (
-                                    router.pathname === '/' ||
-                                    router.pathname === '/portfolio'
-                                ) {
-                                    nextRouter.push('/resume')
-                                } else if (router.pathname === '/contact') {
-                                    nextRouter.push('/portfolio')
-                                }
-                            }
-                            console.log('swiped', eventData.dir)
-                        }}
-                    >
-                        <Flex flexDirection="column" className="page-container">
-                            <Header mobileHeaderHeight={mobileHeaderHeight} />
-                            <Flex
-                                flexDirection="column"
-                                pb={[
-                                    `${footerHeight +
-                                        !isResumePage * mobileHeaderHeight}px`,
-                                    `${mobileHeaderHeight}px`,
-                                ]}
-                                flex={1}
-                            >
-                                {router.route === '/resume' ? (
-                                    <Component {...pageProps} key={router.route} />
-                                ) : (
-                                    <PageTransition
-                                        timeout={300}
-                                        classNames="page-transition"
-                                    >
+                                console.log('swiped', eventData.dir)
+                            }}
+                        >
+                            <Flex flexDirection="column" className="page-container">
+                                <Header mobileHeaderHeight={mobileHeaderHeight} />
+                                <Flex
+                                    flexDirection="column"
+                                    pb={[
+                                        `${footerHeight +
+                                            !isResumePage * mobileHeaderHeight}px`,
+                                        `${mobileHeaderHeight}px`,
+                                    ]}
+                                    flex={1}
+                                >
+                                    {router.route === '/resume' ? (
                                         <Component {...pageProps} key={router.route} />
-                                    </PageTransition>
-                                )}
-                                <style jsx global>{`
-                                    .page-transition-enter {
-                                        opacity: 0;
-                                    }
-                                    .page-transition-enter-active {
-                                        opacity: 1;
-                                        transition: opacity 300ms;
-                                    }
-                                    .page-transition-exit {
-                                        opacity: 1;
-                                    }
-                                    .page-transition-exit-active {
-                                        opacity: 0;
-                                        transition: opacity 300ms;
-                                    }
-                                `}</style>
-                                {!isResumePage && (
-                                    <Footer
-                                        height={`${footerHeight}px`}
-                                        mb={[
-                                            !isResumePage && `${mobileHeaderHeight}px`,
-                                            0,
-                                        ]}
-                                    />
-                                )}
+                                    ) : (
+                                        <PageTransition
+                                            timeout={300}
+                                            classNames="page-transition"
+                                        >
+                                            <Component
+                                                {...pageProps}
+                                                key={router.route}
+                                            />
+                                        </PageTransition>
+                                    )}
+                                    <style jsx global>{`
+                                        .page-transition-enter {
+                                            opacity: 0;
+                                        }
+                                        .page-transition-enter-active {
+                                            opacity: 1;
+                                            transition: opacity 300ms;
+                                        }
+                                        .page-transition-exit {
+                                            opacity: 1;
+                                        }
+                                        .page-transition-exit-active {
+                                            opacity: 0;
+                                            transition: opacity 300ms;
+                                        }
+                                    `}</style>
+                                    {!isResumePage && (
+                                        <Footer
+                                            height={`${footerHeight}px`}
+                                            mb={[
+                                                !isResumePage &&
+                                                    `${mobileHeaderHeight}px`,
+                                                0,
+                                            ]}
+                                        />
+                                    )}
+                                </Flex>
                             </Flex>
-                        </Flex>
-                    </Swipeable>
-                </ThemeProvider>
+                        </Swipeable>
+                    </ThemeProvider>
+                </MDXProvider>
             </div>
         )
     }
