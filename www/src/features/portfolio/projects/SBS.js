@@ -26,7 +26,7 @@ export const SBS = props => (
             <Box mie={5}>
                 <SubRemark>Built from the ground up</SubRemark>
                 <SubLink>
-                    <NavLink href="https://sbs.golden-minutes.com" />
+                    <NavLink target="_blank" href="https://sbs2.golden-minutes.com/" />
                 </SubLink>
             </Box>
             <Grid

@@ -15,7 +15,7 @@ export const Barcodes = props => (
         <ProjectTitle>Manage barcodes for users</ProjectTitle>
         <SubRemark>Built from the ground up</SubRemark>
         <SubLink>
-            <NavLink href="https://github.com/lishine/login-full-stack">
+            <NavLink target="_blank" href="https://github.com/lishine/login-full-stack">
                 Source - https://github.com/lishine/login-full-stack
             </NavLink>
         </SubLink>

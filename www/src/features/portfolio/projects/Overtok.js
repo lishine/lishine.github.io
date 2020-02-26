@@ -17,7 +17,7 @@ export const Overtok = props => (
     <Box {...props}>
         <ProjectTitle>{projectTitle}</ProjectTitle>
         <SubLink>
-            <NavLink mt={1} href="https://overtok.com">
+            <NavLink target="_blank" mt={1} href="https://overtok.com">
                 https://overtok.com
             </NavLink>
         </SubLink>

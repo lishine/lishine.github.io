@@ -28,7 +28,7 @@ export const Salsa = props => {
                     <SubRemark as="dt">Built from the ground up</SubRemark>
                     <SubLink as="dd" alignItems="center">
                         <Span mie="0.5em">Take a look:</Span>
-                        <NavLink href="https://do-salsa.tk" />
+                        <NavLink target="_blank" href="https://dance-salsa.now.sh" />
                     </SubLink>
                 </Box>
                 <Grid

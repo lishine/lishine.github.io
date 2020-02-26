@@ -39,7 +39,7 @@ export const Hydrantech = props => (
                     <ProjectTitle>{projectTitle}</ProjectTitle>
                     <SubRemark>Built from the ground up</SubRemark>
                     <SubLink>
-                        <NavLink href="https://app.hydrant-system.com">
+                        <NavLink target="_blank" href="https://app.hydrant-system.com">
                             https://app.hydrant-system.com
                         </NavLink>
                     </SubLink>
