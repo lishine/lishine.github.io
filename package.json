@@ -22,6 +22,7 @@
         "eslint-import-resolver-node": "^0.3.3",
         "eslint-plugin-flow-check": "^1.2.0",
         "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-mdx": "^1.6.8",
         "eslint-plugin-node": "^11.0.0",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-promise": "^4.2.1",

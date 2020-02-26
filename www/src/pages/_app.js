@@ -27,26 +27,26 @@ export const redirect = (ctx, path) => {
 }
 
 export let globalCtx
-;({ children }) => {
-    return (
-        <Highlight {...defaultProps} code={children} language="javascript">
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={className} style={{ ...style, padding: '20px' }}>
-                    {tokens.map((line, i) => (
-                        <div key={i} {...getLineProps({ line, key: i })}>
-                            {line.map((token, key) => (
-                                <span key={key} {...getTokenProps({ token, key })} />
-                            ))}
-                        </div>
-                    ))}
-                </pre>
-            )}
-        </Highlight>
-    )
-}
+// ;({ children }) => {
+//     return (
+//         <Highlight {...defaultProps} code={children} language="javascript">
+//             {({ className, style, tokens, getLineProps, getTokenProps }) => (
+//                 <pre className={className} style={{ ...style, padding: '20px' }}>
+//                     {tokens.map((line, i) => (
+//                         <div key={i} {...getLineProps({ line, key: i })}>
+//                             {line.map((token, key) => (
+//                                 <span key={key} {...getTokenProps({ token, key })} />
+//                             ))}
+//                         </div>
+//                     ))}
+//                 </pre>
+//             )}
+//         </Highlight>
+//     )
+// }
 
 const CodeBlock = ({ children, className }) => {
-    const language = className.replace(/language-/, '')
+    const language = className?.replace(/language-/, '')
     return (
         <SyntaxHighlighter language={language} style={duotoneDark}>
             {children}
@@ -69,6 +69,7 @@ class MyApp extends App {
             console.log('* SERVER in constructor')
         }
     }
+
     render() {
         const { Component, pageProps, router } = this.props
         if (process.browser) {
@@ -132,7 +133,11 @@ class MyApp extends App {
                                     flex={1}
                                 >
                                     {router.route === '/resume' ? (
-                                        <Component {...pageProps} key={router.route} />
+                                        <Component
+                                            {...pageProps}
+                                            router={router}
+                                            key={router.route}
+                                        />
                                     ) : (
                                         <PageTransition
                                             timeout={300}
@@ -140,26 +145,29 @@ class MyApp extends App {
                                         >
                                             <Component
                                                 {...pageProps}
+                                                router={router}
                                                 key={router.route}
                                             />
                                         </PageTransition>
                                     )}
-                                    <style jsx global>{`
-                                        .page-transition-enter {
-                                            opacity: 0;
-                                        }
-                                        .page-transition-enter-active {
-                                            opacity: 1;
-                                            transition: opacity 300ms;
-                                        }
-                                        .page-transition-exit {
-                                            opacity: 1;
-                                        }
-                                        .page-transition-exit-active {
-                                            opacity: 0;
-                                            transition: opacity 300ms;
-                                        }
-                                    `}</style>
+                                    <style jsx global>
+                                        {`
+                                            .page-transition-enter {
+                                                opacity: 0;
+                                            }
+                                            .page-transition-enter-active {
+                                                opacity: 1;
+                                                transition: opacity 300ms;
+                                            }
+                                            .page-transition-exit {
+                                                opacity: 1;
+                                            }
+                                            .page-transition-exit-active {
+                                                opacity: 0;
+                                                transition: opacity 300ms;
+                                            }
+                                        `}
+                                    </style>
                                     {!isResumePage && (
                                         <Footer
                                             height={`${footerHeight}px`}
