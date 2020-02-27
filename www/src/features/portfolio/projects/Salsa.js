@@ -22,6 +22,7 @@ const alt = `${projectTitle} - React Next.js SSR web app, Serverless backend, Gr
 export const Salsa = props => {
     return (
         <Box {...props}>
+             <a id="salsa" />
             <ProjectTitle>{projectTitle}</ProjectTitle>
             <Flex mt={1} alignItems="flex-start" flexDirection={['column', null, 'row']}>
                 <Box mie={5} as="dl">
