@@ -1,6 +1,5 @@
-import React, { useRef, useState } from 'react'
-import styled from '@emotion/styled'
-import { Box, Flex, H4, LI, UL, Grid, Span, NavLink } from 'styles/ss-components'
+import React from 'react'
+import { Box, Flex, Grid, NavLink } from 'styles/ss-components'
 import {
     ProjectTitle,
     SubRemark,
@@ -16,19 +15,26 @@ import { Gallery } from '../Gallery'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 
-const projectTitle = 'Dancing video courses'
+const projectTitle = 'Dance video courses'
 const alt = `${projectTitle} - React Next.js SSR web app, Serverless backend, Graphql Postgres db, Headless CMS`
 
 export const Project1 = props => {
     return (
         <Box {...props}>
-             <a id="demo1" />
+            <a id="demo1" />
             <ProjectTitle>{projectTitle}</ProjectTitle>
             <Flex mt={1} alignItems="flex-start" flexDirection={['column', null, 'row']}>
                 <Box mie={5} as="dl">
                     <SubRemark as="dt">Built from the ground up</SubRemark>
-                    <SubLink as="dd" alignItems="center">
-                        <Span mie="0.5em">Take a look:</Span>
+                    <SubLink>
+                        Source:&nbsp;
+                        <NavLink
+                            target="_blank"
+                            href="https://github.com/lishine/demo1"
+                        />
+                    </SubLink>
+                    <SubLink as="dd">
+                        Demo:&nbsp;
                         <NavLink target="_blank" href="https://dance-salsa.now.sh" />
                     </SubLink>
                 </Box>
@@ -128,7 +134,7 @@ export const Project1 = props => {
                     <DoesWrapper>
                         <DoesTitle>Content management</DoesTitle>
                         <DoesList>
-                            <DoesItem>DATO Headless CMS</DoesItem>
+                            <DoesItem>Headless CMS:</DoesItem>
                             <DoesItem>
                                 <NavLink
                                     href="https://www.datocms.com"

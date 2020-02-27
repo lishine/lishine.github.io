@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Box, H4, UL, NavLink, Image, Flex, Grid } from 'styles/ss-components'
+import { Box, NavLink, Grid } from 'styles/ss-components'
 import {
     ProjectTitle,
     SubRemark,

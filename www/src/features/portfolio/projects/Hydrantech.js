@@ -1,7 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { Box, Flex, H1, H2, H4, LI, Grid, P, Span, NavLink } from 'styles/ss-components'
-// import dynamic from 'next/dynamic'
-// import LineTo from 'react-lineto'
+import React from 'react'
+import { Box, Flex, H4, Grid, P, Span, NavLink } from 'styles/ss-components'
 import { ArcherContainer, ArcherElement } from 'react-archer'
 import { boxCss } from 'styles/ss-utils'
 import { ProjectTitle, SubRemark, SubLink } from '../common'
@@ -39,9 +37,12 @@ export const Hydrantech = props => (
                     <ProjectTitle>{projectTitle}</ProjectTitle>
                     <SubRemark>Built from the ground up</SubRemark>
                     <SubLink>
-                        <NavLink target="_blank" href="https://app.hydrant-system.com">
-                            https://app.hydrant-system.com
-                        </NavLink>
+                        Demo:&nbsp;
+                        <NavLink target="_blank" href="https://app.hydrant-system.com" />
+                    </SubLink>
+                    <SubLink>
+                        Source(mobile Typescript):&nbsp;
+                        <NavLink target="_blank" href="https://gitlab.com/hydrantech/typed" />
                     </SubLink>
                     <Grid
                         mt={1}
@@ -90,7 +91,7 @@ export const Hydrantech = props => (
                 <ArcherElement id="D">
                     <H4>Mobile</H4>
                     <P>Built with React-Native and MobX</P>
-                    <P>Converted to Typescript</P>
+                    <P>Converted to Typescript and MobX-State-Tree</P>
                     <P>Notifications</P>
                     <P>Geolocation</P>
                     <P>Barcode Scanning</P>

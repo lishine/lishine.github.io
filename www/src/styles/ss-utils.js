@@ -1,6 +1,5 @@
 // node_modules
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
 import styledSystemCss from '@styled-system/css'
 import {
     typography,
@@ -16,8 +15,6 @@ import {
     grid,
 } from 'styled-system'
 import { system, get as styledSystemGet } from '@styled-system/core'
-
-// Common
 
 // Local
 import { mediaDown, mediaUp } from './utils'

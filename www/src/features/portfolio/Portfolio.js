@@ -7,6 +7,8 @@ import { Hydrantech } from './projects/Hydrantech'
 import { First } from './projects/First'
 import { Project2 } from './projects/Project2'
 import { Site } from './projects/Site'
+import { MobxHooksForm } from './projects/MobxHooksForm'
+import { Cypress } from './projects/Cypress'
 
 const PageTitle = props => <H1 textAlign="center" {...props} />
 
@@ -20,12 +22,14 @@ export const Portfolio = () => (
                 Projects I have done and the technologies I have used during my web
                 development career
             </H4>
-            <P mt={1}>
+            {/* <P mt={1}>
                 * Most of the recent and the best writen code is in private repositories
                 and will be demonstrated upon request
-            </P>
+            </P> */}
         </Box>
 
+        <Cypress mt={2} />
+        <MobxHooksForm mt={2} />
         <Site mt={2} />
         <Project2 mt={5} />
         <Project1 mt={5} />
