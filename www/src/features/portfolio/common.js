@@ -15,7 +15,7 @@ export const SubLink = props => <Flex {...props} />
 export const DoesWrapper = styled(Box)()
 export const DoesList = styled(UL)()
 export const DoesTitle = props => (
-    <H4 textAlign="start" mt={1} fontWeight="500" {...props} />
+    <H4 textAlign="start" mt={1} mb="4px" fontWeight="500" {...props} />
 )
 
 export const DoesItem = props => (

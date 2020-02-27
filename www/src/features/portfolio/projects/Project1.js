@@ -16,10 +16,10 @@ import { Gallery } from '../Gallery'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 
-const projectTitle = 'Video courses of Salsa dancing'
+const projectTitle = 'Dancing video courses'
 const alt = `${projectTitle} - React Next.js SSR web app, Serverless backend, Graphql Postgres db, Headless CMS`
 
-export const Salsa = props => {
+export const Project1 = props => {
     return (
         <Box {...props}>
              <a id="demo1" />

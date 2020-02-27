@@ -16,10 +16,10 @@ import { Gallery } from '../Gallery'
 import { boxCss } from 'styles/ss-utils'
 import { mediaUp } from 'styles/utils'
 
-const projectTitle = 'Street Building Sign'
+const projectTitle = 'Manage street sign devices'
 const alt = `${projectTitle} - React Next.js SSR web app, Docker backend, Graphql Postgres db, Headless CMS`
 
-export const SBS = props => (
+export const Project2 = props => (
     <Box {...props}>
         <a id="demo2" />
         <ProjectTitle>{projectTitle}</ProjectTitle>
