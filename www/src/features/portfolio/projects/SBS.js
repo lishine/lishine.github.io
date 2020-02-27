@@ -21,7 +21,7 @@ const alt = `${projectTitle} - React Next.js SSR web app, Docker backend, Graphq
 
 export const SBS = props => (
     <Box {...props}>
-        <a id="sbs" />
+        <a id="demo2" />
         <ProjectTitle>{projectTitle}</ProjectTitle>
         <Flex mt={1} alignItems="flex-start" flexDirection={['column', null, 'row']}>
             <Box mie={5}>
