@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import Head from 'next/head'
 import styled from '@emotion/styled'
 import ReactToPrint from 'react-to-print'
-import { isMobile } from 'react-device-detect'
 
 import {
     LI as _LI,
@@ -17,7 +16,6 @@ import {
     Span,
     DD,
     DT,
-    DL,
     H5,
 } from 'styles/ss-components'
 import { boxCss } from 'styles/ss-utils'
@@ -26,6 +24,7 @@ import { Email, Web, Phone, Israel } from 'svg/icons/index'
 import { mediaUp, mediaDown } from 'styles/utils'
 
 const print = false
+const downloadPdf = false
 
 const LI = props => (
     <_LI
@@ -73,7 +72,7 @@ const Page = () => {
                         content={() => ref.current}
                     />
                 )}
-                <Box position="absolute" top={[2, 1]} left={[2, '80%']}>
+                {downloadPdf && <Box position="absolute" top={[2, 1]} left={[2, '80%']}>
                     <NavLink
                         href={`/${title}.pdf`}
                         target="_blank"
@@ -81,24 +80,23 @@ const Page = () => {
                     >
                         <button className="btn">DOWNLOAD PDF</button>
                     </NavLink>
-                </Box>
+                </Box>}
                 <Flex
                     ref={ref}
                     flexDirection="column"
                     color="black"
                     css={boxCss.css({
+                        pt: 3,
                         [mediaDown('lg')()]: {
                             px: 3,
-                            pt: 9,
                             maxWidth: '600px',
                         },
                         [mediaUp('lg')()]: {
-                            pt: 6,
                             px: 9,
                             width: '1024px',
                         },
                         '@media print': {
-                            pt: 6,
+                            pt: 11,
                             px: 9,
                             width: '1024px',
                             height: '1350px',
@@ -139,13 +137,14 @@ const Page = () => {
                     <H1>
                         <strong>Pavel Ravits</strong>
                     </H1>
-                    <H4 fontWeight="500">Full-Stack React web developer</H4>
+                    <H4 fontWeight="500">React web developer</H4>
 
-                    <H1 mt={3} mb={4} color="link">
+                    {/* <H1 mt={3} mb={4} color="link">
                         ...seeking <strong>collaboration</strong> with{' '}
                         <strong>passionate</strong> developers
-                    </H1>
+                    </H1> */}
                     <Grid
+                        mt={3}
                         flex={1}
                         gridAutoFlow="row"
                         gridColumnGap={9}
@@ -163,47 +162,31 @@ const Page = () => {
                         <Box>
                             <H4 className="sectionHeader">Background</H4>
                             <P>
-                                I am a Full Stack <strong>web & mobile</strong> developer
-                                that specializes in <strong>Front-End, React</strong> and
-                                state management.
+                                I am a Full Stack web developer that specializes in{' '}
+                                <strong>Front-End and React</strong>.
                                 <br />
                                 Have been developing for
                                 <strong> 3 years in Web and React ecosystem</strong>,
-                                since switching from Electronics Engineering and Embedded
-                                C Programming.
+                                since switching from Electronics Engineering and Embedded.
                                 <br />
-                                Programming since age 13.
+                                Writing software since age 13.
                                 <br />
-                                <Span italic>
-                                    In your team, I will be the positive, calm and
-                                    attentive guy.
-                                </Span>
                             </P>
                             <H5>
                                 <strong>A little about my coding practice</strong>
                             </H5>
                             <UL>
-                                <LI>Practice code optimization and refactoring</LI>
                                 <LI>
-                                    Adhere to <strong>DRY and KISS</strong> software
-                                    principles
+                                    Optimize, refactor and practice single source of truth
                                 </LI>
                                 <LI>Separate Business logic from the view</LI>
-                                <LI>Use latest javascript es6</LI>
+                                <LI>Use latest javascript/typescript esnext</LI>
                                 <LI>
-                                    <strong>Always learning</strong>, expanding knowledge
-                                    (blogs, books, newsletters, medium, dev.to)
+                                    Learning and expanding knowledge, trying new things,
+                                    keeping up with the advancements.
                                 </LI>
-                                <LI>
-                                    Trying new things, keeping up with the advancements in
-                                    Javascript, React and Cloud
-                                </LI>
-                                <LI>
-                                    <strong>Excited</strong> about web development.
-                                </LI>
-                                <LI>
-                                    <strong>Great as solo and in a team.</strong>
-                                </LI>
+                                <LI>Passionate about web development</LI>
+                                <LI>Great as a solo and in a team.</LI>
                                 <LI>
                                     Great at solving problems by myself but easily ask for
                                     help.
@@ -245,8 +228,7 @@ const Page = () => {
                                     <LI>
                                         <strong>Worked in a remote team</strong>, using
                                         Clojurescript, Javascript, Node.js, AWS Lambda,
-                                        Dynamodb, Postgresql and
-                                        <strong> part time managing</strong>.
+                                        Dynamodb, Postgresql.
                                     </LI>
                                     <LI>IOT - internet-connected devices</LI>
                                     <LI>
@@ -300,34 +282,36 @@ const Page = () => {
                         <Flex mt={[2, 0]} flexDirection="column">
                             <H4 className="sectionHeader">Skills</H4>
                             <UL>
-                                <LI>Build Server/Client applications</LI>
                                 <LI>React, React Native</LI>
                                 <LI>JavaScript, Typescript, ClojureScript, C</LI>
-                                <LI>Redux, Mobx</LI>
-                                <LI>PostgreSQL, DynamoDB, MongoDB, GraphQL</LI>
+                                <LI>Redux, Mobx, Context, Hooks</LI>
+                                <LI>PostgreSQL, DynamoDB, MongoDB, GraphQL, Sequalize</LI>
                                 <LI>Functional Programming</LI>
-                                <LI>Headless CMS - DatoCMS</LI>
+                                <LI>Headless CMS</LI>
                                 <LI>Node, Express, Meteor</LI>
-                                <LI>AWS Lambda</LI>
-                                <LI>Next.js, SSR, Now v2, Microservices, Serverless</LI>
+                                <LI>AWS Lambda, Next.js, SSR, Microservices, Serverless</LI>
                                 <LI>SMS, Emails, Authentication, PayPal API</LI>
                                 <LI>
                                     HTML, CSS, SCSS, CSS in JS, Emotion, Styled-System
                                 </LI>
                                 <LI>Webpack, Traefik, Docker, Service workers</LI>
-                                <LI>Development / staging / production setup</LI>
+                                <LI>CI/CD. Development / staging / production setup</LI>
+                                <LI>
+                                    Testing, end-to-end, unit, integration. Mocha, Jest,
+                                    Cypress
+                                </LI>
                             </UL>
                             <H4 className="sectionHeader">Areas of Interest</H4>
                             <UL>
                                 <LI>Front-End, UI</LI>
-                                <LI>Distributed Software</LI>
-                                <LI>Cloud</LI>
-                                <LI>Blockchain DAPP</LI>
+                                <LI>Typescript</LI>
+                                <LI>React</LI>
+                                <LI>GraphQL</LI>
                             </UL>
                             <H4 className="sectionHeader">In my free time</H4>
                             <UL>
-                                <LI>Doing sport and meditation</LI>
                                 <LI>Learning new staff</LI>
+                                <LI>Sport and meditation</LI>
                             </UL>
                             <H4 className="sectionHeader">Spoken Languages</H4>
                             <UL>
