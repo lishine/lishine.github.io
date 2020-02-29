@@ -72,15 +72,17 @@ const Page = () => {
                         content={() => ref.current}
                     />
                 )}
-                {downloadPdf && <Box position="absolute" top={[2, 1]} left={[2, '80%']}>
-                    <NavLink
-                        href={`/${title}.pdf`}
-                        target="_blank"
-                        style={{ textDecoration: 'none' }}
-                    >
-                        <button className="btn">DOWNLOAD PDF</button>
-                    </NavLink>
-                </Box>}
+                {downloadPdf && (
+                    <Box position="absolute" top={[2, 1]} left={[2, '80%']}>
+                        <NavLink
+                            href={`/${title}.pdf`}
+                            target="_blank"
+                            style={{ textDecoration: 'none' }}
+                        >
+                            <button className="btn">DOWNLOAD PDF</button>
+                        </NavLink>
+                    </Box>
+                )}
                 <Flex
                     ref={ref}
                     flexDirection="column"
@@ -285,11 +287,14 @@ const Page = () => {
                                 <LI>React, React Native</LI>
                                 <LI>JavaScript, Typescript, ClojureScript, C</LI>
                                 <LI>Redux, Mobx, Context, Hooks</LI>
-                                <LI>PostgreSQL, DynamoDB, MongoDB, GraphQL, Sequalize</LI>
+                                <LI>PostgreSQL, DynamoDB, MongoDB, Sequalize</LI>
+                                <LI>API - Rest, RPC, GraphQL</LI>
                                 <LI>Functional Programming</LI>
                                 <LI>Headless CMS</LI>
                                 <LI>Node, Express, Meteor</LI>
-                                <LI>AWS Lambda, Next.js, SSR, Microservices, Serverless</LI>
+                                <LI>
+                                    AWS Lambda, Next.js, SSR, Microservices, Serverless
+                                </LI>
                                 <LI>SMS, Emails, Authentication, PayPal API</LI>
                                 <LI>
                                     HTML, CSS, SCSS, CSS in JS, Emotion, Styled-System
