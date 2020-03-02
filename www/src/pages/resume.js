@@ -288,10 +288,10 @@ const Page = () => {
                                 <LI>JavaScript, Typescript, ClojureScript, C</LI>
                                 <LI>Redux, Mobx, Context, Hooks</LI>
                                 <LI>PostgreSQL, DynamoDB, MongoDB, Sequalize</LI>
-                                <LI>API - Rest, RPC, GraphQL</LI>
+                                <LI>API - Rest, RPC, GraphQL, OpenAPI</LI>
                                 <LI>Functional Programming</LI>
                                 <LI>Headless CMS</LI>
-                                <LI>Node, Express, Meteor</LI>
+                                <LI>NodeJS, Express, Websockets, Meteor</LI>
                                 <LI>
                                     AWS Lambda, Next.js, SSR, Microservices, Serverless
                                 </LI>
@@ -299,7 +299,7 @@ const Page = () => {
                                 <LI>
                                     HTML, CSS, SCSS, CSS in JS, Emotion, Styled-System
                                 </LI>
-                                <LI>Webpack, Traefik, Docker, Service workers</LI>
+                                <LI>Git, Webpack, Babel, Docker, Traefik, Service workers</LI>
                                 <LI>CI/CD. Development / staging / production setup</LI>
                                 <LI>
                                     Testing, end-to-end, unit, integration. Mocha, Jest,

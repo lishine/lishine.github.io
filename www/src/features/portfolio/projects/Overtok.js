@@ -26,12 +26,12 @@ export const Overtok = props => (
                 <DoesTitle>Working in a team</DoesTitle>
                 <DoesList>
                     <DoesItem>
-                        Javascript web cDoesItement, which is embedded into cDoesItement
+                        Javascript web client, which is embedded into client
                         website
                     </DoesItem>
                     <DoesItem>Clojurescript web admin panel (see picture)</DoesItem>
                     <DoesItem>
-                        Mobile cDoesItement built with Clojuresript and React-Native
+                        Mobile client built with Clojuresript and React-Native
                     </DoesItem>
                     <DoesItem>Serverless backend</DoesItem>
                 </DoesList>
