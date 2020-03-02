@@ -32,7 +32,7 @@ export const Barcodes = props => (
                     <DoesItem>CSS in Js - Styled components</DoesItem>
                     <DoesItem>Server - Express</DoesItem>
                     <DoesItem>DB - PostgreSQL</DoesItem>
-                    <DoesItem>DB Object interface - Massive</DoesItem>
+                    <DoesItem>Data mapper - Massive</DoesItem>
                 </DoesList>
             </DoesWrapper>
             <DoesWrapper mt={[1, 0]}>
