@@ -181,7 +181,7 @@ const Page = () => {
                                 <LI>
                                     Optimize, refactor and practice single source of truth
                                 </LI>
-                                <LI>Separate Business logic from the view</LI>
+                                <LI>Separate business logic from view</LI>
                                 <LI>Use latest javascript/typescript esnext</LI>
                                 <LI>
                                     Learning and expanding knowledge, trying new things,
@@ -248,10 +248,6 @@ const Page = () => {
                                     <Years>2003 - 2016</Years>
                                     <DD>
                                         <strong>Software & Electronics engineer</strong>
-                                        <br />
-                                        <Span italic>
-                                            At Syqe Medical / Startups / Freelance
-                                        </Span>
                                     </DD>
                                 </Flex>
                                 <Flex mt={1}>

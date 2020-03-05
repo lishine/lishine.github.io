@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import get from 'lodash/fp/get'
 
 import { Form, P, Box, Flex, Span, Image, NavLink, Grid } from 'styles/ss-components'
-
-import { RouteLink } from 'common/RouteLink'
-import { boxCss } from 'styles/ss-utils'
 
 export const Footer = props => {
     const logoHeight = '36px'

@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { Portfolio } from 'features/portfolio/Portfolio'
-import { fonts } from 'features/fonts'
 
 export default () => (
     <div>

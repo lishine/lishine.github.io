@@ -1,11 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import styled from '@emotion/styled'
-
-// Common
-import { boxCss } from 'styles/ss-utils'
-import { mediaUp, mediaDown } from 'styles/utils'
 
 export const RouteLink = ({ children, className, alternativeHref, ...props }) => {
     const router = useRouter()
