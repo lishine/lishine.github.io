@@ -9,6 +9,8 @@ export const ProjectTitle = props => (
     <H3 pt={3} mb={1} fontWeight="500" borderBottom="1px solid currentColor" {...props} />
 )
 
+export const SubProjectTitle = props => <H4 pt={3} mb={1} fontWeight="500" {...props} />
+
 export const SubRemark = props => <Span fontStyle="italic" fontWeight="300" {...props} />
 export const SubLink = props => <Flex {...props} />
 

@@ -28,8 +28,6 @@ export const Portfolio = () => (
             </P> */}
         </Box>
 
-        <Cypress mt={2} />
-        <MobxHooksForm mt={2} />
         <Site mt={2} />
         <Project2 mt={5} />
         <Project1 mt={5} />

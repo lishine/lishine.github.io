@@ -71,6 +71,7 @@ class MyApp extends App {
     }
 
     render() {
+        console.log('typeof <Footer />', typeof <Footer />)
         const { Component, pageProps, router } = this.props
         if (process.browser) {
             console.log('router', router)
