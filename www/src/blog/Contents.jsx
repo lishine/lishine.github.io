@@ -6,9 +6,11 @@ import Link from 'next/link'
 import { UL, LI } from 'styles/ss-components'
 
 // Local
-import { frontMatter as pages } from '../pages/blog/posts/*.mdx'
+import { frontMatter as one } from '../pages/blog/posts/haskell-install-tutorial.mdx'
+// import { frontMatter as pages } from '../pages/blog/posts/*.mdx'
 
 export const Contents = () => {
+    const pages = [one]
     console.log('pages.length', pages.length)
     return (
         <UL>

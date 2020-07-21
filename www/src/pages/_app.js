@@ -2,19 +2,20 @@ import React, { useRef, useState, useEffect } from 'react'
 import Head from 'next/head'
 import { default as nextRouter } from 'next/router'
 import App from 'next/app'
-import { ThemeProvider } from 'emotion-theming'
+import { ThemeProvider, CSSReset, ColorModeProvider, useColorMode } from '@chakra-ui/core'
+import { Global, css } from '@emotion/core'
 import { PageTransition } from 'next-page-transitions'
 import { useSwipeable, Swipeable } from 'react-swipeable'
 import { MDXProvider } from '@mdx-js/react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { okaidia as duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
-import { GlobalCss, theme } from 'styles/theme'
+import { theme } from 'styles/theme'
 import { Header } from 'features/header/Header'
 import { Footer } from 'features/footer/Footer'
 import { Flex } from 'styles/ss-components'
 
-import 'scss/index.scss'
+// import 'scss/index.scss'
 import { fonts } from 'features/fonts'
 
 export const redirect = (ctx, path) => {
@@ -60,6 +61,33 @@ const components = {
     // props => <pre style={{ color: 'tomato' }} {...props} />,
 }
 
+const GlobalStyle = ({ children }) => {
+    return (
+        <>
+            <CSSReset />
+            <Global
+                styles={css`
+                    ::selection {
+                        background-color: #47a3f3;
+                        color: #fefefe;
+                    }
+                    html {
+                        min-width: 360px;
+                        scroll-behavior: smooth;
+                    }
+                    #__next {
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 100vh;
+                        background: 'white';
+                    }
+                `}
+            />
+            {children}
+        </>
+    )
+}
+
 class MyApp extends App {
     constructor(props) {
         super(props)
@@ -71,7 +99,7 @@ class MyApp extends App {
     }
 
     render() {
-        console.log('typeof <Footer />', typeof <Footer />)
+        console.log('typeof <Footer />', typeof (<Footer />))
         const { Component, pageProps, router } = this.props
         if (process.browser) {
             console.log('router', router)
@@ -84,107 +112,13 @@ class MyApp extends App {
         const footerHeight = 66
         const mobileHeaderHeight = 56
         return (
-            <div>
-                <Head>
-                    <meta
-                        charSet="utf-8"
-                        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                        name="viewport"
-                    />
-                    <style>{fonts}</style>
-                </Head>
+            <ThemeProvider theme={theme}>
                 <MDXProvider components={components}>
-                    <ThemeProvider theme={theme}>
-                        <GlobalCss />
-                        <Swipeable
-                            delta={250}
-                            onSwiped={eventData => {
-                                const { dir } = eventData
-                                if (dir === 'Right') {
-                                    if (
-                                        router.pathname === '/' ||
-                                        router.pathname === '/portfolio'
-                                    ) {
-                                        nextRouter.push('/contact')
-                                    } else if (router.pathname === '/resume') {
-                                        nextRouter.push('/portfolio')
-                                    }
-                                } else if (dir === 'Left') {
-                                    if (
-                                        router.pathname === '/' ||
-                                        router.pathname === '/portfolio'
-                                    ) {
-                                        nextRouter.push('/resume')
-                                    } else if (router.pathname === '/contact') {
-                                        nextRouter.push('/portfolio')
-                                    }
-                                }
-                                console.log('swiped', eventData.dir)
-                            }}
-                        >
-                            <Flex flexDirection="column" className="page-container">
-                                <Header mobileHeaderHeight={mobileHeaderHeight} />
-                                <Flex
-                                    flexDirection="column"
-                                    pb={[
-                                        `${footerHeight +
-                                            !isResumePage * mobileHeaderHeight}px`,
-                                        `${mobileHeaderHeight}px`,
-                                    ]}
-                                    flex={1}
-                                >
-                                    {router.route === '/resume' ? (
-                                        <Component
-                                            {...pageProps}
-                                            router={router}
-                                            key={router.route}
-                                        />
-                                    ) : (
-                                        <PageTransition
-                                            timeout={300}
-                                            classNames="page-transition"
-                                        >
-                                            <Component
-                                                {...pageProps}
-                                                router={router}
-                                                key={router.route}
-                                            />
-                                        </PageTransition>
-                                    )}
-                                    <style jsx global>
-                                        {`
-                                            .page-transition-enter {
-                                                opacity: 0;
-                                            }
-                                            .page-transition-enter-active {
-                                                opacity: 1;
-                                                transition: opacity 300ms;
-                                            }
-                                            .page-transition-exit {
-                                                opacity: 1;
-                                            }
-                                            .page-transition-exit-active {
-                                                opacity: 0;
-                                                transition: opacity 300ms;
-                                            }
-                                        `}
-                                    </style>
-                                    {!isResumePage && (
-                                        <Footer
-                                            height={`${footerHeight}px`}
-                                            mb={[
-                                                !isResumePage &&
-                                                    `${mobileHeaderHeight}px`,
-                                                0,
-                                            ]}
-                                        />
-                                    )}
-                                </Flex>
-                            </Flex>
-                        </Swipeable>
-                    </ThemeProvider>
+                    <GlobalStyle>
+                        <Component {...pageProps} router={router} key={router.route} />
+                    </GlobalStyle>
                 </MDXProvider>
-            </div>
+            </ThemeProvider>
         )
     }
 }

@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 // Common
-import { Flex, H1 } from 'styles/ss-components'
+import { Flex, H1, Box } from 'styles/ss-components'
 
-export default frontMatter => {
+export default function Layout(frontMatter) {
     return ({ children: content, router }) => {
         return (
             <>
@@ -26,7 +26,14 @@ export default frontMatter => {
                         <Link href="/blog">&#8592; contents</Link>
                     )}
                     <H1 mb={2}>{frontMatter.title}</H1>
-                    {content}
+                    <Box
+                        css={boxCss.css({
+                            '*': { fontFamily: 'Lato' },
+                            h4: { fontSize: '20px' },
+                        })}
+                    >
+                        {content}
+                    </Box>
                 </Flex>
             </>
         )

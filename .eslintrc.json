@@ -52,7 +52,7 @@
         "camelcase": 0,
         "no-return-await": 0,
         "no-constant-condition": 0,
-        "no-unused-vars": 1,
+        "no-unused-vars": 0,
         "curly": ["error", "all"],
         "prettier/prettier": [
             "warn",

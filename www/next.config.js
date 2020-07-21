@@ -6,16 +6,23 @@ const optimizedImages = require('next-optimized-images')
 // const withMDX = require('@next/mdx')({
 // extension: /\.(md|mdx)$/,
 // })
+const readingTime = require('reading-time')
 
 const withMdxEnhanced = require('next-mdx-enhanced')
 
 const nextConfig = {
-    // pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-    distDir: '../.next',
-    webpack: (config, { dev }) => {
-        config.optimization.minimizer[0].options.terserOptions.compress.inline = false
-        return config
+    experimental: {
+        modern: true,
     },
+    devIndicators: {
+        autoPrerender: false,
+    },
+    // pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+    // distDir: '../.next',
+    // webpack: (config, { dev }) => {
+    //     config.optimization.minimizer[0].options.terserOptions.compress.inline = false
+    //     return config
+    // },
 }
 
 module.exports = withPlugins(
@@ -28,8 +35,10 @@ module.exports = withPlugins(
                 remarkPlugins: [],
                 rehypePlugins: [],
                 extendFrontMatter: {
-                    process: (mdxContent, frontMatter) => {},
-                    phase: 'prebuild|loader|both',
+                    process: mdxContent => ({
+                        wordCount: mdxContent.split(/\s+/gu).length,
+                        readingTime: readingTime(mdxContent),
+                    }),
                 },
             }),
         ],

@@ -1,30 +1,13 @@
-const env = require('./env-config.js')
-
 module.exports = {
-	"presets": [
-		"next/babel",
-		"@emotion/babel-preset-css-prop"
-	],
-	"plugins": [
-		[
-			"emotion",
-			{
-			  "sourceMap": true,
-			  "autoLabel": true,
-			  "labelFormat": "[local]",
-			  "cssPropOptimization": true
-			}
-		  ],
-		['transform-define', env],
-		[
-			"module-resolver",
-			{
-				"root": [
-					"./"
-				]
-			}
-		],
-        "@babel/plugin-proposal-export-default-from",
-        'import-glob-array'
-	]
+    presets: [
+        'next/babel',
+        [
+            '@emotion/babel-preset-css-prop',
+            {
+                autoLabel: process.env.NODE_ENV !== 'production',
+                labelFormat: '[local]',
+            },
+        ],
+    ],
+    plugins: ['macros', '@babel/plugin-proposal-export-namespace-from', 'import-glob-array'],
 }

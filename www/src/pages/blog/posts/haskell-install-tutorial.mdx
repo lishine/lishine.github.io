@@ -1,0 +1,132 @@
+---
+title: 'Haskell with VSCode install in Ubuntu 20 instructions'
+---
+
+-   This version of Ubuntu PopOs
+
+`sudo apt install libicu-dev libtinfo-dev libgmp-dev zlib1g-dev`
+
+-   On Debianish platforms, if libfoo is missing, you can frequently install it with something like
+
+`apt-get install libfoo-dev`
+
+#### Stack
+
+<a href="https://docs.haskellstack.org/en/stable/README/" target="_blank">
+    Installing stack and creating project
+</a>
+
+add ~/.local/bin to the PATH
+
+stack install hlint
+
+Extension: Haskell syntax Highlighting
+
+#### Language Server
+
+-   Installation from source
+    stack ghc -- --version
+    <a href="https://github.com/haskell/haskell-ide-engine" target="_blank">
+        Installing IDE engine
+    </a>
+    Extension: Haskell Language server
+    Then able to see the documentation on hover
+
+Debugging Extension
+stack install phoityne-vscode
+Spec.hs runs:
+stack test
+
+### Test - setup Hspec
+
+Add - hspec under dependencies section
+stack build
+Replace Spec.hs with:
+
+```hs
+{-# OPTIONS_GHC -F -pgmF hspec-discover #-}
+```
+
+stack install hspec-discover
+create test/SpecHelper.hs with:
+
+```hs
+module SpecHelper
+  ( module Test.Hspec
+  , module Phoityne.Example.Math
+  ) where
+
+import Test.Hspec
+import Phoityne.Example.Math
+```
+
+create the files of the example from the repo of the article:
+
+<a href="https://github.com/dogwith1eye/my-project" target="_blank">
+    code of the article
+</a>
+// no-referer
+
+```shell
+stack build
+stack test
+```
+
+should look like
+
+```shell
+Phoityne.Example.Math
+sumGs
+with [1..10]
+should be 55
+with [1..10]
+should be 55
+with [1..1]
+should be 0
+
+Finished in 0.0004 seconds
+3 examples, 0 failures
+
+first > Test suite first-test passed
+Completed 12 action(s).
+
+```
+
+restart vscode
+Go to MathSpec.hs
+Goto debug panel
+Choose - create launch file
+Choose haskell-debug-adapter
+Set a breakpoint
+Run F5
+
+<a
+    href="https://medium.com/@dogwith1eye/setting-up-haskell-in-vs-code-with-stack-and-the-ide-engine-81d49eda3ecf"
+    target="_blank"
+>
+    reference article
+</a>
+// no-referer
+
+Learn Haskell:
+Reccomended cis194 courses
+BTW this user has plenty experience in Clojuse and in Haskell
+https://github.com/bitemyapp/learnhaskell
+
+This I found interesting:
+
+https://haskellfortypescriptdevs.fission.codes/
+
+Map the structure of software design-patterns to the concepts found in the Haskell type class library and in functional programming in general.
+https://github.com/thma/LtuPatternFactory
+
+### formatter
+
+Use the built in vscode formatter
+or
+stack install ormolu and vscode ormolu extension
+
+Actually hie makes problems all the time and solution is
+run: stack test
+or/and
+restart vscode

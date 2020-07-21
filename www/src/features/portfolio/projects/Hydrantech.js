@@ -42,7 +42,10 @@ export const Hydrantech = props => (
                     </SubLink>
                     <SubLink>
                         Source(mobile Typescript):&nbsp;
-                        <NavLink target="_blank" href="https://gitlab.com/hydrantech/typed" />
+                        <NavLink
+                            target="_blank"
+                            href="https://gitlab.com/hydrantech/typed"
+                        />
                     </SubLink>
                     <Grid
                         mt={1}
@@ -78,23 +81,29 @@ export const Hydrantech = props => (
                 })}
             >
                 <ArcherElement id="B">
-                    <H4>Server</H4>
-                    <P>Built with Meteor</P>
-                    <P>MongoDB</P>
+                    <div>
+                        <H4>Server</H4>
+                        <P>Built with Meteor</P>
+                        <P>MongoDB</P>
+                    </div>
                 </ArcherElement>
                 <ArcherElement id="C">
-                    <H4>Client</H4>
-                    <P>Built with React + React-router</P>
-                    <P>Notifications with Service-Workers</P>
-                    <P>Show hydrants on a map</P>
+                    <div>
+                        <H4>Client</H4>
+                        <P>Built with React + React-router</P>
+                        <P>Notifications with Service-Workers</P>
+                        <P>Show hydrants on a map</P>
+                    </div>
                 </ArcherElement>
                 <ArcherElement id="D">
-                    <H4>Mobile</H4>
-                    <P>Built with React-Native and MobX</P>
-                    <P>Converted to Typescript and MobX-State-Tree</P>
-                    <P>Notifications</P>
-                    <P>Geolocation</P>
-                    <P>Barcode Scanning</P>
+                    <div>
+                        <H4>Mobile</H4>
+                        <P>Built with React-Native and MobX</P>
+                        <P>Converted to Typescript and MobX-State-Tree</P>
+                        <P>Notifications</P>
+                        <P>Geolocation</P>
+                        <P>Barcode Scanning</P>
+                    </div>
                 </ArcherElement>
             </Grid>
         </ArcherContainer>
