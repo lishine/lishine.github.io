@@ -165,11 +165,15 @@ const Page = () => {
                             <H4 className="sectionHeader">Background</H4>
                             <P>
                                 I am a Full Stack web developer that specializes in{' '}
-                                <strong>Front-End and React</strong>.
+                                <strong>Node.js</strong> and <strong> React</strong>.
                                 <br />
                                 Have been developing for
-                                <strong> 3 years in Web and React ecosystem</strong>,
-                                since switching from Electronics Engineering and Embedded.
+                                <strong>
+                                    {' '}
+                                    3 years in Javascript/Typescript and React ecosystem
+                                </strong>
+                                , since switching from Electronics Engineering and
+                                Embedded.
                                 <br />
                                 Writing software since age 13.
                                 <br />
@@ -207,9 +211,9 @@ const Page = () => {
                                 <Flex as="dl">
                                     <Years>2017 - today</Years>
                                     <DD>
-                                        <strong>React Full Stack Web Developer</strong>
+                                        <strong>Full Stack Web Developer</strong>
                                         <br />
-                                        <Span italic>Freelance at Xlucidity</Span>
+                                        <Span italic>Xlucidity</Span>
                                     </DD>
                                 </Flex>
                                 <UL mt={1}>
@@ -219,13 +223,18 @@ const Page = () => {
                                     </LI>
                                     <LI>
                                         <strong>
-                                            Next.js SSR and React single-page applications
+                                            Next.js SSR, React and Redux single-page
+                                            applications
                                         </strong>{' '}
-                                        using latest CSS-IN-JS technology
+                                        using CSS-IN-JS technology
                                     </LI>
                                     <LI>
                                         React Native mobile apps using Javascript,
                                         Typescript, and Mobx.
+                                    </LI>
+                                    <LI>
+                                        <strong>Worked in a remote team</strong>, using
+                                        Jira, Mysql, Node.js, REST, React, CI/CD.
                                     </LI>
                                     <LI>
                                         <strong>Worked in a remote team</strong>, using
@@ -284,7 +293,7 @@ const Page = () => {
                                 <LI>JavaScript, Typescript, ClojureScript, C</LI>
                                 <LI>Redux, Mobx, Context, Hooks</LI>
                                 <LI>PostgreSQL, DynamoDB, MongoDB, Sequalize</LI>
-                                <LI>API - Rest, RPC, GraphQL, OpenAPI</LI>
+                                <LI>API - Rest, GraphQL</LI>
                                 <LI>Functional Programming</LI>
                                 <LI>Headless CMS</LI>
                                 <LI>NodeJS, Express, Websockets, Meteor</LI>
@@ -295,7 +304,9 @@ const Page = () => {
                                 <LI>
                                     HTML, CSS, SCSS, CSS in JS, Emotion, Styled-System
                                 </LI>
-                                <LI>Git, Webpack, Babel, Docker, Traefik, Service workers</LI>
+                                <LI>
+                                    Git, Webpack, Babel, Docker, Traefik, Service workers
+                                </LI>
                                 <LI>CI/CD. Development / staging / production setup</LI>
                                 <LI>
                                     Testing, end-to-end, unit, integration. Mocha, Jest,
@@ -305,6 +316,7 @@ const Page = () => {
                             <H4 className="sectionHeader">Areas of Interest</H4>
                             <UL>
                                 <LI>Front-End, UI</LI>
+                                <LI>Servers</LI>
                                 <LI>Typescript</LI>
                                 <LI>React</LI>
                                 <LI>GraphQL</LI>

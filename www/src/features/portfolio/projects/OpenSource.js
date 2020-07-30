@@ -2,9 +2,30 @@ import React from 'react'
 import { Box, LI, UL, NavLink } from 'styles/ss-components'
 import { ProjectTitle, SubLink, SubProjectTitle } from '../common'
 
-export const Site = props => (
+export const OpenSource = props => (
     <Box {...props}>
         <ProjectTitle>Open source</ProjectTitle>
+
+        <SubProjectTitle>Web RTC - Twitch clone</SubProjectTitle>
+        <SubLink>
+            Source:&nbsp;
+            <NavLink target="_blank" href="https://github.com/lishine/web-rtc" />
+        </SubLink>
+
+        <SubProjectTitle>Python backend demo</SubProjectTitle>
+        <SubLink>
+            Source:&nbsp;
+            <NavLink
+                target="_blank"
+                href="https://github.com/lishine/python-graphql-typescript"
+            />
+        </SubLink>
+
+        <SubProjectTitle>Orders view application</SubProjectTitle>
+        <SubLink>
+            Source:&nbsp;
+            <NavLink target="_blank" href="https://github.com/lishine/orders" />
+        </SubLink>
 
         <SubProjectTitle>Life game</SubProjectTitle>
         <SubLink>

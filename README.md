@@ -1,8 +1,9 @@
-### Portfolio site
-<a href="http://lishine.github.io" target="_blank">lishine.github.io</a>
+# Portfolio site
+<http://lishine.github.io>
+
 * Static Next.js + React
 * Deployed to github-pages
-* SCSS, Emotion, Styled-System 
+* SCSS, Emotion, Styled-System
 * Clean design 😊
 * Responsive & adaptive
 * SEO optimized

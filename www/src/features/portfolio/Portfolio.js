@@ -6,7 +6,7 @@ import { Barcodes } from './projects/Barcodes'
 import { Hydrantech } from './projects/Hydrantech'
 import { First } from './projects/First'
 import { Project2 } from './projects/Project2'
-import { Site } from './projects/Site'
+import { OpenSource } from './projects/OpenSource'
 import { MobxHooksForm } from './projects/MobxHooksForm'
 import { Cypress } from './projects/Cypress'
 
@@ -28,7 +28,7 @@ export const Portfolio = () => (
             </P> */}
         </Box>
 
-        <Site mt={2} />
+        <OpenSource mt={2} />
         <Project2 mt={5} />
         <Project1 mt={5} />
         <Overtok mt={5} />
