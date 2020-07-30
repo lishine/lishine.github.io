@@ -18,7 +18,7 @@
         "@styled-system/core": "5.1.2",
         "@styled-system/css": "5.0.23",
         "@styled-system/should-forward-prop": "5.1.2",
-        "bootstrap": "4.2.1",
+        "bootstrap": "4.5.0",
         "camelize": "1.0.0",
         "emotion-theming": "10.0.18",
         "next": "9.2.2-canary.20",
