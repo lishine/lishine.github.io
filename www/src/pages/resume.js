@@ -45,7 +45,7 @@ const LI = props => (
 const UL = styled(_UL)()
 const Years = styled(DT)()
 
-const title = 'Pavel Ravits - Full Stack React Web Developer - Resume'
+const title = 'Pavel Ravits - Web Developer - Resume'
 
 const Page = () => {
     const ref = useRef(null)
@@ -139,7 +139,7 @@ const Page = () => {
                     <H1>
                         <strong>Pavel Ravits</strong>
                     </H1>
-                    <H4 fontWeight="500">React web developer</H4>
+                    <H4 fontWeight="500">Web developer</H4>
 
                     {/* <H1 mt={3} mb={4} color="link">
                         ...seeking <strong>collaboration</strong> with{' '}
