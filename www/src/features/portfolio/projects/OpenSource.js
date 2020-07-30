@@ -21,7 +21,9 @@ export const OpenSource = props => (
             />
         </SubLink>
 
-        <SubProjectTitle>Orders view application</SubProjectTitle>
+        <SubProjectTitle>
+            Typescript + Graphql Apollo server/client + Postgres
+        </SubProjectTitle>
         <SubLink>
             Source:&nbsp;
             <NavLink target="_blank" href="https://github.com/lishine/orders" />
