@@ -4,10 +4,10 @@ import { default as nextRouter } from 'next/router'
 import App from 'next/app'
 import { ThemeProvider } from 'emotion-theming'
 import { PageTransition } from 'next-page-transitions'
-import { useSwipeable, Swipeable } from 'react-swipeable'
-import { MDXProvider } from '@mdx-js/react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { okaidia as duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+// import { useSwipeable, Swipeable } from 'react-swipeable'
+// import { MDXProvider } from '@mdx-js/react'
+// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+// import { okaidia as duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import { GlobalCss, theme } from 'styles/theme'
 import { Header } from 'features/header/Header'
@@ -45,20 +45,20 @@ export let globalCtx
 //     )
 // }
 
-const CodeBlock = ({ children, className }) => {
-    const language = className?.replace(/language-/, '')
-    return (
-        <SyntaxHighlighter language={language} style={duotoneDark}>
-            {children}
-        </SyntaxHighlighter>
-    )
-}
+// const CodeBlock = ({ children, className }) => {
+//     const language = className?.replace(/language-/, '')
+//     return (
+//         <SyntaxHighlighter language={language} style={duotoneDark}>
+//             {children}
+//         </SyntaxHighlighter>
+//     )
+// }
 
-const components = {
-    pre: props => <div {...props} />,
-    code: CodeBlock,
-    // props => <pre style={{ color: 'tomato' }} {...props} />,
-}
+// const components = {
+//     pre: props => <div {...props} />,
+//     code: CodeBlock,
+//     // props => <pre style={{ color: 'tomato' }} {...props} />,
+// }
 
 class MyApp extends App {
     constructor(props) {
@@ -71,7 +71,6 @@ class MyApp extends App {
     }
 
     render() {
-        console.log('typeof <Footer />', typeof <Footer />)
         const { Component, pageProps, router } = this.props
         if (process.browser) {
             console.log('router', router)
@@ -93,10 +92,10 @@ class MyApp extends App {
                     />
                     <style>{fonts}</style>
                 </Head>
-                <MDXProvider components={components}>
-                    <ThemeProvider theme={theme}>
-                        <GlobalCss />
-                        <Swipeable
+                {/* <MDXProvider components={components}> */}
+                <ThemeProvider theme={theme}>
+                    <GlobalCss />
+                    {/* <Swipeable
                             delta={250}
                             onSwiped={eventData => {
                                 const { dir } = eventData
@@ -121,69 +120,61 @@ class MyApp extends App {
                                 }
                                 console.log('swiped', eventData.dir)
                             }}
+                        > */}
+                    <Flex flexDirection="column" className="page-container">
+                        <Header mobileHeaderHeight={mobileHeaderHeight} />
+                        <Flex
+                            flexDirection="column"
+                            pb={[
+                                `${footerHeight + !isResumePage * mobileHeaderHeight}px`,
+                                `${mobileHeaderHeight}px`,
+                            ]}
+                            flex={1}
                         >
-                            <Flex flexDirection="column" className="page-container">
-                                <Header mobileHeaderHeight={mobileHeaderHeight} />
-                                <Flex
-                                    flexDirection="column"
-                                    pb={[
-                                        `${footerHeight +
-                                            !isResumePage * mobileHeaderHeight}px`,
-                                        `${mobileHeaderHeight}px`,
-                                    ]}
-                                    flex={1}
-                                >
-                                    {router.route === '/resume' ? (
-                                        <Component
-                                            {...pageProps}
-                                            router={router}
-                                            key={router.route}
-                                        />
-                                    ) : (
-                                        <PageTransition
-                                            timeout={300}
-                                            classNames="page-transition"
-                                        >
-                                            <Component
-                                                {...pageProps}
-                                                router={router}
-                                                key={router.route}
-                                            />
-                                        </PageTransition>
-                                    )}
-                                    <style jsx global>
-                                        {`
-                                            .page-transition-enter {
-                                                opacity: 0;
-                                            }
-                                            .page-transition-enter-active {
-                                                opacity: 1;
-                                                transition: opacity 300ms;
-                                            }
-                                            .page-transition-exit {
-                                                opacity: 1;
-                                            }
-                                            .page-transition-exit-active {
-                                                opacity: 0;
-                                                transition: opacity 300ms;
-                                            }
-                                        `}
-                                    </style>
-                                    {!isResumePage && (
-                                        <Footer
-                                            height={`${footerHeight}px`}
-                                            mb={[
-                                                !isResumePage &&
-                                                    `${mobileHeaderHeight}px`,
-                                                0,
-                                            ]}
-                                        />
-                                    )}
-                                </Flex>
-                            </Flex>
-                        </Swipeable>
-                    </ThemeProvider>
-                </MDXProvider>
+                            {/* {router.route === '/resume' ? (
+                                <Component
+                                    {...pageProps}
+                                    router={router}
+                                    key={router.route}
+                                />
+                            ) : ( */}
+                            <PageTransition timeout={300} classNames="page-transition">
+                                <Component
+                                    {...pageProps}
+                                    router={router}
+                                    key={router.route}
+                                />
+                            </PageTransition>
+                            {/* )} */}
+                            <style jsx global>
+                                {`
+                                    .page-transition-enter {
+                                        opacity: 0;
+                                    }
+                                    .page-transition-enter-active {
+                                        opacity: 1;
+                                        transition: opacity 300ms;
+                                    }
+                                    .page-transition-exit {
+                                        opacity: 1;
+                                    }
+                                    .page-transition-exit-active {
+                                        opacity: 0;
+                                        transition: opacity 300ms;
+                                    }
+                                `}
+                            </style>
+                            {!isResumePage && (
+                                <Footer
+                                    height={`${footerHeight}px`}
+                                    mb={[!isResumePage && `${mobileHeaderHeight}px`, 0]}
+                                />
+                            )}
+                        </Flex>
+                    </Flex>
+                    {/* </Swipeable> */}
+                </ThemeProvider>
+                {/* </MDXProvider> */}
             </div>
         )
     }
