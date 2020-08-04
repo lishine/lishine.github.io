@@ -6,12 +6,6 @@ export const OpenSource = props => (
     <Box {...props}>
         <ProjectTitle>Open source</ProjectTitle>
 
-        <SubProjectTitle>Web RTC - Twitch clone</SubProjectTitle>
-        <SubLink>
-            Source:&nbsp;
-            <NavLink target="_blank" href="https://github.com/lishine/web-rtc" />
-        </SubLink>
-
         <SubProjectTitle>Python backend demo</SubProjectTitle>
         <SubLink>
             Source:&nbsp;
