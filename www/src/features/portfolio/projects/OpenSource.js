@@ -15,13 +15,13 @@ export const OpenSource = props => (
             />
         </SubLink>
 
-        <SubProjectTitle>
+        {/* <SubProjectTitle>
             Typescript + Graphql Apollo server/client + Postgres
         </SubProjectTitle>
         <SubLink>
             Source:&nbsp;
             <NavLink target="_blank" href="https://github.com/lishine/orders" />
-        </SubLink>
+        </SubLink> */}
 
         <SubProjectTitle>Life game</SubProjectTitle>
         <SubLink>
