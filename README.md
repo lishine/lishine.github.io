@@ -1,6 +1,8 @@
 # Portfolio site
 <http://lishine.github.io>
 
+## use Node 12
+
 * Static Next.js + React
 * Deployed to github-pages
 * SCSS, Emotion, Styled-System
